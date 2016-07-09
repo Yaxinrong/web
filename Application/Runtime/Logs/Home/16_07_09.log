@@ -4649,3 +4649,1178 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000641s ]
 INFO: [ app_end ] --END-- [ RunTime:0.000758s ]
 
+[ 2016-07-09T20:24:15+08:00 ] ::1 /tp/index.php/Home/Index/modify_rest
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000515s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003930s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004274s ]
+SQL: SHOW COLUMNS FROM `restaurant` [ RunTime:0.0074s ]
+SQL: SELECT * FROM `restaurant` WHERE `account` = '1'  [ RunTime:0.0059s ]
+NOTIC: [8] Undefined index: phoneNum C:\wamp\www\tp\Application\Home\Controller\IndexController.class.php 第 201 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000102s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000242s ]
+NOTIC: [8] Undefined variable: information C:\wamp\www\tp\Application\Runtime\Cache\Home\f30006de24f72ae3d68c3a49c79967fb.php 第 96 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009438s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009577s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000572s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000881s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000947s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001093s ]
+
+[ 2016-07-09T20:34:19+08:00 ] ::1 /tp/index.php/Home/Index/modify_rest
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000533s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000714s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000862s ]
+SQL: SHOW COLUMNS FROM `restaurant` [ RunTime:0.0057s ]
+SQL: SELECT * FROM `restaurant` WHERE `account` = '1'  [ RunTime:0.0060s ]
+NOTIC: [8] Undefined index: phoneNum C:\wamp\www\tp\Application\Home\Controller\IndexController.class.php 第 201 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000096s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000236s ]
+NOTIC: [8] Undefined variable: information C:\wamp\www\tp\Application\Runtime\Cache\Home\f30006de24f72ae3d68c3a49c79967fb.php 第 96 行.
+NOTIC: [8] Undefined variable: information C:\wamp\www\tp\Application\Runtime\Cache\Home\f30006de24f72ae3d68c3a49c79967fb.php 第 102 行.
+NOTIC: [8] Undefined variable: information C:\wamp\www\tp\Application\Runtime\Cache\Home\f30006de24f72ae3d68c3a49c79967fb.php 第 108 行.
+NOTIC: [8] Undefined variable: information C:\wamp\www\tp\Application\Runtime\Cache\Home\f30006de24f72ae3d68c3a49c79967fb.php 第 113 行.
+NOTIC: [8] Undefined variable: information C:\wamp\www\tp\Application\Runtime\Cache\Home\f30006de24f72ae3d68c3a49c79967fb.php 第 119 行.
+NOTIC: [8] Undefined variable: information C:\wamp\www\tp\Application\Runtime\Cache\Home\f30006de24f72ae3d68c3a49c79967fb.php 第 124 行.
+NOTIC: [8] Undefined variable: information C:\wamp\www\tp\Application\Runtime\Cache\Home\f30006de24f72ae3d68c3a49c79967fb.php 第 129 行.
+NOTIC: [8] Undefined variable: information C:\wamp\www\tp\Application\Runtime\Cache\Home\f30006de24f72ae3d68c3a49c79967fb.php 第 134 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009554s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009692s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000495s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000619s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000687s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000894s ]
+
+[ 2016-07-09T20:34:55+08:00 ] ::1 /tp/index.php/Home/Index/modify_rest
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000550s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000630s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000767s ]
+SQL: SHOW COLUMNS FROM `restaurant` [ RunTime:0.0055s ]
+SQL: SELECT * FROM `restaurant` WHERE `account` = '1'  [ RunTime:0.0055s ]
+NOTIC: [8] Undefined index: phoneNum C:\wamp\www\tp\Application\Home\Controller\IndexController.class.php 第 201 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000147s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000398s ]
+NOTIC: [8] Undefined variable: information C:\wamp\www\tp\Application\Runtime\Cache\Home\f30006de24f72ae3d68c3a49c79967fb.php 第 96 行.
+NOTIC: [8] Undefined variable: information C:\wamp\www\tp\Application\Runtime\Cache\Home\f30006de24f72ae3d68c3a49c79967fb.php 第 102 行.
+NOTIC: [8] Undefined variable: information C:\wamp\www\tp\Application\Runtime\Cache\Home\f30006de24f72ae3d68c3a49c79967fb.php 第 108 行.
+NOTIC: [8] Undefined variable: information C:\wamp\www\tp\Application\Runtime\Cache\Home\f30006de24f72ae3d68c3a49c79967fb.php 第 113 行.
+NOTIC: [8] Undefined variable: information C:\wamp\www\tp\Application\Runtime\Cache\Home\f30006de24f72ae3d68c3a49c79967fb.php 第 119 行.
+NOTIC: [8] Undefined variable: information C:\wamp\www\tp\Application\Runtime\Cache\Home\f30006de24f72ae3d68c3a49c79967fb.php 第 124 行.
+NOTIC: [8] Undefined variable: information C:\wamp\www\tp\Application\Runtime\Cache\Home\f30006de24f72ae3d68c3a49c79967fb.php 第 129 行.
+NOTIC: [8] Undefined variable: information C:\wamp\www\tp\Application\Runtime\Cache\Home\f30006de24f72ae3d68c3a49c79967fb.php 第 134 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011921s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012139s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000810s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000988s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000704s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000921s ]
+
+[ 2016-07-09T20:34:59+08:00 ] ::1 /tp/index.php/Home/Index/modify_rest
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000055s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000849s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000704s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000885s ]
+SQL: SHOW COLUMNS FROM `restaurant` [ RunTime:0.0064s ]
+SQL: SELECT * FROM `restaurant` WHERE `account` = '1'  [ RunTime:0.0060s ]
+NOTIC: [8] Undefined index: phoneNum C:\wamp\www\tp\Application\Home\Controller\IndexController.class.php 第 201 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000110s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000232s ]
+NOTIC: [8] Undefined variable: information C:\wamp\www\tp\Application\Runtime\Cache\Home\f30006de24f72ae3d68c3a49c79967fb.php 第 96 行.
+NOTIC: [8] Undefined variable: information C:\wamp\www\tp\Application\Runtime\Cache\Home\f30006de24f72ae3d68c3a49c79967fb.php 第 102 行.
+NOTIC: [8] Undefined variable: information C:\wamp\www\tp\Application\Runtime\Cache\Home\f30006de24f72ae3d68c3a49c79967fb.php 第 108 行.
+NOTIC: [8] Undefined variable: information C:\wamp\www\tp\Application\Runtime\Cache\Home\f30006de24f72ae3d68c3a49c79967fb.php 第 113 行.
+NOTIC: [8] Undefined variable: information C:\wamp\www\tp\Application\Runtime\Cache\Home\f30006de24f72ae3d68c3a49c79967fb.php 第 119 行.
+NOTIC: [8] Undefined variable: information C:\wamp\www\tp\Application\Runtime\Cache\Home\f30006de24f72ae3d68c3a49c79967fb.php 第 124 行.
+NOTIC: [8] Undefined variable: information C:\wamp\www\tp\Application\Runtime\Cache\Home\f30006de24f72ae3d68c3a49c79967fb.php 第 129 行.
+NOTIC: [8] Undefined variable: information C:\wamp\www\tp\Application\Runtime\Cache\Home\f30006de24f72ae3d68c3a49c79967fb.php 第 134 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010202s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010343s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000542s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000669s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001125s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001363s ]
+
+[ 2016-07-09T20:35:12+08:00 ] ::1 /tp/index.php/Home/Index/modify_rest
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000571s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000675s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000804s ]
+SQL: SHOW COLUMNS FROM `restaurant` [ RunTime:0.0062s ]
+SQL: SELECT * FROM `restaurant` WHERE `account` = '1'  [ RunTime:0.0055s ]
+NOTIC: [8] Undefined index: phoneNum C:\wamp\www\tp\Application\Home\Controller\IndexController.class.php 第 201 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000218s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000426s ]
+NOTIC: [8] Undefined variable: information C:\wamp\www\tp\Application\Runtime\Cache\Home\f30006de24f72ae3d68c3a49c79967fb.php 第 96 行.
+NOTIC: [8] Undefined variable: information C:\wamp\www\tp\Application\Runtime\Cache\Home\f30006de24f72ae3d68c3a49c79967fb.php 第 102 行.
+NOTIC: [8] Undefined variable: information C:\wamp\www\tp\Application\Runtime\Cache\Home\f30006de24f72ae3d68c3a49c79967fb.php 第 108 行.
+NOTIC: [8] Undefined variable: information C:\wamp\www\tp\Application\Runtime\Cache\Home\f30006de24f72ae3d68c3a49c79967fb.php 第 113 行.
+NOTIC: [8] Undefined variable: information C:\wamp\www\tp\Application\Runtime\Cache\Home\f30006de24f72ae3d68c3a49c79967fb.php 第 119 行.
+NOTIC: [8] Undefined variable: information C:\wamp\www\tp\Application\Runtime\Cache\Home\f30006de24f72ae3d68c3a49c79967fb.php 第 124 行.
+NOTIC: [8] Undefined variable: information C:\wamp\www\tp\Application\Runtime\Cache\Home\f30006de24f72ae3d68c3a49c79967fb.php 第 129 行.
+NOTIC: [8] Undefined variable: information C:\wamp\www\tp\Application\Runtime\Cache\Home\f30006de24f72ae3d68c3a49c79967fb.php 第 134 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009902s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010064s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000837s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001049s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001169s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001373s ]
+
+[ 2016-07-09T20:36:39+08:00 ] ::1 /tp/index.php/Home/Index/modify_rest
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000467s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000589s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000712s ]
+SQL: SHOW COLUMNS FROM `restaurant` [ RunTime:0.0067s ]
+SQL: SELECT * FROM `restaurant` WHERE `account` = '1'  [ RunTime:0.0060s ]
+NOTIC: [8] Undefined index: phoneNum C:\wamp\www\tp\Application\Home\Controller\IndexController.class.php 第 202 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000090s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000218s ]
+NOTIC: [8] Undefined variable: info C:\wamp\www\tp\Application\Runtime\Cache\Home\f30006de24f72ae3d68c3a49c79967fb.php 第 96 行.
+NOTIC: [8] Undefined variable: info C:\wamp\www\tp\Application\Runtime\Cache\Home\f30006de24f72ae3d68c3a49c79967fb.php 第 102 行.
+NOTIC: [8] Undefined variable: info C:\wamp\www\tp\Application\Runtime\Cache\Home\f30006de24f72ae3d68c3a49c79967fb.php 第 108 行.
+NOTIC: [8] Undefined variable: info C:\wamp\www\tp\Application\Runtime\Cache\Home\f30006de24f72ae3d68c3a49c79967fb.php 第 113 行.
+NOTIC: [8] Undefined variable: info C:\wamp\www\tp\Application\Runtime\Cache\Home\f30006de24f72ae3d68c3a49c79967fb.php 第 119 行.
+NOTIC: [8] Undefined variable: info C:\wamp\www\tp\Application\Runtime\Cache\Home\f30006de24f72ae3d68c3a49c79967fb.php 第 124 行.
+NOTIC: [8] Undefined variable: info C:\wamp\www\tp\Application\Runtime\Cache\Home\f30006de24f72ae3d68c3a49c79967fb.php 第 129 行.
+NOTIC: [8] Undefined variable: info C:\wamp\www\tp\Application\Runtime\Cache\Home\f30006de24f72ae3d68c3a49c79967fb.php 第 134 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010364s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010678s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000501s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000615s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000720s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000836s ]
+
+[ 2016-07-09T20:40:51+08:00 ] ::1 /tp/index.php/Home/Index/modify_rest
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000496s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000598s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000724s ]
+SQL: SHOW COLUMNS FROM `restaurant` [ RunTime:0.0066s ]
+SQL: SELECT * FROM `restaurant` WHERE `account` = '1'  [ RunTime:0.0075s ]
+NOTIC: [8] Undefined index: phoneNum C:\wamp\www\tp\Application\Home\Controller\IndexController.class.php 第 202 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000090s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000218s ]
+NOTIC: [8] Undefined variable: info C:\wamp\www\tp\Application\Runtime\Cache\Home\f30006de24f72ae3d68c3a49c79967fb.php 第 96 行.
+NOTIC: [8] Undefined variable: info C:\wamp\www\tp\Application\Runtime\Cache\Home\f30006de24f72ae3d68c3a49c79967fb.php 第 102 行.
+NOTIC: [8] Undefined variable: info C:\wamp\www\tp\Application\Runtime\Cache\Home\f30006de24f72ae3d68c3a49c79967fb.php 第 108 行.
+NOTIC: [8] Undefined variable: info C:\wamp\www\tp\Application\Runtime\Cache\Home\f30006de24f72ae3d68c3a49c79967fb.php 第 113 行.
+NOTIC: [8] Undefined variable: info C:\wamp\www\tp\Application\Runtime\Cache\Home\f30006de24f72ae3d68c3a49c79967fb.php 第 119 行.
+NOTIC: [8] Undefined variable: info C:\wamp\www\tp\Application\Runtime\Cache\Home\f30006de24f72ae3d68c3a49c79967fb.php 第 124 行.
+NOTIC: [8] Undefined variable: info C:\wamp\www\tp\Application\Runtime\Cache\Home\f30006de24f72ae3d68c3a49c79967fb.php 第 129 行.
+NOTIC: [8] Undefined variable: info C:\wamp\www\tp\Application\Runtime\Cache\Home\f30006de24f72ae3d68c3a49c79967fb.php 第 134 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010586s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010755s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000481s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000593s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000788s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000906s ]
+
+[ 2016-07-09T20:41:46+08:00 ] ::1 /tp/index.php/Home/Index/modify_rest
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000550s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000734s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000887s ]
+SQL: SHOW COLUMNS FROM `restaurant` [ RunTime:0.0063s ]
+SQL: SELECT * FROM `restaurant` WHERE `account` = '1'  [ RunTime:0.0056s ]
+NOTIC: [8] Undefined index: phoneNum C:\wamp\www\tp\Application\Home\Controller\IndexController.class.php 第 202 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000092s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000245s ]
+NOTIC: [8] Undefined variable: p C:\wamp\www\tp\Application\Runtime\Cache\Home\f30006de24f72ae3d68c3a49c79967fb.php 第 96 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011631s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011771s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000486s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000601s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000602s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000719s ]
+
+[ 2016-07-09T20:43:04+08:00 ] ::1 /tp/index.php/Home/Index/modify_rest
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000048s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000757s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001118s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001360s ]
+SQL: SHOW COLUMNS FROM `restaurant` [ RunTime:0.0061s ]
+SQL: SELECT * FROM `restaurant` WHERE `account` = '1'  [ RunTime:0.0062s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000089s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000216s ]
+NOTIC: [8] Use of undefined constant phoneNum - assumed 'phoneNum' C:\wamp\www\tp\Application\Runtime\Cache\Home\f30006de24f72ae3d68c3a49c79967fb.php 第 96 行.
+NOTIC: [8] Undefined variable: info C:\wamp\www\tp\Application\Runtime\Cache\Home\f30006de24f72ae3d68c3a49c79967fb.php 第 96 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008608s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008751s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000452s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000567s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000618s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000733s ]
+
+[ 2016-07-09T20:43:41+08:00 ] ::1 /tp/index.php/Home/Index/modify_rest
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000527s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001592s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001857s ]
+SQL: SHOW COLUMNS FROM `restaurant` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `restaurant` WHERE `account` = '1'  [ RunTime:0.0055s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000135s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000267s ]
+NOTIC: [8] Use of undefined constant phoneNum - assumed 'phoneNum' C:\wamp\www\tp\Application\Runtime\Cache\Home\f30006de24f72ae3d68c3a49c79967fb.php 第 96 行.
+NOTIC: [8] Undefined variable: info C:\wamp\www\tp\Application\Runtime\Cache\Home\f30006de24f72ae3d68c3a49c79967fb.php 第 96 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011511s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011662s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000491s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000603s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000660s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000777s ]
+
+[ 2016-07-09T20:43:58+08:00 ] ::1 /tp/index.php/Home/Index/modify_rest
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000580s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001392s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001693s ]
+SQL: SHOW COLUMNS FROM `restaurant` [ RunTime:0.0061s ]
+SQL: SELECT * FROM `restaurant` WHERE `account` = '1'  [ RunTime:0.0066s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000086s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000218s ]
+NOTIC: [8] Use of undefined constant phoneNum - assumed 'phoneNum' C:\wamp\www\tp\Application\Runtime\Cache\Home\f30006de24f72ae3d68c3a49c79967fb.php 第 96 行.
+NOTIC: [8] Undefined variable: info C:\wamp\www\tp\Application\Runtime\Cache\Home\f30006de24f72ae3d68c3a49c79967fb.php 第 96 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007750s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007962s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000479s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000603s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001356s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001665s ]
+
+[ 2016-07-09T20:44:41+08:00 ] ::1 /tp/index.php/Home/Index/modify_rest
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000624s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001230s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001438s ]
+SQL: SHOW COLUMNS FROM `restaurant` [ RunTime:0.0068s ]
+SQL: SELECT * FROM `restaurant` WHERE `account` = '1'  [ RunTime:0.0064s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000089s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000215s ]
+NOTIC: [8] Use of undefined constant phonenum - assumed 'phonenum' C:\wamp\www\tp\Application\Runtime\Cache\Home\f30006de24f72ae3d68c3a49c79967fb.php 第 96 行.
+NOTIC: [8] Undefined variable: info C:\wamp\www\tp\Application\Runtime\Cache\Home\f30006de24f72ae3d68c3a49c79967fb.php 第 96 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008336s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008552s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000455s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000568s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000647s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000763s ]
+
+[ 2016-07-09T20:45:29+08:00 ] ::1 /tp/index.php/Home/Index/modify_rest
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000529s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000867s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001100s ]
+SQL: SHOW COLUMNS FROM `restaurant` [ RunTime:0.0069s ]
+SQL: SELECT * FROM `restaurant` WHERE `account` = '1'  [ RunTime:0.0059s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000088s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000214s ]
+NOTIC: [8] Use of undefined constant phoneNum - assumed 'phoneNum' C:\wamp\www\tp\Application\Runtime\Cache\Home\f30006de24f72ae3d68c3a49c79967fb.php 第 96 行.
+NOTIC: [8] Undefined variable: information C:\wamp\www\tp\Application\Runtime\Cache\Home\f30006de24f72ae3d68c3a49c79967fb.php 第 96 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007730s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007926s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000492s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000606s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000687s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000830s ]
+
+[ 2016-07-09T20:49:12+08:00 ] ::1 /tp/index.php/Home/Index/modify_rest
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000534s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000832s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001041s ]
+SQL: SHOW COLUMNS FROM `restaurant` [ RunTime:0.0073s ]
+SQL: SELECT * FROM `restaurant` WHERE `account` = '1'  [ RunTime:0.0061s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000113s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000247s ]
+NOTIC: [8] Use of undefined constant phoneNum - assumed 'phoneNum' C:\wamp\www\tp\Application\Runtime\Cache\Home\f30006de24f72ae3d68c3a49c79967fb.php 第 96 行.
+NOTIC: [8] Undefined variable: information C:\wamp\www\tp\Application\Runtime\Cache\Home\f30006de24f72ae3d68c3a49c79967fb.php 第 96 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009022s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009170s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000535s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000661s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000882s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001064s ]
+
+[ 2016-07-09T20:50:32+08:00 ] ::1 /tp/index.php/Home/Index/modify_rest
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000442s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000738s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000865s ]
+SQL: SHOW COLUMNS FROM `restaurant` [ RunTime:0.0061s ]
+SQL: SELECT * FROM `restaurant` WHERE `account` = '1'  [ RunTime:0.0060s ]
+NOTIC: [8] Undefined index: PhoneNum C:\wamp\www\tp\Application\Home\Controller\IndexController.class.php 第 202 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000097s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000259s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011938s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012166s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000532s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000650s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000698s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000835s ]
+
+[ 2016-07-09T20:54:31+08:00 ] ::1 /tp/index.php/Home/Index/modify_rest
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000045s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000781s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000860s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000994s ]
+SQL: SHOW COLUMNS FROM `restaurant` [ RunTime:0.0057s ]
+SQL: SELECT * FROM `restaurant` WHERE `account` = '1'  [ RunTime:0.0059s ]
+NOTIC: [8] Undefined index: phoneNum C:\wamp\www\tp\Application\Home\Controller\IndexController.class.php 第 202 行.
+NOTIC: [8] Undefined index: phoneNum C:\wamp\www\tp\Application\Home\Controller\IndexController.class.php 第 204 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000136s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000331s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010922s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011064s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000553s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000695s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000698s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000815s ]
+
+[ 2016-07-09T20:55:07+08:00 ] ::1 /tp/index.php/Home/Index/modify_rest
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000526s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000848s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001008s ]
+SQL: SHOW COLUMNS FROM `restaurant` [ RunTime:0.4305s ]
+SQL: SELECT * FROM `restaurant` WHERE `account` = '1'  [ RunTime:0.4255s ]
+NOTIC: [8] Undefined index: phoneNum C:\wamp\www\tp\Application\Home\Controller\IndexController.class.php 第 202 行.
+NOTIC: [8] Undefined index: phoneNum C:\wamp\www\tp\Application\Home\Controller\IndexController.class.php 第 204 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000356s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001021s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027200s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027634s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001826s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002209s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002157s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002443s ]
+
+[ 2016-07-09T20:55:40+08:00 ] ::1 /tp/index.php/Home/Index/modify_rest
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000721s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000697s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000826s ]
+SQL: SHOW COLUMNS FROM `restaurant` [ RunTime:0.4634s ]
+SQL: SELECT * FROM `restaurant` WHERE `account` = '1'  [ RunTime:0.4572s ]
+NOTIC: [8] Undefined index: phonenum C:\wamp\www\tp\Application\Home\Controller\IndexController.class.php 第 202 行.
+NOTIC: [8] Undefined index: phonenum C:\wamp\www\tp\Application\Home\Controller\IndexController.class.php 第 204 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000276s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000685s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024032s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024649s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001515s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001901s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001999s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002409s ]
+
+[ 2016-07-09T20:55:58+08:00 ] ::1 /tp/index.php/Home/Index/modify_rest
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000736s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001069s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001268s ]
+SQL: SHOW COLUMNS FROM `restaurant` [ RunTime:0.4253s ]
+SQL: SELECT * FROM `restaurant` WHERE `account` = '1'  [ RunTime:0.4155s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000284s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000698s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023311s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023754s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001556s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001950s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002534s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003172s ]
+
+[ 2016-07-09T20:57:55+08:00 ] ::1 /tp/index.php/Home/Index/modify_rest
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000529s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001051s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001338s ]
+SQL: SHOW COLUMNS FROM `restaurant` [ RunTime:0.0067s ]
+SQL: SELECT * FROM `restaurant` WHERE `account` = '1'  [ RunTime:0.0063s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000163s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000412s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008823s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009049s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000584s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000716s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001154s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001393s ]
+
+[ 2016-07-09T20:58:31+08:00 ] ::1 /tp/index.php/Home/Index/modify_rest
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000532s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000841s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000994s ]
+SQL: SHOW COLUMNS FROM `restaurant` [ RunTime:0.0067s ]
+SQL: SELECT * FROM `restaurant` WHERE `account` = '1'  [ RunTime:0.0062s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000087s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000232s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008245s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008491s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000540s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000679s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000605s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000723s ]
+
+[ 2016-07-09T21:00:24+08:00 ] ::1 /tp/index.php/Home/Index/modify_rest
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000458s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001066s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001340s ]
+SQL: SHOW COLUMNS FROM `restaurant` [ RunTime:0.0059s ]
+SQL: SELECT * FROM `restaurant` WHERE `account` = '1'  [ RunTime:0.0065s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000193s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000496s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008179s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008345s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000613s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000788s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001217s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001460s ]
+
+[ 2016-07-09T21:00:47+08:00 ] ::1 /tp/index.php/Home/Index/modify_rest
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000531s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000771s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001061s ]
+SQL: SHOW COLUMNS FROM `restaurant` [ RunTime:0.0226s ]
+SQL: SELECT * FROM `restaurant` WHERE `account` = '1'  [ RunTime:0.0211s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000415s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000895s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025300s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025836s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001448s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002017s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001594s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001869s ]
+
+[ 2016-07-09T21:00:53+08:00 ] ::1 /tp/index.php/Home/Index/modify_rest
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000056s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000772s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000898s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001074s ]
+SQL: SHOW COLUMNS FROM `restaurant` [ RunTime:0.0062s ]
+SQL: SELECT * FROM `restaurant` WHERE `account` = '1'  [ RunTime:0.0074s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000155s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000385s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011274s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011511s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000594s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000744s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000749s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000880s ]
+
+[ 2016-07-09T21:01:29+08:00 ] ::1 /tp/index.php/Home/Index/modify_rest
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000541s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000647s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000795s ]
+SQL: SHOW COLUMNS FROM `restaurant` [ RunTime:0.0066s ]
+SQL: SELECT * FROM `restaurant` WHERE `account` = '1'  [ RunTime:0.0067s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000139s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000319s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009638s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009803s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000456s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000573s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000651s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000768s ]
+
+[ 2016-07-09T21:01:52+08:00 ] ::1 /tp/index.php/Home/Index/modify_rest
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000565s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001122s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001435s ]
+SQL: SHOW COLUMNS FROM `restaurant` [ RunTime:0.0062s ]
+SQL: SELECT * FROM `restaurant` WHERE `account` = '1'  [ RunTime:0.0064s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000091s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000264s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009033s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009330s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000614s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000797s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000764s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000903s ]
+
+[ 2016-07-09T21:04:57+08:00 ] ::1 /tp/index.php/Home/Index/modify_rest
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000048s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000852s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000752s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000885s ]
+SQL: SHOW COLUMNS FROM `restaurant` [ RunTime:0.0118s ]
+SQL: SELECT * FROM `restaurant` WHERE `account` = '1'  [ RunTime:0.0081s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000195s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000321s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010472s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010737s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000524s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000639s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000751s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000903s ]
+
+[ 2016-07-09T21:12:00+08:00 ] ::1 /tp/index.php/Home/Index/modify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002046s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000744s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000899s ]
+SQL: SHOW COLUMNS FROM `restaurant` [ RunTime:0.0065s ]
+NOTIC: [8] Use of undefined constant account - assumed 'account' C:\wamp\www\tp\Application\Home\Controller\IndexController.class.php 第 245 行.
+SQL: UPDATE `restaurant` SET `account`='1',`password`='123456',`phoneNum`='62232062',`rest_name`='味多美',`province`='北京',`city`='北京',`zone`='海淀',`addr`='北京交通大学东门',`description`='味多美' [ RunTime:0.0073s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000069s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000193s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007026s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007176s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000641s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000803s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000743s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000870s ]
+
+[ 2016-07-09T21:12:01+08:00 ] ::1 /tp/index.php/Home/Index/home
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000504s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000758s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000887s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000094s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000228s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010140s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010282s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000531s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000659s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000817s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000940s ]
+
+[ 2016-07-09T21:21:18+08:00 ] ::1 /tp/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000069s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001313s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000729s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000859s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000188s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000432s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013150s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013406s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000826s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001009s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000733s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000852s ]
+
+[ 2016-07-09T21:21:21+08:00 ] ::1 /tp/index.php/Home/Index/modify_rest
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000512s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000833s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000982s ]
+SQL: SHOW COLUMNS FROM `restaurant` [ RunTime:0.0072s ]
+SQL: SELECT * FROM `restaurant` WHERE `account` = '1'  [ RunTime:0.0077s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000098s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000248s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009820s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009993s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000647s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000786s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000825s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2016-07-09T21:21:31+08:00 ] ::1 /tp/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000468s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000703s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000826s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000147s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000391s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012483s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012630s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000575s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000732s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000687s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000829s ]
+
+[ 2016-07-09T21:23:17+08:00 ] ::1 /tp/index.php/Home/Index/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000046s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000757s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001595s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001818s ]
+SQL: SHOW COLUMNS FROM `restaurant` [ RunTime:0.0065s ]
+SQL: SELECT * FROM `restaurant` WHERE `account` = '小杨楼私房菜馆' AND `rest_no` > 0 LIMIT 1   [ RunTime:0.0059s ]
+SQL: INSERT INTO `restaurant` (`account`,`password`,`phoneNum`,`rest_name`,`province`,`city`,`zone`,`addr`,`description`) VALUES ('小杨楼私房菜馆','123456','62259110','小杨楼私房菜馆','北京','北京','海淀','北京市海淀区交大东路52号院','家常菜') [ RunTime:0.0157s ]
+NOTIC: [8] A session had already been started - ignoring session_start() C:\wamp\www\tp\Application\Home\Controller\IndexController.class.php 第 57 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000070s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000195s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007832s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008068s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000822s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000992s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000763s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000882s ]
+
+[ 2016-07-09T21:23:18+08:00 ] ::1 /tp/index.php/Home/Index/modify_rest
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000698s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001143s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001357s ]
+SQL: SHOW COLUMNS FROM `restaurant` [ RunTime:0.0058s ]
+SQL: SELECT * FROM `restaurant` WHERE `account` = '小杨楼私房菜馆'  [ RunTime:0.0062s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000082s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000216s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008410s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008561s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000567s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000692s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000707s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000824s ]
+
+[ 2016-07-09T21:24:20+08:00 ] ::1 /tp/index.php/Home/Index/modify_rest
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000050s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000783s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000792s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000938s ]
+SQL: SHOW COLUMNS FROM `restaurant` [ RunTime:0.0065s ]
+SQL: SELECT * FROM `restaurant` WHERE `account` = '小杨楼私房菜馆'  [ RunTime:0.0060s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000106s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000245s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011936s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012240s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000606s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000734s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000801s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000927s ]
+
+[ 2016-07-09T21:25:01+08:00 ] ::1 /tp/index.php/Home/Index/modify_rest
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000520s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003323s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003940s ]
+SQL: SHOW COLUMNS FROM `restaurant` [ RunTime:0.0065s ]
+SQL: SELECT * FROM `restaurant` WHERE `account` = '小杨楼私房菜馆'  [ RunTime:0.0076s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000083s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000211s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010676s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010909s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000572s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000698s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000751s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000921s ]
+
+[ 2016-07-09T21:25:45+08:00 ] ::1 /tp/index.php/Home/Index/modify_rest
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000514s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004500s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004896s ]
+SQL: SHOW COLUMNS FROM `restaurant` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `restaurant` WHERE `account` = '小杨楼私房菜馆'  [ RunTime:0.0080s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000082s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000209s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009484s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009792s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001017s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001239s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000946s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001132s ]
+
+[ 2016-07-09T21:26:44+08:00 ] ::1 /tp/index.php/Home/Index/modify_rest
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000049s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001111s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001333s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001549s ]
+SQL: SHOW COLUMNS FROM `restaurant` [ RunTime:0.0062s ]
+SQL: SELECT * FROM `restaurant` WHERE `account` = '小杨楼私房菜馆'  [ RunTime:0.0063s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000086s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000223s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008241s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008398s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000566s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000688s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000755s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000882s ]
+
+[ 2016-07-09T21:31:56+08:00 ] ::1 /tp/index.php/Home/Index/modify_rest
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000637s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001506s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001724s ]
+SQL: SHOW COLUMNS FROM `restaurant` [ RunTime:0.0072s ]
+SQL: SELECT * FROM `restaurant` WHERE `account` = '小杨楼私房菜馆'  [ RunTime:0.0062s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000091s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000277s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009784s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010060s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000708s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000898s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000724s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000872s ]
+
+[ 2016-07-09T21:31:59+08:00 ] ::1 /tp/index.php/Home/Index/modify_rest
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000053s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001153s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000879s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001022s ]
+SQL: SHOW COLUMNS FROM `restaurant` [ RunTime:0.0058s ]
+SQL: SELECT * FROM `restaurant` WHERE `account` = '小杨楼私房菜馆'  [ RunTime:0.0058s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000079s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000205s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008220s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008377s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000547s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000672s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000696s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000813s ]
+
+[ 2016-07-09T21:31:59+08:00 ] ::1 /tp/index.php/Home/Index/modify_rest
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000503s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001597s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001867s ]
+SQL: SHOW COLUMNS FROM `restaurant` [ RunTime:0.0067s ]
+SQL: SELECT * FROM `restaurant` WHERE `account` = '小杨楼私房菜馆'  [ RunTime:0.0063s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000079s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000229s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007507s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007660s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000560s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000674s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000738s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000866s ]
+
+[ 2016-07-09T21:31:59+08:00 ] ::1 /tp/index.php/Home/Index/modify_rest
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000459s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000762s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000894s ]
+SQL: SHOW COLUMNS FROM `restaurant` [ RunTime:0.0058s ]
+SQL: SELECT * FROM `restaurant` WHERE `account` = '小杨楼私房菜馆'  [ RunTime:0.0062s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000081s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000208s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008363s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008519s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000608s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000736s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000735s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000853s ]
+
+[ 2016-07-09T21:32:00+08:00 ] ::1 /tp/index.php/Home/Index/modify_rest
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000717s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001142s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001348s ]
+SQL: SHOW COLUMNS FROM `restaurant` [ RunTime:0.0058s ]
+SQL: SELECT * FROM `restaurant` WHERE `account` = '小杨楼私房菜馆'  [ RunTime:0.0057s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000203s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000543s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022579s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023134s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002234s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002862s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001169s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001357s ]
+
+[ 2016-07-09T21:32:00+08:00 ] ::1 /tp/index.php/Home/Index/modify_rest
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000556s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000688s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000836s ]
+SQL: SHOW COLUMNS FROM `restaurant` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `restaurant` WHERE `account` = '小杨楼私房菜馆'  [ RunTime:0.0056s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000080s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000205s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008368s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008592s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000532s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000646s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000693s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000808s ]
+
+[ 2016-07-09T21:32:00+08:00 ] ::1 /tp/index.php/Home/Index/modify_rest
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000737s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000738s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000868s ]
+SQL: SHOW COLUMNS FROM `restaurant` [ RunTime:0.0071s ]
+SQL: SELECT * FROM `restaurant` WHERE `account` = '小杨楼私房菜馆'  [ RunTime:0.0063s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000084s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000218s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008231s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008454s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000588s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000708s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000696s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000813s ]
+
+[ 2016-07-09T21:32:00+08:00 ] ::1 /tp/index.php/Home/Index/modify_rest
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000451s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000774s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000906s ]
+SQL: SHOW COLUMNS FROM `restaurant` [ RunTime:0.0057s ]
+SQL: SELECT * FROM `restaurant` WHERE `account` = '小杨楼私房菜馆'  [ RunTime:0.0057s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000081s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000207s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008210s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008363s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000841s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001014s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001152s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001398s ]
+
+[ 2016-07-09T21:32:00+08:00 ] ::1 /tp/index.php/Home/Index/modify_rest
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000483s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000773s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000925s ]
+SQL: SHOW COLUMNS FROM `restaurant` [ RunTime:0.0062s ]
+SQL: SELECT * FROM `restaurant` WHERE `account` = '小杨楼私房菜馆'  [ RunTime:0.0064s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000080s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000210s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008550s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008711s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000545s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000675s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000687s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000827s ]
+
+[ 2016-07-09T21:33:56+08:00 ] ::1 /tp/index.php/Home/Index/modify_rest
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000561s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001011s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001248s ]
+SQL: SHOW COLUMNS FROM `restaurant` [ RunTime:0.0061s ]
+SQL: SELECT * FROM `restaurant` WHERE `account` = '小杨楼私房菜馆'  [ RunTime:0.0061s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000154s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000424s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010321s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010562s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001056s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001336s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001164s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001334s ]
+
+[ 2016-07-09T21:36:49+08:00 ] ::1 /tp/index.php/Home/Index/modify_rest
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000050s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000831s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000790s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000931s ]
+SQL: SHOW COLUMNS FROM `restaurant` [ RunTime:0.0316s ]
+SQL: SELECT * FROM `restaurant` WHERE `account` = '小杨楼私房菜馆'  [ RunTime:0.0092s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000093s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000256s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008660s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008907s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000672s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000813s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000727s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000857s ]
+
+[ 2016-07-09T21:37:27+08:00 ] ::1 /tp/index.php/Home/Index/modify_rest
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000565s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003957s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004267s ]
+SQL: SHOW COLUMNS FROM `restaurant` [ RunTime:0.0061s ]
+SQL: SELECT * FROM `restaurant` WHERE `account` = '小杨楼私房菜馆'  [ RunTime:0.0071s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000099s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000270s ]
+NOTIC: [8] Undefined variable: password C:\wamp\www\tp\Application\Runtime\Cache\Home\f30006de24f72ae3d68c3a49c79967fb.php 第 63 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010242s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010532s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001262s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001522s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001366s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001794s ]
+

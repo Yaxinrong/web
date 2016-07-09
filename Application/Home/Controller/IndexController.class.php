@@ -196,10 +196,16 @@ class IndexController extends Controller {
         $column=M('Restaurant');
         $condition['account']=$account;
         $information=$column->where($condition)->select();
-        dump($information);
+        $info=$information[0];
      //   $phone=$result_information[phoneNum];
-        $this->assign('phone',$information['phoneNum']);
-
+        $this->assign('phoneNum',$info['phonenum']);
+      //  $this->assign('password',$info['password']);
+        $this->assign('rest_name',$info['rest_name']);
+        $this->assign('description',$info['description']);
+        $this->assign('province',$info['province']);
+        $this->assign('city',$info['city']);
+        $this->assign('zone',$info['zone']);
+        $this->assign('addr',$info['addr']);
         $this->display();
     }
     public function home(){
@@ -210,8 +216,8 @@ class IndexController extends Controller {
         $account=$_SESSION['account'];
 
         $password=$_POST['password'];
-        $password_again=$_POST['password_again'];
-        $phone_num=$_POST['phone_num'];
+        //$password_again=$_POST['password_again'];
+        $phone_num=$_POST['phoneNum'];
         $rest_name=$_POST['rest_name'];
         $description=$_POST['description'];
         $province=$_POST['province'];
@@ -224,10 +230,7 @@ class IndexController extends Controller {
             $this->error('密码、电话、店铺名、店铺描述、省、市、区、详细地址都不能为空','modify_rest');
         }
         else {
-            if ($password != $password_again) {
-                $this->error('两次输入的密码不一致,请重新输入！','modify_rest');
-            }
-            else {
+
                 $User = M("Restaurant"); // 实例化User对象
                 $data['account'] = $account;
                 $data['password'] = $password;
@@ -244,7 +247,7 @@ class IndexController extends Controller {
                     } else {
                         $this->success('修改成功!', 'home');
                     }
-                }
+
         }
     }
 }
