@@ -56,6 +56,7 @@ class IndexController extends Controller {
                     } else {
                         session_start();
                         $_SESSION['account']=$account_register;
+                        $_SESSION['password']=$password_register;
 
                         $this->success('注册成功!', 'modify_rest');
                     }
@@ -137,7 +138,9 @@ class IndexController extends Controller {
                     $this->error('上传失败','uploaddish');
                 }
                 else {
-                    $this->success('上传成功!', 'home');
+                    $this->success('上传成功!', 'modify_dish');
+                    session_start();
+                    $_SESSION['dish_name']=$dish_name;
                 }
 
             }
@@ -214,8 +217,8 @@ class IndexController extends Controller {
     }
     public function modify(){
         $account=$_SESSION['account'];
-
-        $password=$_POST['password'];
+        $password=$_SESSION['password'];
+        //$password=$_POST['password'];
         //$password_again=$_POST['password_again'];
         $phone_num=$_POST['phoneNum'];
         $rest_name=$_POST['rest_name'];
@@ -225,9 +228,9 @@ class IndexController extends Controller {
         $zone=$_POST['zone'];
         $addr=$_POST['addr'];
 
-        if($password=="" || $addr==""|| $city=="" || $description=="" || $phone_num=="" || $province=="" || $rest_name=="" || $zone==""  )
+        if($addr==""|| $city=="" || $description=="" || $phone_num=="" || $province=="" || $rest_name=="" || $zone==""  )
         {
-            $this->error('密码、电话、店铺名、店铺描述、省、市、区、详细地址都不能为空','modify_rest');
+            $this->error('电话、店铺名、店铺描述、省、市、区、详细地址都不能为空','modify_rest');
         }
         else {
 
@@ -241,13 +244,34 @@ class IndexController extends Controller {
                 $data['zone'] = $zone;
                 $data['addr'] = $addr;
                 $data['description'] = $description;
-                    $result = $User->where(account=='$account')->save($data);
+                $condition['account']=$account;
+                    $result = $User->where($condition)->save($data);
                     if (!$result) {
                         $this->error('修改不成功！','modify_rest');
                     } else {
                         $this->success('修改成功!', 'home');
+                       
                     }
 
         }
+    }
+
+
+    public function modify_dish(){
+        $account=$_SESSION['account'];
+        $column=M('Restaurant');
+        $condition['account']=$account;
+        $information=$column->where($condition)->select();
+        $info=$information[0];
+        //   $phone=$result_information[phoneNum];
+        $this->assign('phoneNum',$info['phonenum']);
+        //  $this->assign('password',$info['password']);
+        $this->assign('rest_name',$info['rest_name']);
+        $this->assign('description',$info['description']);
+        $this->assign('province',$info['province']);
+        $this->assign('city',$info['city']);
+        $this->assign('zone',$info['zone']);
+        $this->assign('addr',$info['addr']);
+        $this->display();
     }
 }

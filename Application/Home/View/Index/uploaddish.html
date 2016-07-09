@@ -10,22 +10,7 @@
     <link rel="stylesheet" href="__PUBLIC__/css/recipeadd.css">
     <link rel="stylesheet" href="__PUBLIC__/css/uploadify.css">
 
-    <meta content="IE=Edge,chrome=1" http-equiv="X-UA-Compatible">
-    <link href="/favicon.ico?v=3" rel="shortcut icon">
 
-    <script type="text/javascript">
-        $(function() {
-            $('#file_upload').uploadify({
-                'swf'      : '__PUBLIC__/js/uploadify.swf',
-                'uploader' : '__INDEX__/uploaddish',
-                'buttonText' : '上传成品图',
-                'onUploadSuccess' : function(file, data, response) {
-                    $('#image').attr('src','__PUBLIC__/image/logo.png'+data);
-                    $('#pic').val(data);
-                },
-            });
-        });
-    </script>
 
 <body>
 
