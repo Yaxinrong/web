@@ -5,10 +5,10 @@
     <meta content="" name="description">
     <meta content="webkit" name="renderer">
     <meta content="IE=EmulateIE8" http-equiv="X-UA-Compatible">
-    <link rel="stylesheet" href="/1/Public/css/css.css">
-    <link rel="stylesheet" href="/1/Public/css/recipe.css">
-    <link rel="stylesheet" href="/1/Public/css/recipeadd.css">
-    <link rel="stylesheet" href="/1/Public/css/uploadify.css">
+    <link rel="stylesheet" href="/tp/Public/css/css.css">
+    <link rel="stylesheet" href="/tp/Public/css/recipe.css">
+    <link rel="stylesheet" href="/tp/Public/css/recipeadd.css">
+    <link rel="stylesheet" href="/tp/Public/css/uploadify.css">
 
     <meta content="IE=Edge,chrome=1" http-equiv="X-UA-Compatible">
     <link href="/favicon.ico?v=3" rel="shortcut icon">
@@ -16,11 +16,11 @@
     <script type="text/javascript">
         $(function() {
             $('#file_upload').uploadify({
-                'swf'      : '/1/Public/js/uploadify.swf',
+                'swf'      : '/tp/Public/js/uploadify.swf',
                 'uploader' : '__INDEX__/uploaddish',
                 'buttonText' : '上传成品图',
                 'onUploadSuccess' : function(file, data, response) {
-                    $('#image').attr('src','/1/Public/image/logo.png'+data);
+                    $('#image').attr('src','/tp/Public/image/logo.png'+data);
                     $('#pic').val(data);
                 },
             });
@@ -40,7 +40,7 @@
                 <div class="grid_12">
                     <h1>
                         <a href="index.html">
-                            <img src="/1/Public/image/logo.png" alt="Logo alt">
+                            <img src="/tp/Public/image/logo.png" alt="Logo alt">
                         </a>
                     </h1>
                 </div>
@@ -65,7 +65,7 @@
 
 <!-- 主框架 -->
 <div class="wrap">
-    <form  action="/1/index.php/Home/Index/upload" autocomplete="on" method="post" enctype=”multipart/form-data”>
+    <form  action="/tp/index.php/Home/Index/upload" autocomplete="on" method="post" enctype=”multipart/form-data”>
     <div class="w clear mod">
 
 

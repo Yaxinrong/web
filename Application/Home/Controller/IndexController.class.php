@@ -57,7 +57,7 @@ class IndexController extends Controller {
                         session_start();
                         $_SESSION['account']=$account_register;
 
-                        $this->success('注册成功!', 'uploaddish');
+                        $this->success('注册成功!', 'modify_rest');
                     }
 
                 }
@@ -74,16 +74,23 @@ class IndexController extends Controller {
     }
     public function uploaddish()
     {
-        $this->display();
-    }
-    
-    public function upload()
-    {
-        session_start();
         $rest_name=$_SESSION['account'];
         $column=M('Restaurant');
         $condition['account']=$rest_name;
         $rest_no=$column->where($condition)->field('rest_no')->select();
+        dump($rest_no);
+        $this->display();
+
+    }
+    
+    public function upload()
+    {
+       // session_start();
+        $rest_name=$_SESSION['account'];
+        $column=M('Restaurant');
+        $condition['account']=$rest_name;
+        $rest_no=$column->where($condition)->field('rest_no')->select();
+
         $dish_name = $_POST['dish_name'];
         $finish_pic = $_POST['file_upload'];
         $price = $_POST['price'];
@@ -107,7 +114,8 @@ class IndexController extends Controller {
         else {
 
             $User = M("restdish"); // 实例化User对象
-            $data['rest_no']=(int)$rest_no;
+            $data['rest_no']=$rest_no;
+
             $data['description'] = $description;
             $data['dish_name'] = $dish_name;
             $data['price'] = $price;
@@ -187,10 +195,10 @@ class IndexController extends Controller {
         $account=$_SESSION['account'];
         $column=M('Restaurant');
         $condition['account']=$account;
-        $phone=$column->where($condition)->field('phoneNum')->select();
+        $information=$column->where($condition)->select();
+        dump($information);
      //   $phone=$result_information[phoneNum];
-        dump($phone);
-        $this->assign('phone_num',$phone);
+        $this->assign('phone',$information['phoneNum']);
 
         $this->display();
     }
@@ -200,6 +208,7 @@ class IndexController extends Controller {
     }
     public function modify(){
         $account=$_SESSION['account'];
+
         $password=$_POST['password'];
         $password_again=$_POST['password_again'];
         $phone_num=$_POST['phone_num'];

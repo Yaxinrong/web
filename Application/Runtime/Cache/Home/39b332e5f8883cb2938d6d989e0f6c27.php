@@ -4,9 +4,9 @@
     <title>Home</title>
     <meta charset="utf-8">
     <meta name = "format-detection" content = "telephone=no" />
-    <link rel="stylesheet" href="/1/Public/css/stuck.css">
-    <link rel="stylesheet" href="/1/Public/css/style1.css">
-    <link rel="stylesheet" href="/1/Public/css/touchTouch.css">
+    <link rel="stylesheet" href="/tp/Public/css/stuck.css">
+    <link rel="stylesheet" href="/tp/Public/css/style1.css">
+    <link rel="stylesheet" href="/tp/Public/css/touchTouch.css">
 
 </head>
 
@@ -25,7 +25,7 @@
                 <div class="grid_12">
                     <h1>
                         <a href="index.html">
-                            <img src="/1/Public/image/logo.png" alt="Logo alt">
+                            <img src="/tp/Public/image/logo.png" alt="Logo alt">
                         </a>
                     </h1>
                     <div class="navigation">
@@ -53,10 +53,10 @@
             <div class="grid_4">
                 <div class="banner">
                     <div class="gall_block">
-                        <img src="/1/Public/image/img1.jpg" alt="">
+                        <img src="/tp/Public/image/img1.jpg" alt="">
                         <div class="bann_capt ">
                             <div class="maxheight">
-                                <img src="/1/Public/image/icon1.png" alt="">
+                                <img src="/tp/Public/image/icon1.png" alt="">
                                 <div class="bann_title">My<br>Menu</div>
                                 <a href="#">more</a>
                             </div>
@@ -69,22 +69,22 @@
                     <div class="gall_block">
                         <div class="bann_capt  bn__1">
                             <div class="maxheight">
-                                <img src="/1/Public/image/icon2.png" alt="">
+                                <img src="/tp/Public/image/icon2.png" alt="">
                                 <div class="bann_title">Pay Attention to me</div>
                                 <a href="#">more</a>
                             </div>
                         </div>
-                        <img src="/1/Public/image/img2.jpg" alt="">
+                        <img src="/tp/Public/image/img2.jpg" alt="">
                     </div>
                 </div>
             </div>
             <div class="grid_4">
                 <div class="banner ">
                     <div class="gall_block">
-                        <img src="/1/Public/image/img3.jpg" alt="">
+                        <img src="/tp/Public/image/img3.jpg" alt="">
                         <div class="bann_capt  bn__2">
                             <div class="maxheight">
-                                <img src="/1/Public/image/icon3.png" alt="">
+                                <img src="/tp/Public/image/icon3.png" alt="">
                                 <div class="bann_title">Modify Information</div>
                                 <a href="#">more</a>
                             </div>

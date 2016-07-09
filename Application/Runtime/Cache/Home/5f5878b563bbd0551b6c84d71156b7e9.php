@@ -13,19 +13,19 @@
     <meta name="keywords" content="html5, css3, form, switch, animation, :target, pseudo-class" />
     <meta name="author" content="Codrops" />
     <link rel="shortcut icon" href="../favicon.ico">
-    <link rel="stylesheet" type="text/css" href="/1/Public/css/demo.css" />
-    <link rel="stylesheet" type="text/css" href="/1/Public/css/style.css" />
-    <link rel="stylesheet" type="text/css" href="/1/Public/css/animate-custom.css" />
+    <link rel="stylesheet" type="text/css" href="/tp/Public/css/demo.css" />
+    <link rel="stylesheet" type="text/css" href="/tp/Public/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="/tp/Public/css/animate-custom.css" />
 </head>
 <body>
-<a href="/1/index.php/Home/Index/uploaddish">go_upload</a>
+<a href="/tp/index.php/Home/Index/uploaddish">go_upload</a>
 <div>
-    <a href="/1/index.php/Home/Index/modify_rest">go_queryrest</a>
+    <a href="/tp/index.php/Home/Index/modify_rest">go_queryrest</a>
 
 </div>
 
 <div>
-    <a href="/1/index.php/Home/Index/home">go_home</a>
+    <a href="/tp/index.php/Home/Index/home">go_home</a>
 </div>
 <div class="container">
     <!-- Codrops top bar -->
@@ -48,7 +48,7 @@
             <a class="hiddenanchor" id="tologin"></a>
             <div id="wrapper">
                 <div id="login" class="animate form">
-                    <form  action="/1/index.php/Home/Index/register" autocomplete="on" method="post">
+                    <form  action="/tp/index.php/Home/Index/register" autocomplete="on" method="post">
                         <h1>Log in</h1>
                         <p>
                             <label for="username" class="uname" data-icon="u" > Your email or username </label>
@@ -73,7 +73,7 @@
                 </div>
 
                 <div id="register" class="animate form">
-                    <form  action="/1/index.php/Home/Index/register" autocomplete="on" method="post">
+                    <form  action="/tp/index.php/Home/Index/register" autocomplete="on" method="post">
                         <h1> Sign up </h1>
                         <p>
                             <label for="account_register" class="uname" data-icon="u">Your username</label>

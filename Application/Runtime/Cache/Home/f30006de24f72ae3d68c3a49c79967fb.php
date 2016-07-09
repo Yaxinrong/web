@@ -9,14 +9,14 @@
     <meta content="IE=EmulateIE8" http-equiv="X-UA-Compatible">
     <link href="/favicon.ico?v=3" rel="shortcut icon">
     <link rel="shortcut icon" href="../favicon.ico">
-    <link rel="stylesheet" type="text/css" href="/1/Public/css/demo.css" />
-    <link rel="stylesheet" type="text/css" href="/1/Public/css/style.css" />
-    <link rel="stylesheet" type="text/css" href="/1/Public/css/animate-custom.css" />
-    <link href="/1/Public/css/style2.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/tp/Public/css/demo.css" />
+    <link rel="stylesheet" type="text/css" href="/tp/Public/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="/tp/Public/css/animate-custom.css" />
+    <link href="/tp/Public/css/style2.css" type="text/css" rel="stylesheet">
 </head>
 
 
-<script type="text/javascript" src="/1/Public/js/upssx.js"></script>
+<script type="text/javascript" src="/tp/Public/js/upssx.js"></script>
 <script language="javascript" type="text/javascript">
 
     function convert(){
@@ -69,7 +69,7 @@
                 <div class="grid_12">
                     <h1>
                         <a href="主页.html">
-                            <img src="/1/Public/image/logo.png" alt="Logo alt">
+
                         </a>
                     </h1>
                 </div>
@@ -90,10 +90,10 @@
                 <div class="head"><h2>修改信息</h2></div>
                 <div class="sect cf">
                     <div class="modify-content-left">
-                        <form action="/1/index.php/Home/Index/modify" method="post" id="account-modify-form">
-                            <div class="field-group field-group--phone">
+                        <form action="/tp/index.php/Home/Index/modify" method="post" id="account-modify-form">
+                            <div class="phone">
                                 <label for="account-modify-phone">电  话</label>
-                                <input type="phone" class="f-text" id="account-modify-phone" name="phone_num" size="15" tabindex="2" value="<?php echo ($phone); ?>">
+                                <input type="phone" class="f-text" id="account-modify-phone" name="phone_num" size="15" tabindex="2" value="<?php echo ($information['phoneNum']); ?>">
 
                             </div>
 
