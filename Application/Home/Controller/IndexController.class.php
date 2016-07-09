@@ -55,7 +55,7 @@ class IndexController extends Controller {
                         $this->error('注册不成功！','Index/index#toregister');
                     } else {
                         session_start();
-                        $_SESSION['account']=$_POST['account'];
+                        $_SESSION['account']=$account_register;
 
                         $this->success('注册成功!', 'uploaddish');
                     }
