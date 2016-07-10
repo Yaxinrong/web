@@ -10,22 +10,7 @@
     <link rel="stylesheet" href="/tp/Public/css/recipeadd.css">
     <link rel="stylesheet" href="/tp/Public/css/uploadify.css">
 
-    <meta content="IE=Edge,chrome=1" http-equiv="X-UA-Compatible">
-    <link href="/favicon.ico?v=3" rel="shortcut icon">
 
-    <script type="text/javascript">
-        $(function() {
-            $('#file_upload').uploadify({
-                'swf'      : '/tp/Public/js/uploadify.swf',
-                'uploader' : '__INDEX__/uploaddish',
-                'buttonText' : '上传成品图',
-                'onUploadSuccess' : function(file, data, response) {
-                    $('#image').attr('src','/tp/Public/image/logo.png'+data);
-                    $('#pic').val(data);
-                },
-            });
-        });
-    </script>
 
 <body>
 
@@ -116,10 +101,7 @@
                             <br />
                         </div>
                         -->
-                        <div class="avatar_box"> <img id="image" width="130" height="130" border="0" />
                             <div class="upload_avatar"><input id="file_upload" name="file_upload" type="file" multiple="true" value="" /></div>
-                        </div>
-
                         <span style="font-size: 12px; color:#999; float: left; padding: 8px 0px 0px 10px;" ></span>
 
                     </dd>
@@ -139,12 +121,12 @@
                 <p>
                     <label>请选择菜品种类： </label>
                     <select name="type" class="utype">
-                        <option value="-1">所有类别</option>
-                        <option value="1" >凉菜</option>
-                        <option value="2" >热菜</option>
-                        <option value="3" >汤羹煲炖类</option>
-                        <option value="4" >甜品</option>
-                        <option value="5" >饮品果汁类</option>
+                        <option value="所有类别">所有类别</option>
+                        <option value="凉菜" >凉菜</option>
+                        <option value="热菜" >热菜</option>
+                        <option value="汤羹煲炖类" >汤羹煲炖类</option>
+                        <option value="甜品" >甜品</option>
+                        <option value="饮品果汁类" >饮品果汁类</option>
                     </select>
                 </p>
 

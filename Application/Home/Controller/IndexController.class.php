@@ -4,9 +4,7 @@ use Think\Controller;
 class IndexController extends Controller {
     public function index(){
         $this->display();
-
     }
-
     public function register()
     {
         $account_register=$_POST['account_register'];
@@ -27,13 +25,8 @@ class IndexController extends Controller {
         else {
             if ($password_register != $pwd_again_register) {
                 $this->error('两次输入的密码不一致,请重新输入！','Index/index#toregister');
-//                echo "两次输入的密码不一致,请重新输入！";
-//                echo "<a href='Index.html'>重新输入</a>"
             }
-            //else if($code!=$_SESSION['check'])
-            //{
-            //     echo"验证码错误！";
-            //  }
+           
             else {
                 $User = M("Restaurant"); // 实例化User对象
                 $data['account'] = $account_register;
@@ -58,14 +51,13 @@ class IndexController extends Controller {
                         $_SESSION['account']=$account_register;
                         $_SESSION['password']=$password_register;
 
-                        $this->success('注册成功!', 'modify_rest');
+                        $this->success('注册成功!', 'uploaddish');
                     }
 
                 }
             }
         }
     }
-
     public function checkStatus($name){
         $User = M("Restaurant");
         $map=array();
@@ -78,8 +70,6 @@ class IndexController extends Controller {
         $rest_name=$_SESSION['account'];
         $column=M('Restaurant');
         $condition['account']=$rest_name;
-        $rest_no=$column->where($condition)->field('rest_no')->select();
-        dump($rest_no);
         $this->display();
 
     }
@@ -91,47 +81,32 @@ class IndexController extends Controller {
         $column=M('Restaurant');
         $condition['account']=$rest_name;
         $rest_no=$column->where($condition)->field('rest_no')->select();
-
+        $info=$rest_no[0];
         $dish_name = $_POST['dish_name'];
         $finish_pic = $_POST['file_upload'];
         $price = $_POST['price'];
         $type = $_POST['type'];
         $checked = $_POST['checked'];
         $description = $_POST['description'];
-        import('ORG.Net.UploadFile');
-       //// $pic = new UploadFile();// 实例化上传类
-       // $pic->maxSize  = 3145728 ;// 设置附件上传大小
-      //  $pic->allowExts  = array('jpg', 'gif', 'png', 'jpeg');// 设置附件上传类型
-      //  $pic->savePath =  './Public/Uploads/';// 设置附件上传目录
-       // if(!$pic->upload()) {// 上传错误提示错误信息
-       //     $this->error($pic->getErrorMsg());
-       // }else{// 上传成功 获取上传文件信息
-       //     $info =  $pic->getUploadFileInfo();
-      //  }
-// 保存表单数据 包括附件数据
         if ($dish_name == "" || $price == "" || $type == "" || $description == "") {
             $this->error('菜名、价格、类型、描述都不能为空！','uploaddish');
         }
         else {
-
             $User = M("restdish"); // 实例化User对象
-            $data['rest_no']=$rest_no;
-
+            $data['rest_no']=$info['rest_no'];
             $data['description'] = $description;
             $data['dish_name'] = $dish_name;
             $data['price'] = $price;
             $data['type'] = $type;
+            $data['signature'] = $checked;
             $data['finish_pic']=$finish_pic;
             if($checked)
             {
-                $data['signature'] = 1;
+                $data['signature'] = 'true';
             }
             else {
-                $data['signature'] = 0;
+                $data['signature'] ='false';
             }
-            if (($this->checkStatus($dish_name))) {
-                $this->error('该菜名已存在','uploaddish');
-            } else {
                // $picres= $User->add(); // 写入用户数据到数据库
                 $result = $User->add($data);
                 if (!$result) {
@@ -141,9 +116,9 @@ class IndexController extends Controller {
                     $this->success('上传成功!', 'modify_dish');
                     session_start();
                     $_SESSION['dish_name']=$dish_name;
+                    $_SESSION['rest_no']=$rest_no;
+                    dump($info['rest_no']);
                 }
-
-            }
         }
         }
 
@@ -155,54 +130,16 @@ class IndexController extends Controller {
         return $authInfo=$User->where($map)->find();
     }
 
-  /*  public function uploadify()
-    {
-        if (isset($_FILES['ori_img'])){
-            $upload = new \Think\UploadFile();// 实例化上传类
-            $upload->maxSize = 3000000 ;// 设置附件上传大小  C('UPLOAD_SIZE');
-            //$upload->savePath = './Public/Uploads/' . $path; // 设置附件上传目录
-            $upload->savePath = '__PUBLIC__/image' . 'thumb/'; // 设置附件上传目录
-            $upload->allowExts = array('jpg', 'gif', 'png', 'jpeg'); // 设置附件上传类型
-            $upload->saveRule = 'time';
-            $upload->uploadReplace = true; //是否存在同名文件是否覆盖
-            $upload->thumb = true; //是否对上传文件进行缩略图处理
-            $upload->thumbMaxWidth = '100,300'; //缩略图处理宽度
-            $upload->thumbMaxHeight = '50,150'; //缩略图处理高度
-            //$upload->thumbPrefix = $prefix; //缩略图前缀
-            $upload->thumbPrefix = 'm_,s_';  //生产2张缩略图
-            //$upload->thumbPath = './Public/Uploads/' . $path . date('Ymd', time()) . '/'; //缩略图保存路径
-            $upload->thumbPath = '__PUBLIC__/image' . 'thumb/' . date('Ymd', time()) . '/'; //缩略图保存路径
-
-            //$upload->thumbRemoveOrigin = true; //上传图片后删除原图片
-            $upload->thumbRemoveOrigin = false; //上传图片后删除原图片
-            $upload->autoSub = true; //是否使用子目录保存图片
-            $upload->subType = 'date'; //子目录保存规则
-            $upload->dateFormat = 'Ymd'; //子目录保存规则为date时时间格式
-
-            if (!$upload->upload()) {// 上传错误提示错误信息
-                echo json_encode(array('msg' => $this->error($upload->getErrorMsg()), 'status' => 0));
-            } else {// 上传成功 获取上传文件信息
-                $info = $upload->getUploadFileInfo();
-                $picname = $info[0]['savename'];
-
-                $picname = explode('/', $picname);
-                //$picname = $picname[0] . '/' . $prefix . $picname[1];
-                $picname = $picname[0] . '/' . '_hz' . $picname[1];
-                print_r($picname);
-                echo json_encode(array('status' => 1, 'msg' => $picname));
-            }
-        }
-    }
-*/
+  
     public function modify_rest(){
         $account=$_SESSION['account'];
         $column=M('Restaurant');
         $condition['account']=$account;
-        $information=$column->where($condition)->select();
+        $information=$column->where($condition)->find();
         $info=$information[0];
-     //   $phone=$result_information[phoneNum];
+
         $this->assign('phoneNum',$info['phonenum']);
-      //  $this->assign('password',$info['password']);
+
         $this->assign('rest_name',$info['rest_name']);
         $this->assign('description',$info['description']);
         $this->assign('province',$info['province']);
@@ -215,7 +152,7 @@ class IndexController extends Controller {
         $this->display();
 
     }
-    public function modify(){
+    public function modifyReat(){
         $account=$_SESSION['account'];
         $password=$_SESSION['password'];
         //$password=$_POST['password'];
@@ -258,20 +195,68 @@ class IndexController extends Controller {
 
 
     public function modify_dish(){
-        $account=$_SESSION['account'];
-        $column=M('Restaurant');
-        $condition['account']=$account;
-        $information=$column->where($condition)->select();
-        $info=$information[0];
-        //   $phone=$result_information[phoneNum];
-        $this->assign('phoneNum',$info['phonenum']);
-        //  $this->assign('password',$info['password']);
-        $this->assign('rest_name',$info['rest_name']);
-        $this->assign('description',$info['description']);
-        $this->assign('province',$info['province']);
-        $this->assign('city',$info['city']);
-        $this->assign('zone',$info['zone']);
-        $this->assign('addr',$info['addr']);
+        $dish_name=$_SESSION['dish_name'];
+        $column=M('restdish');
+        $condition['dish_name']=$dish_name;
+        $information=$column->where($condition)->find();
+       // dump($information);
+        $this->assign('dish_name',$information['dish_name']);
+        $this->assign('price',$information['price']);
+        $this->assign('type',$information['type']);
+        $this->assign('signature',$information['signature']);
+        $this->assign('description',$information['description']);
         $this->display();
     }
+
+
+
+    public function modifyDish(){
+        $dish_name=$_SESSION['dish_name'];
+        //$rest_no=$_SESSION['rest_no'];
+        $modify_name=$_POST['dish_name'];
+        $price=$_POST['price'];
+        $type=$_POST['type'];
+        $checked=$_POST['signature'];
+        $description=$_POST['description'];
+
+
+        if($description=="" || $price=="" || $type=="")
+        {
+            $this->error('价格，类型，和描述都不能为空','modify_dish');
+        }
+        else {
+
+            $User = M("restdish"); // 实例化User对象
+            $condition['dish_name']=$dish_name;
+            $rest_no=$User->where($condition)->field('rest_no')->find();
+            $finish_pic=$User->where($condition)->field('finish_pic')->find();
+            $data['rest_no'] = $rest_no;
+            $data['description'] = $description;
+            $data['dish_name'] = $modify_name;
+            $data['price'] = $price;
+            $data['type'] = $type;
+            if($checked)
+            {
+                $data['signature'] = 'true';
+            }
+            else {
+                $data['signature'] ='false';
+            }
+            $data['finish_pic'] = $finish_pic;
+
+            $result = $User->where($condition)->save($data);
+            if (!$result) {
+                $this->error('修改不成功！','modify_dish');
+            } else {
+                $this->success('修改成功!', 'home');
+
+            }
+
+        }
+    }
+
+
+
+
+
 }
