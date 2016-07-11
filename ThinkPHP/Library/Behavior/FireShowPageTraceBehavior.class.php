@@ -490,7 +490,11 @@ class FirePHP {
     protected $throwAssertionExceptions = false;
 
     /**
+<<<<<<< HEAD
      * Wildfire protocol message index
+=======
+     * Wildfire protocol message Index
+>>>>>>> a5e08416349912c053d12d314143e9ac576a31d2
      *
      * @var int
      */

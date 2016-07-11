@@ -13,6 +13,7 @@
     <meta name="keywords" content="html5, css3, form, switch, animation, :target, pseudo-class" />
     <meta name="author" content="Codrops" />
     <link rel="shortcut icon" href="../favicon.ico">
+<<<<<<< HEAD
     <link rel="stylesheet" type="text/css" href="/hhw/Public/css/demo.css" />
     <link rel="stylesheet" type="text/css" href="/hhw/Public/css/style.css" />
     <link rel="stylesheet" type="text/css" href="/hhw/Public/css/animate-custom.css" />
@@ -29,6 +30,18 @@
                         <strong>Back to the Codrops Article</strong>
                     </a>
                 </span>
+=======
+    <link rel="stylesheet" type="text/css" href="/1/Public/css/demo.css" />
+    <link rel="stylesheet" type="text/css" href="/1/Public/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="/1/Public/css/animate-custom.css" />
+</head>
+<body>
+<a href="/1/index.php/Home/Index/uploaddish">go</a>
+<div class="container">
+    <!-- Codrops top bar -->
+    <div class="codrops-top">
+
+>>>>>>> a5e08416349912c053d12d314143e9ac576a31d2
         <div class="clr"></div>
     </div><!--/ Codrops top bar -->
     <header>
@@ -46,6 +59,7 @@
             <a class="hiddenanchor" id="tologin"></a>
             <div id="wrapper">
                 <div id="login" class="animate form">
+<<<<<<< HEAD
                     <form  action="/hhw/index.php/Home/Index/check" autocomplete="on" method="post">
                         <h1>Log in</h1>
                         <p>
@@ -55,6 +69,17 @@
                         <p>
                             <label for="password" class="youpasswd" data-icon="p"> Your password </label>
                             <input id="password" name="password" required="required" type="password" placeholder="eg. X8df!90EO" />
+=======
+                    <form  action="/1/index.php/Home/Index/register" autocomplete="on" method="post">
+                        <h1>Log in</h1>
+                        <p>
+                            <label for="username" class="uname" data-icon="u" > Your email or username </label>
+                            <input id="username" name="account_login" required="required" type="text" placeholder="myusername or mymail@mail.com"/>
+                        </p>
+                        <p>
+                            <label for="password" class="youpasswd" data-icon="p"> Your password </label>
+                            <input id="password" name="password_login" required="required" type="password" placeholder="eg. X8df!90EO" />
+>>>>>>> a5e08416349912c053d12d314143e9ac576a31d2
                         </p>
                         <p class="keeplogin">
                             <input type="checkbox" name="loginkeeping" id="loginkeeping" value="loginkeeping" />
@@ -71,7 +96,11 @@
                 </div>
 
                 <div id="register" class="animate form">
+<<<<<<< HEAD
                     <form  action="/hhw/index.php/Home/Index/register" autocomplete="on" method="post">
+=======
+                    <form  action="/1/index.php/Home/Index/register" autocomplete="on" method="post">
+>>>>>>> a5e08416349912c053d12d314143e9ac576a31d2
                         <h1> Sign up </h1>
                         <p>
                             <label for="account_register" class="uname" data-icon="u">Your username</label>
@@ -120,6 +149,10 @@
                             <label for="addr" class="uaddr" >Your address </label>
                             <input id="addr" name="addr" required="required" type="text" placeholder="Your address..." />
                         </p>
+<<<<<<< HEAD
+=======
+
+>>>>>>> a5e08416349912c053d12d314143e9ac576a31d2
                         <p class="signin button">
                             <input type="submit" value="Sign up"/>
                         </p>

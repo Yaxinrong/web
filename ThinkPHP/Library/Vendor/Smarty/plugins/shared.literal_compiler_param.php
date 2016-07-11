@@ -10,7 +10,11 @@
  * evaluate compiler parameter
  *
  * @param array   $params  parameter array as given to the compiler function
+<<<<<<< HEAD
  * @param integer $index   array index of the parameter to convert
+=======
+ * @param integer $index   array Index of the parameter to convert
+>>>>>>> a5e08416349912c053d12d314143e9ac576a31d2
  * @param mixed   $default value to be returned if the parameter is not present
  * @return mixed evaluated value of parameter or $default
  * @throws SmartyException if parameter is not a literal (but an expression, variable, …)

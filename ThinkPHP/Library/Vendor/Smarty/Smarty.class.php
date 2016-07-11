@@ -825,7 +825,11 @@ class Smarty extends Smarty_Internal_TemplateBase {
                 }
             }
         } elseif ($key !== null) {
+<<<<<<< HEAD
             // override directory at specified index
+=======
+            // override directory at specified Index
+>>>>>>> a5e08416349912c053d12d314143e9ac576a31d2
             $this->template_dir[$key] = rtrim($template_dir, '/\\') . DS;
         } else {
             // append new directory
@@ -838,8 +842,13 @@ class Smarty extends Smarty_Internal_TemplateBase {
     /**
     * Get template directories
     *
+<<<<<<< HEAD
     * @param mixed index of directory to get, null to get all
     * @return array|string list of template directories, or directory of $index
+=======
+    * @param mixed Index of directory to get, null to get all
+    * @return array|string list of template directories, or directory of $Index
+>>>>>>> a5e08416349912c053d12d314143e9ac576a31d2
     */
     public function getTemplateDir($index=null)
     {
@@ -890,7 +899,11 @@ class Smarty extends Smarty_Internal_TemplateBase {
                 }
             }
         } elseif( $key !== null ) {
+<<<<<<< HEAD
             // override directory at specified index
+=======
+            // override directory at specified Index
+>>>>>>> a5e08416349912c053d12d314143e9ac576a31d2
             $this->config_dir[$key] = rtrim($config_dir, '/\\') . DS;
         } else {
             // append new directory

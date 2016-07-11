@@ -845,7 +845,11 @@ class Template_Lite_Compiler extends Template_Lite {
 //					$_result .= "['$var']";
 					$parts = explode('.', $var);
 					$section = $parts[0];
+<<<<<<< HEAD
 					$section_prop = isset($parts[1]) ? $parts[1] : 'index';
+=======
+					$section_prop = isset($parts[1]) ? $parts[1] : 'Index';
+>>>>>>> a5e08416349912c053d12d314143e9ac576a31d2
 					$_result .= "[\$this->_sections['$section']['$section_prop']]";
 				}
 			}

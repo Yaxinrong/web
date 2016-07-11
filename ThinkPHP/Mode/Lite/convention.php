@@ -41,7 +41,11 @@ return  array(
     'DEFAULT_THEME'         =>  '',	// 默认模板主题名称
     'DEFAULT_MODULE'        =>  'Home',  // 默认模块
     'DEFAULT_CONTROLLER'    =>  'Index', // 默认控制器名称
+<<<<<<< HEAD
     'DEFAULT_ACTION'        =>  'index', // 默认操作名称
+=======
+    'DEFAULT_ACTION'        =>  'Index', // 默认操作名称
+>>>>>>> a5e08416349912c053d12d314143e9ac576a31d2
     'DEFAULT_CHARSET'       =>  'utf-8', // 默认输出编码
     'DEFAULT_TIMEZONE'      =>  'PRC',	// 默认时区
     'DEFAULT_AJAX_RETURN'   =>  'JSON',  // 默认AJAX 数据返回格式,可选JSON XML ...

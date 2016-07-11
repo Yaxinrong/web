@@ -228,19 +228,31 @@ abstract class Smarty_Resource {
             return $this->fileExists($source, $file) ? $file : false;
         }
 
+<<<<<<< HEAD
         // template_dir index?
+=======
+        // template_dir Index?
+>>>>>>> a5e08416349912c053d12d314143e9ac576a31d2
         if (preg_match('#^\[(?P<key>[^\]]+)\](?P<file>.+)$#', $file, $match)) {
             $_directory = null;
             // try string indexes
             if (isset($_directories[$match['key']])) {
                 $_directory = $_directories[$match['key']];
             } else if (is_numeric($match['key'])) {
+<<<<<<< HEAD
                 // try numeric index
+=======
+                // try numeric Index
+>>>>>>> a5e08416349912c053d12d314143e9ac576a31d2
                 $match['key'] = (int) $match['key'];
                 if (isset($_directories[$match['key']])) {
                     $_directory = $_directories[$match['key']];
                 } else {
+<<<<<<< HEAD
                     // try at location index
+=======
+                    // try at location Index
+>>>>>>> a5e08416349912c053d12d314143e9ac576a31d2
                     $keys = array_keys($_directories);
                     $_directory = $_directories[$keys[$match['key']]];
                 }

@@ -2745,7 +2745,11 @@ static public $yy_action = array(
 #line 2741 "smarty_internal_templateparser.php"
 #line 854 "smarty_internal_templateparser.y"
     function yy_r134(){
+<<<<<<< HEAD
     $this->_retvalue = '['.$this->compiler->compileTag('private_special_variable',array(),'[\'section\'][\''.$this->yystack[$this->yyidx + -1]->minor.'\'][\'index\']').']';
+=======
+    $this->_retvalue = '['.$this->compiler->compileTag('private_special_variable',array(),'[\'section\'][\''.$this->yystack[$this->yyidx + -1]->minor.'\'][\'Index\']').']';
+>>>>>>> a5e08416349912c053d12d314143e9ac576a31d2
     }
 #line 2746 "smarty_internal_templateparser.php"
 #line 858 "smarty_internal_templateparser.y"

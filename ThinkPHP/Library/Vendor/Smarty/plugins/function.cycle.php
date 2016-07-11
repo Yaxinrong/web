@@ -60,7 +60,11 @@ function smarty_function_cycle($params, $template)
     } else {
         if(isset($cycle_vars[$name]['values'])
             && $cycle_vars[$name]['values'] != $params['values'] ) {
+<<<<<<< HEAD
             $cycle_vars[$name]['index'] = 0;
+=======
+            $cycle_vars[$name]['Index'] = 0;
+>>>>>>> a5e08416349912c053d12d314143e9ac576a31d2
         }
         $cycle_vars[$name]['values'] = $params['values'];
     }
@@ -77,26 +81,46 @@ function smarty_function_cycle($params, $template)
         $cycle_array = explode($cycle_vars[$name]['delimiter'],$cycle_vars[$name]['values']);
     }
 
+<<<<<<< HEAD
     if(!isset($cycle_vars[$name]['index']) || $reset ) {
         $cycle_vars[$name]['index'] = 0;
+=======
+    if(!isset($cycle_vars[$name]['Index']) || $reset ) {
+        $cycle_vars[$name]['Index'] = 0;
+>>>>>>> a5e08416349912c053d12d314143e9ac576a31d2
     }
 
     if (isset($params['assign'])) {
         $print = false;
+<<<<<<< HEAD
         $template->assign($params['assign'], $cycle_array[$cycle_vars[$name]['index']]);
     }
 
     if($print) {
         $retval = $cycle_array[$cycle_vars[$name]['index']];
+=======
+        $template->assign($params['assign'], $cycle_array[$cycle_vars[$name]['Index']]);
+    }
+
+    if($print) {
+        $retval = $cycle_array[$cycle_vars[$name]['Index']];
+>>>>>>> a5e08416349912c053d12d314143e9ac576a31d2
     } else {
         $retval = null;
     }
 
     if($advance) {
+<<<<<<< HEAD
         if ( $cycle_vars[$name]['index'] >= count($cycle_array) -1 ) {
             $cycle_vars[$name]['index'] = 0;
         } else {
             $cycle_vars[$name]['index']++;
+=======
+        if ( $cycle_vars[$name]['Index'] >= count($cycle_array) -1 ) {
+            $cycle_vars[$name]['Index'] = 0;
+        } else {
+            $cycle_vars[$name]['Index']++;
+>>>>>>> a5e08416349912c053d12d314143e9ac576a31d2
         }
     }
 

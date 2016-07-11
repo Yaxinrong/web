@@ -113,12 +113,21 @@ function compile_section_start($arguments, &$object)
 
 	$output .= "if ({$section_props}['show']):\n";
 	$output .= "
+<<<<<<< HEAD
 		for ({$section_props}['index'] = {$section_props}['start'], {$section_props}['iteration'] = 1;
 			 {$section_props}['iteration'] <= {$section_props}['total'];
 			 {$section_props}['index'] += {$section_props}['step'], {$section_props}['iteration']++):\n";
 	$output .= "{$section_props}['rownum'] = {$section_props}['iteration'];\n";
 	$output .= "{$section_props}['index_prev'] = {$section_props}['index'] - {$section_props}['step'];\n";
 	$output .= "{$section_props}['index_next'] = {$section_props}['index'] + {$section_props}['step'];\n";
+=======
+		for ({$section_props}['Index'] = {$section_props}['start'], {$section_props}['iteration'] = 1;
+			 {$section_props}['iteration'] <= {$section_props}['total'];
+			 {$section_props}['Index'] += {$section_props}['step'], {$section_props}['iteration']++):\n";
+	$output .= "{$section_props}['rownum'] = {$section_props}['iteration'];\n";
+	$output .= "{$section_props}['index_prev'] = {$section_props}['Index'] - {$section_props}['step'];\n";
+	$output .= "{$section_props}['index_next'] = {$section_props}['Index'] + {$section_props}['step'];\n";
+>>>>>>> a5e08416349912c053d12d314143e9ac576a31d2
 	$output .= "{$section_props}['first']	  = ({$section_props}['iteration'] == 1);\n";
 	$output .= "{$section_props}['last']	   = ({$section_props}['iteration'] == {$section_props}['total']);\n";
 

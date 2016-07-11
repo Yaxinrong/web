@@ -313,7 +313,11 @@ class Smarty_Security {
         $_template_dir = $this->smarty->getTemplateDir();
         $_config_dir = $this->smarty->getConfigDir();
 
+<<<<<<< HEAD
         // check if index is outdated
+=======
+        // check if Index is outdated
+>>>>>>> a5e08416349912c053d12d314143e9ac576a31d2
         if ((!$this->_template_dir || $this->_template_dir !== $_template_dir)
                 || (!$this->_config_dir || $this->_config_dir !== $_config_dir)
                 || (!empty($this->secure_dir) && (!$this->_secure_dir || $this->_secure_dir !== $this->secure_dir))
@@ -324,7 +328,11 @@ class Smarty_Security {
             $_secure = !empty($this->secure_dir);
         }
 
+<<<<<<< HEAD
         // rebuild template dir index
+=======
+        // rebuild template dir Index
+>>>>>>> a5e08416349912c053d12d314143e9ac576a31d2
         if ($_template) {
             $this->_template_dir = $_template_dir;
             foreach ($_template_dir as $directory) {
@@ -333,7 +341,11 @@ class Smarty_Security {
             }
         }
 
+<<<<<<< HEAD
         // rebuild config dir index
+=======
+        // rebuild config dir Index
+>>>>>>> a5e08416349912c053d12d314143e9ac576a31d2
         if ($_config) {
             $this->_config_dir = $_config_dir;
             foreach ($_config_dir as $directory) {
@@ -342,7 +354,11 @@ class Smarty_Security {
             }
         }
 
+<<<<<<< HEAD
         // rebuild secure dir index
+=======
+        // rebuild secure dir Index
+>>>>>>> a5e08416349912c053d12d314143e9ac576a31d2
         if ($_secure) {
             $this->_secure_dir = $this->secure_dir;
             foreach ((array) $this->secure_dir as $directory) {
@@ -388,7 +404,11 @@ class Smarty_Security {
             throw new SmartyException("directory '{$filepath}' not allowed by security setting (no trusted_dir specified)");
         }
 
+<<<<<<< HEAD
         // check if index is outdated
+=======
+        // check if Index is outdated
+>>>>>>> a5e08416349912c053d12d314143e9ac576a31d2
         if (!$this->_trusted_dir || $this->_trusted_dir !== $this->trusted_dir) {
             $this->_php_resource_dir = array();
 

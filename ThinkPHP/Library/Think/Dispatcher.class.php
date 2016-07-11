@@ -30,7 +30,11 @@ class Dispatcher {
         if(isset($_GET[$varPath])) { // 判断URL里面是否有兼容模式参数
             $_SERVER['PATH_INFO'] = $_GET[$varPath];
             unset($_GET[$varPath]);
+<<<<<<< HEAD
         }elseif(IS_CLI){ // CLI模式下 index.php module/controller/action/params/...
+=======
+        }elseif(IS_CLI){ // CLI模式下 Index.php module/controller/action/params/...
+>>>>>>> a5e08416349912c053d12d314143e9ac576a31d2
             $_SERVER['PATH_INFO'] = isset($_SERVER['argv'][1]) ? $_SERVER['argv'][1] : '';
         }
 

@@ -785,7 +785,11 @@ function is_list(array $a) {
 
 /*
  mixed array_ref_search(mixed &$value, array $array)
+<<<<<<< HEAD
  if $value ref in $array, return the index else false
+=======
+ if $value ref in $array, return the Index else false
+>>>>>>> a5e08416349912c053d12d314143e9ac576a31d2
 */
 function array_ref_search(&$value, &$array) {
     if (!is_array($value)) return array_search($value, $array, true);

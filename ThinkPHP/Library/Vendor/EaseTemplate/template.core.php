@@ -404,11 +404,19 @@ class ETCore{
 			){
 		if ($content){
 			//如果没有安全文件则自动创建
+<<<<<<< HEAD
 			if($this->RunType=='Cache' && !is_file($this->CacheDir.'index.htm')){
 				$Ease_name   = 'Ease Template!';
 				$Ease_base   = "<title>$Ease_name</title><a href='http://www.systn.com'>$Ease_name</a>";
 				$this->writer($this->CacheDir.'index.htm',$Ease_base);
 				$this->writer($this->CacheDir.'index.html',$Ease_base);
+=======
+			if($this->RunType=='Cache' && !is_file($this->CacheDir.'Index.htm')){
+				$Ease_name   = 'Ease Template!';
+				$Ease_base   = "<title>$Ease_name</title><a href='http://www.systn.com'>$Ease_name</a>";
+				$this->writer($this->CacheDir.'Index.htm',$Ease_base);
+				$this->writer($this->CacheDir.'Index.html',$Ease_base);
+>>>>>>> a5e08416349912c053d12d314143e9ac576a31d2
 				$this->writer($this->CacheDir.'default.htm',$Ease_base);
 			}
 			

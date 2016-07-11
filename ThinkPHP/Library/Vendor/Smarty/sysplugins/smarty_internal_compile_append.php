@@ -30,6 +30,7 @@ class Smarty_Internal_Compile_Append extends Smarty_Internal_Compile_Assign {
         // the following must be assigned at runtime because it will be overwritten in parent class
         $this->required_attributes = array('var', 'value');
         $this->shorttag_order = array('var', 'value');
+<<<<<<< HEAD
         $this->optional_attributes = array('scope', 'index');
         // check and get attributes
         $_attr = $this->getAttributes($compiler, $args);
@@ -37,6 +38,15 @@ class Smarty_Internal_Compile_Append extends Smarty_Internal_Compile_Assign {
         if (isset($_attr['index'])) {
             $_params['smarty_internal_index'] = '[' . $_attr['index'] . ']';
             unset($_attr['index']);
+=======
+        $this->optional_attributes = array('scope', 'Index');
+        // check and get attributes
+        $_attr = $this->getAttributes($compiler, $args);
+        // map to compile assign attributes
+        if (isset($_attr['Index'])) {
+            $_params['smarty_internal_index'] = '[' . $_attr['Index'] . ']';
+            unset($_attr['Index']);
+>>>>>>> a5e08416349912c053d12d314143e9ac576a31d2
         } else {
             $_params['smarty_internal_index'] = '[]';
         }
