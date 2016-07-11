@@ -14,20 +14,7 @@
   <meta name="apple-mobile-web-app-title" content="Amaze UI" />
   <link rel="stylesheet" href="__PUBLIC__/css/amazeui.min.css"/>
   <link rel="stylesheet" href="__PUBLIC__/css/admin.css">
-  <!--[if lt IE 9]>
-  <script src="__PUBLIC__/js/jquery1.11.1.min.js"></script>
-  <script src="__PUBLIC__/js/modernizr.js"></script>
-  <script src="__PUBLIC__/js/polyfill/rem.min.js"></script>
-  <script src="__PUBLIC__/js/polyfill/respond.min.js"></script>
-  <script src="__PUBLIC__/js/amazeui.legacy.js"></script>
-  <script type="text/javascript">
-  <![endif]-->
 
-  <!--[if (gte IE 9)|!(IE)]><!-->
-  <script src="__PUBLIC__/js/jquery.min.js"></script>
-  <script src="__PUBLIC__/js/amazeui.min.js"></script>
-  <!--<![endif]-->
-  <script src="__PUBLIC__/js/app.js"></script>
 </head>
 <body>
 <!--[if lte IE 9]>
@@ -130,24 +117,13 @@
 
       <div class="am-u-md-3 am-cf">
         <div class="am-fr">
-          <div class="am-input-group am-input-group-sm" >
+          <div class="am-input-group am-input-group-sm" method="post">
             <form  action="__URL__/search" autocomplete="on" method="post" enctype=”multipart/form-data”>
-            <input  id='dishname' name='dishname' type="text" class="am-form-field" value="">
+            <input  id='dishname' name='dishname' type="text" class="am-form-field">
             <span class="am-input-group-btn">
               <input   class="am-btn am-btn-default" type="submit"  id="search" value="搜索" >
-
-           <script type="text/javascript">
-  function chg()
-  {
-    alert($('#dishname').val());
-    $.post("__URL__/admin_table_search?dishname="+$('#dishname').val(),
-            {},function(data){alert(data);}
-           );
-    location.href='admin_table_search.html';
-  }
-  </script>
             </span>
-</form>
+            </form>
           </div>
         </div>
       </div>
@@ -225,6 +201,19 @@
   <p class="am-padding-left">© 2014 AllMobilize, Inc. Licensed under MIT license. <a href="http://www.mycodes.net/" target="_blank">源码之家</a></p>
 </footer>
 
+<!--[if lt IE 9]>
+<script src="__PUBLIC__/js/jquery1.11.1.min.js"></script>
+<script src="__PUBLIC__/js/modernizr.js"></script>
+<script src="__PUBLIC__/js/polyfill/rem.min.js"></script>
+<script src="__PUBLIC__/js/polyfill/respond.min.js"></script>
+<script src="__PUBLIC__/js/amazeui.legacy.js"></script>
+<script type="text/javascript">
+<![endif]-->
 
+<!--[if (gte IE 9)|!(IE)]><!-->
+<script src="__PUBLIC__/js/jquery.min.js"></script>
+<script src="__PUBLIC__/js/amazeui.min.js"></script>
+<!--<![endif]-->
+<script src="__PUBLIC__/js/app.js"></script>
 </body>
 </html>

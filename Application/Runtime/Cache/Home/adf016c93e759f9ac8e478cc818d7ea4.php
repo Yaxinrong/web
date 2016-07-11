@@ -1,4 +1,4 @@
-<!doctype html>
+<?php if (!defined('THINK_PATH')) exit();?><!doctype html>
 <html class="no-js">
 <head>
   <meta charset="utf-8">
@@ -9,25 +9,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <meta name="renderer" content="webkit">
   <meta http-equiv="Cache-Control" content="no-siteapp" />
-  <link rel="icon" type="image/png" href="__PUBLIC__/images/favicon.png">
-  <link rel="apple-touch-icon-precomposed" href="__PUBLIC__/images/app-icon72x72@2x.png">
+  <link rel="icon" type="image/png" href="/hhw/Public/images/favicon.png">
+  <link rel="apple-touch-icon-precomposed" href="/hhw/Public/images/app-icon72x72@2x.png">
   <meta name="apple-mobile-web-app-title" content="Amaze UI" />
-  <link rel="stylesheet" href="__PUBLIC__/css/amazeui.min.css"/>
-  <link rel="stylesheet" href="__PUBLIC__/css/admin.css">
+  <link rel="stylesheet" href="/hhw/Public/css/amazeui.min.css"/>
+  <link rel="stylesheet" href="/hhw/Public/css/admin.css">
   <!--[if lt IE 9]>
-  <script src="__PUBLIC__/js/jquery1.11.1.min.js"></script>
-  <script src="__PUBLIC__/js/modernizr.js"></script>
-  <script src="__PUBLIC__/js/polyfill/rem.min.js"></script>
-  <script src="__PUBLIC__/js/polyfill/respond.min.js"></script>
-  <script src="__PUBLIC__/js/amazeui.legacy.js"></script>
+  <script src="/hhw/Public/js/jquery1.11.1.min.js"></script>
+  <script src="/hhw/Public/js/modernizr.js"></script>
+  <script src="/hhw/Public/js/polyfill/rem.min.js"></script>
+  <script src="/hhw/Public/js/polyfill/respond.min.js"></script>
+  <script src="/hhw/Public/js/amazeui.legacy.js"></script>
   <script type="text/javascript">
   <![endif]-->
 
   <!--[if (gte IE 9)|!(IE)]><!-->
-  <script src="__PUBLIC__/js/jquery.min.js"></script>
-  <script src="__PUBLIC__/js/amazeui.min.js"></script>
+  <script src="/hhw/Public/js/jquery.min.js"></script>
+  <script src="/hhw/Public/js/amazeui.min.js"></script>
   <!--<![endif]-->
-  <script src="__PUBLIC__/js/app.js"></script>
+  <script src="/hhw/Public/js/app.js"></script>
 </head>
 <body>
 <!--[if lte IE 9]>
@@ -48,7 +48,7 @@
       <li><a href="javascript:;"><span class="am-icon-envelope-o"></span> 收件箱 <span class="am-badge am-badge-warning">5</span></a></li>
       <li class="am-dropdown" data-am-dropdown>
         <a class="am-dropdown-toggle" data-am-dropdown-toggle href="javascript:;">
-          <span class="am-icon-users"></span> 欢迎，{$_SESSION['username']} <span class="am-icon-caret-down"></span>
+          <span class="am-icon-users"></span> 欢迎，<?php echo ($_SESSION['username']); ?> <span class="am-icon-caret-down"></span>
         </a>
         <ul class="am-dropdown-content">
           <li><a href="#"><span class="am-icon-user"></span> 资料</a></li>
@@ -131,7 +131,7 @@
       <div class="am-u-md-3 am-cf">
         <div class="am-fr">
           <div class="am-input-group am-input-group-sm" >
-            <form  action="__URL__/search" autocomplete="on" method="post" enctype=”multipart/form-data”>
+            <form  action="/hhw/index.php/Home/Index/search" autocomplete="on" method="post" enctype=”multipart/form-data”>
             <input  id='dishname' name='dishname' type="text" class="am-form-field" value="">
             <span class="am-input-group-btn">
               <input   class="am-btn am-btn-default" type="submit"  id="search" value="搜索" >
@@ -140,7 +140,7 @@
   function chg()
   {
     alert($('#dishname').val());
-    $.post("__URL__/admin_table_search?dishname="+$('#dishname').val(),
+    $.post("/hhw/index.php/Home/Index/admin_table_search?dishname="+$('#dishname').val(),
             {},function(data){alert(data);}
            );
     location.href='admin_table_search.html';
@@ -166,14 +166,13 @@
           <tbody>
 
 
-          <volist name="list" id="vo" >
-            <tr>
+          <?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr>
 
-              <td>{$vo['dish_no']}</td>
-              <td><a href="admin_dish.html">{$vo['dish_name']}</a></td>
-              <td>{$vo['description']}</td>
-              <td>{$vo['price']}</td>
-              <td>{$vo['type']}
+              <td><?php echo ($vo['dish_no']); ?></td>
+              <td><a href="admin_dish.html"><?php echo ($vo['dish_name']); ?></a></td>
+              <td><?php echo ($vo['description']); ?></td>
+              <td><?php echo ($vo['price']); ?></td>
+              <td><?php echo ($vo['type']); ?>
               </td>
               <td>
                 <div class="am-btn-toolbar">
@@ -189,15 +188,14 @@
                     </script>
                   </div>
                 </div>
-              </td>
-          </volist>
+              </td><?php endforeach; endif; else: echo "" ;endif; ?>
             </tr>
 
           </tbody>
         </table>
           <div class="am-cf">
             <div class="sum">
-              共 {$sum} 条记录
+              共 <?php echo ($sum); ?> 条记录
           </div>
   <div class="am-fr">
     <ul class="am-pagination">
@@ -207,7 +205,7 @@
     </ul>
   </div>
 </div>
-          <div>{$page}</div>
+          <div><?php echo ($page); ?></div>
 
 
           <hr />
