@@ -4,7 +4,6 @@ use Think\Controller;
 class IndexController extends Controller {
     public function index(){
         $this->display();
-<<<<<<< HEAD
 
     }
     public function check()
@@ -12,15 +11,12 @@ class IndexController extends Controller {
         $name = $_POST['username'];
         $password = $_POST['password'];
         if ($name == "") {
-
             echo "请填写用户名<br>";
             echo "<script type='text/javascript'>alert('请填写用户名');
         </script>";
 
 
         } elseif ($password == "") {
-
-            //echo "请填写密码<br><a href='login.php'>返回</a>";
             echo "<script type='text/javascript'>alert('请填写密码');</script>";
 
         } else {
@@ -28,7 +24,6 @@ class IndexController extends Controller {
             $condition['account'] = $name;
             $condition['password'] = $password;
             $result = $colum->where($condition)->select();
-
 
             if ( $result) {
 
@@ -38,10 +33,9 @@ class IndexController extends Controller {
 
             } else
                 $this->success("密码错误！", U("Index/index"));
+
         }
 
-=======
->>>>>>> a5e08416349912c053d12d314143e9ac576a31d2
     }
     public function register()
     {
@@ -64,10 +58,6 @@ class IndexController extends Controller {
             if ($password_register != $pwd_again_register) {
                 $this->error('两次输入的密码不一致,请重新输入！','Index/index#toregister');
             }
-<<<<<<< HEAD
-=======
-           
->>>>>>> a5e08416349912c053d12d314143e9ac576a31d2
             else {
                 $User = M("Restaurant"); // 实例化User对象
                 $data['account'] = $account_register;
@@ -91,12 +81,9 @@ class IndexController extends Controller {
                         session_start();
                         $_SESSION['account']=$account_register;
                         $_SESSION['password']=$password_register;
-<<<<<<< HEAD
-                        $this->success("注册成功！", U("Index/admin_user"));
-=======
 
-                        $this->success('注册成功!', 'uploaddish');
->>>>>>> a5e08416349912c053d12d314143e9ac576a31d2
+                     //   $this->success('注册成功!', 'modify_rest');
+                        $this->success("注册成功！", U("Index/admin_user"));
                     }
 
                 }
@@ -110,7 +97,6 @@ class IndexController extends Controller {
         $map['rest_no']=array('gt',0);
         return $authInfo=$User->where($map)->find();
     }
-<<<<<<< HEAD
 
     public function admin_user()
 {
@@ -119,7 +105,9 @@ class IndexController extends Controller {
     $condition['account']=$account;
     $information=$column->where($condition)->select();
     $info=$information[0];
+    //   $phone=$result_information[phoneNum];
     $this->assign('phoneNum',$info['phonenum']);
+    //  $this->assign('password',$info['password']);
     $this->assign('rest_name',$info['rest_name']);
     $this->assign('description',$info['description']);
     $this->assign('province',$info['province']);
@@ -140,36 +128,25 @@ class IndexController extends Controller {
     }
     public function admin_table()
     {
-
         $name = $_SESSION['username'];
         $colum = M("Restaurant");
-
         $condition['account'] =$name ;
         $restno = $colum->where($condition)->field('rest_no')->select();
         $dish = M("Restdish");
         $info=$restno[0];
       $conditionDish['rest_no'] =$info['rest_no'];
-
         $resultDish = $dish->where($conditionDish)->select();
-
         $dishname = $dish->where($conditionDish)->field('dish_name')->select();
         $i=$dishname[0];
         $_SESSION['dishname']=$i['dish_name'];
-
         $sum = count($resultDish);//获得当前总数
-    
         $p =new \Think\Page($sum, 10);
         $page = $p->show();
         $list = $dish->where($conditionDish)->limit($p->firstRow.','.$p->listRows)->select();
-     
         $this->assign('list',$list);
         $this->assign('page', $page);
         $this->assign('sum',$sum);
-        
-
 $this->display();
-     
-      
 }
     public function admin_table_search()
     {
@@ -183,116 +160,17 @@ $this->display();
             $result = $colum->query("select * from restdish where dish_name like '%$dish%' ");
             $this->assign('list',$result);
             $this->display();
-
         }
-
     }
     public function search()
     {
-
         $dish = $_POST['dishname'];
         $_SESSION['dishname']=$dish;
         $this->success("搜索成功！", U("Index/admin_table_search"));
-
-
     }
     public function modify(){
         $account=$_SESSION['username'];
         $password=$_SESSION['password'];
-=======
-    public function uploaddish()
-    {
-        $rest_name=$_SESSION['account'];
-        $column=M('Restaurant');
-        $condition['account']=$rest_name;
-        $this->display();
-
-    }
-    
-    public function upload()
-    {
-       // session_start();
-        $rest_name=$_SESSION['account'];
-        $column=M('Restaurant');
-        $condition['account']=$rest_name;
-        $rest_no=$column->where($condition)->field('rest_no')->select();
-        $info=$rest_no[0];
-        $dish_name = $_POST['dish_name'];
-        $finish_pic = $_POST['file_upload'];
-        $price = $_POST['price'];
-        $type = $_POST['type'];
-        $checked = $_POST['checked'];
-        $description = $_POST['description'];
-        if ($dish_name == "" || $price == "" || $type == "" || $description == "") {
-            $this->error('菜名、价格、类型、描述都不能为空！','uploaddish');
-        }
-        else {
-            $User = M("restdish"); // 实例化User对象
-            $data['rest_no']=$info['rest_no'];
-            $data['description'] = $description;
-            $data['dish_name'] = $dish_name;
-            $data['price'] = $price;
-            $data['type'] = $type;
-            $data['signature'] = $checked;
-            $data['finish_pic']=$finish_pic;
-            if($checked)
-            {
-                $data['signature'] = 'true';
-            }
-            else {
-                $data['signature'] ='false';
-            }
-               // $picres= $User->add(); // 写入用户数据到数据库
-                $result = $User->add($data);
-                if (!$result) {
-                    $this->error('上传失败','uploaddish');
-                }
-                else {
-                    $this->success('上传成功!', 'modify_dish');
-                    session_start();
-                    $_SESSION['dish_name']=$dish_name;
-                    $_SESSION['rest_no']=$rest_no;
-                    dump($info['rest_no']);
-                }
-        }
-        }
-
-    public function checkDish($dish_name){
-        $User = M("restdish");
-        $map=array();
-        $map['dish_name']=$dish_name;
-        $map['dish_no']=array('gt',0);
-        return $authInfo=$User->where($map)->find();
-    }
-
-  
-    public function modify_rest(){
-        $account=$_SESSION['account'];
-        $column=M('Restaurant');
-        $condition['account']=$account;
-        $information=$column->where($condition)->find();
-        $info=$information[0];
-
-        $this->assign('phoneNum',$info['phonenum']);
-
-        $this->assign('rest_name',$info['rest_name']);
-        $this->assign('description',$info['description']);
-        $this->assign('province',$info['province']);
-        $this->assign('city',$info['city']);
-        $this->assign('zone',$info['zone']);
-        $this->assign('addr',$info['addr']);
-        $this->display();
-    }
-    public function home(){
-        $this->display();
-
-    }
-    public function modifyReat(){
-        $account=$_SESSION['account'];
-        $password=$_SESSION['password'];
-        //$password=$_POST['password'];
-        //$password_again=$_POST['password_again'];
->>>>>>> a5e08416349912c053d12d314143e9ac576a31d2
         $phone_num=$_POST['phoneNum'];
         $rest_name=$_POST['rest_name'];
         $description=$_POST['description'];
@@ -300,10 +178,8 @@ $this->display();
         $city=$_POST['city'];
         $zone=$_POST['zone'];
         $addr=$_POST['addr'];
-
         if($addr==""|| $city=="" || $description=="" || $phone_num=="" || $province=="" || $rest_name=="" || $zone==""  )
         {
-<<<<<<< HEAD
             $this->error('电话、店铺名、店铺描述、省、市、区、详细地址都不能为空','admin_user');
         }
         else {
@@ -324,9 +200,7 @@ $this->display();
                 $this->error('修改不成功！','admin_user');
             } else {
                 $this->success("修改成功！", U("Index/admin_user"));
-
             }
-
         }
     }
     public function upload()
@@ -348,7 +222,7 @@ $this->display();
         else {
             $User = M("restdish"); // 实例化User对象
 
-            $data['rest_no']=$info['rest_no'];
+                        $data['rest_no']=$info['rest_no'];
             $data['description'] = $description;
             $data['dish_name'] = $dish_name;
             $data['price'] = $price;
@@ -357,58 +231,57 @@ $this->display();
             $data['finish_pic']=$finish_pic;
             if($checked)
             {
-
-                $data['signature'] = 'true';
+                                $data['signature'] = 'true';
             }
             else {
 
-                $data['signature'] ='false';
+                               $data['signature'] ='false';
             }
-             $result = $User->add($data);
+
+            //上传文件
+            $upload = new \Think\Upload();// 实例化上传类
+            $upload->maxSize=10145728;//大小
+            $upload->saveName=$_POST['file'];
+            $upload->exts=array('jpg','png','gif','jpeg');//类型
+            $upload->rootPath  ='./Public/Dish_img/'; // 设置附件上传根目录
+            $upload->savePath  =''; // 设置附件上传（子）目录
+            $fileName=$_POST['file'];
+          //  $fileExtensions=strrchr($fileName, '.');
+           // $fileName = trim($fileName,$fileExtensions);
+          //  $upload->saveName= $fileName;
+            $data['finish_pic']='http://localhost/tp/PUBLIC/Dish_img/right/'.$fileName;
+           /* dump($data);
+            $info   =   $upload->upload();
+
+
+            //生成缩略图
+            $image = new \Think\Image();
+            $image->open($data['finish_pic']);
+            $savename =$data['finish_pic'];
+            if($image->width() > 80){
+                $image->thumb(80, 60,\Think\Image::IMAGE_THUMB_CENTER)->save($savename);
+            }else{
+                $image->save($savename);
+            }*/
+            $result = $User->add($data);
                 if (!$result) {
                     $this->error('上传失败', 'admin_dish');
                 } else {
                     $this->success('上传成功!', 'admin_table');
                     session_start();
-                    $_SESSION['dish_name'] = $dish_name;
                 }
             }
 
         }
-=======
-            $this->error('电话、店铺名、店铺描述、省、市、区、详细地址都不能为空','modify_rest');
-        }
-        else {
-
-                $User = M("Restaurant"); // 实例化User对象
-                $data['account'] = $account;
-                $data['password'] = $password;
-                $data['phoneNum'] = $phone_num;
-                $data['rest_name'] = $rest_name;
-                $data['province'] = $province;
-                $data['city'] = $city;
-                $data['zone'] = $zone;
-                $data['addr'] = $addr;
-                $data['description'] = $description;
-                $condition['account']=$account;
-                    $result = $User->where($condition)->save($data);
-                    if (!$result) {
-                        $this->error('修改不成功！','modify_rest');
-                    } else {
-                        $this->success('修改成功!', 'home');
-                       
-                    }
-
-        }
-    }
 
 
-    public function modify_dish(){
-        $dish_name=$_SESSION['dish_name'];
+
+
+    public function admin_modify_dish(){
+        $dish_name=$_SESSION['dishname'];
         $column=M('restdish');
         $condition['dish_name']=$dish_name;
         $information=$column->where($condition)->find();
-       // dump($information);
         $this->assign('dish_name',$information['dish_name']);
         $this->assign('price',$information['price']);
         $this->assign('type',$information['type']);
@@ -420,7 +293,8 @@ $this->display();
 
 
     public function modifyDish(){
-        $dish_name=$_SESSION['dish_name'];
+       // $dish_name=$_SESSION['dish_name'];
+       $dish_name= $_SESSION['dishname'];
         //$rest_no=$_SESSION['rest_no'];
         $modify_name=$_POST['dish_name'];
         $price=$_POST['price'];
@@ -431,7 +305,7 @@ $this->display();
 
         if($description=="" || $price=="" || $type=="")
         {
-            $this->error('价格，类型，和描述都不能为空','modify_dish');
+            $this->error('价格，类型，和描述都不能为空','admin_modify_dish');
         }
         else {
 
@@ -455,17 +329,56 @@ $this->display();
 
             $result = $User->where($condition)->save($data);
             if (!$result) {
-                $this->error('修改不成功！','modify_dish');
+                $this->error('修改不成功！','admin_modify_dish');
             } else {
-                $this->success('修改成功!', 'home');
+                $this->success('修改成功!', 'admin_table');
 
             }
 
         }
     }
+    public function admin_changePassword(){
+        $this->display();
+    }
+    public function modifyPassword(){
+        $rest_name=$_SESSION['username'];
+        $column=M('Restaurant');
+        $condition['account']=$rest_name;
+        $password=$column->where($condition)->field('password')->select();
+        $info=$password[0];
+        $p=$info['password'];
+        $oldPassword = $_POST['oldpassword'];
+        $newPassword = $_POST['newpassword'];
+        $confirmPassword = $_POST['confirm'];
+        if( $oldPassword!=$p){
+            $this->error('原先密码不正确！','admin_changePassword');
+        }else if( $newPassword !=$confirmPassword){
+            $this->error('确认密码与设置密码不一致！','admin_changePassword');
+        }else{
+            $result = $column->execute("update restaurant set password='$newPassword' where account='$rest_name'");
+            if( $result){
+                $this->success('密码修改成功！','admin_user');
 
+            }else{
+                $this->error('密码修改不成功！','admin_user');
 
->>>>>>> a5e08416349912c053d12d314143e9ac576a31d2
+            }
+        }
+
+    }
+    public function admin_log(){
+        $rest_name=$_SESSION['username'];
+        $column=M('Restaurant');
+        $condition['account']=$rest_name;
+        $rest_no=$column->where($condition)->field('rest_no')->select();
+        $info=$rest_no[0];
+        $conditionDish['rest_no'] =$info['rest_no'];
+        $comment=M('Comment');
+        $resultDish = $comment->where($conditionDish)->select();
+        $this->assign('list',$resultDish);
+        $this->display();
+    }
+
 
 
 

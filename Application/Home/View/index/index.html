@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <!--[if lt IE 7 ]> <html lang="en" class="no-js ie6 lt8"> <![endif]-->
 <!--[if IE 7 ]>    <html lang="en" class="no-js ie7 lt8"> <![endif]-->
 <!--[if IE 8 ]>    <html lang="en" class="no-js ie8 lt8"> <![endif]-->
@@ -18,19 +18,17 @@
     <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/animate-custom.css" />
 </head>
 <body>
-<a href="__URL__/uploaddish">go_upload</a>
-<div>
-    <a href="__URL__/modify_rest">go_queryrest</a>
-
-</div>
-
-<div>
-    <a href="__URL__/home">go_home</a>
-</div>
 <div class="container">
     <!-- Codrops top bar -->
     <div class="codrops-top">
-
+        <a href="">
+            <strong>&laquo; Previous Demo: </strong>Responsive Content Navigator
+        </a>
+                <span class="right">
+                    <a href=" http://tympanus.net/codrops/2012/03/27/login-and-registration-form-with-html5-and-css3/">
+                        <strong>Back to the Codrops Article</strong>
+                    </a>
+                </span>
         <div class="clr"></div>
     </div><!--/ Codrops top bar -->
     <header>
@@ -48,15 +46,15 @@
             <a class="hiddenanchor" id="tologin"></a>
             <div id="wrapper">
                 <div id="login" class="animate form">
-                    <form  action="__URL__/register" autocomplete="on" method="post">
+                    <form  action="__URL__/check" autocomplete="on" method="post">
                         <h1>Log in</h1>
                         <p>
                             <label for="username" class="uname" data-icon="u" > Your email or username </label>
-                            <input id="username" name="account_login" required="required" type="text" placeholder="myusername or mymail@mail.com"/>
+                            <input id="username" name="username" required="required" type="text" placeholder="myusername or mymail@mail.com"/>
                         </p>
                         <p>
                             <label for="password" class="youpasswd" data-icon="p"> Your password </label>
-                            <input id="password" name="password_login" required="required" type="password" placeholder="eg. X8df!90EO" />
+                            <input id="password" name="password" required="required" type="password" placeholder="eg. X8df!90EO" />
                         </p>
                         <p class="keeplogin">
                             <input type="checkbox" name="loginkeeping" id="loginkeeping" value="loginkeeping" />
@@ -122,14 +120,12 @@
                             <label for="addr" class="uaddr" >Your address </label>
                             <input id="addr" name="addr" required="required" type="text" placeholder="Your address..." />
                         </p>
-
                         <p class="signin button">
                             <input type="submit" value="Sign up"/>
                         </p>
                         <p class="change_link">
                             Already a member ?
-
-                            //<a href="#tologin" class="to_register"> Go and log in </a>
+                            <a href="#tologin" class="to_register"> Go and log in </a>
                         </p>
                     </form>
                 </div>
@@ -140,5 +136,3 @@
 </div>
 </body>
 </html>
-
-
