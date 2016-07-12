@@ -136,7 +136,7 @@
       </div>
 
       <div class="am-u-sm-12 am-u-md-8 am-u-md-pull-4">
-        <form action="__URL__/upload" autocomplete="on" method="post" enctype=”multipart/form-data class="am-form am-form-horizontal">
+        <form action="__URL__/upload" enctype="multipart/form-data" autocomplete="on" method="post" enctype=”multipart/form-data class="am-form am-form-horizontal">
           <div class="am-form-group">
             <label  class="am-u-sm-3 am-form-label">菜品名称 / Dish Name</label>
             <div class="am-u-sm-9">
@@ -152,15 +152,20 @@
                     <span class="pic">*</span>
                   </dt>
                   <dd>
-                    <div style="width:100%;float:left;padding:10px 20px 20px;background-color:#ccc" >
-                      <p>
-                        <ul class="imagelist" id="image_list"></ul>
-                      </p>
 
-                    </div>
+                    <a class="addphoto">
+                      <input type="file" id="file" name="file" draggable="false" single accept="image/*">
+                    </a>
+                    <!--允许file控件接受的文件类型  single  multiple-->
+                    <div id="destination"></div>
+                    <script src="__PUBLIC__/js/jquery-1.10.1.min.js"></script>
+                    <script src="__PUBLIC__/js/base.js"></script>
+                    <script>
+                      $(function(){
+                        previewImage()
+                      });
 
-                    <div class="upload_avatar"><input id="file" name="file" type="file" multiple="true" ></div>
-                    <span style="font-size: 12px; color:#999; float: left; padding: 8px 0px 0px 10px;" ></span>
+                    </script>
                   </dd>
                 </dl>
               </div>

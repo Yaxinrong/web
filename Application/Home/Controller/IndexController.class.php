@@ -123,7 +123,7 @@ class IndexController extends Controller {
         $rest_name=$_SESSION['username'];
         $column=M('Restaurant');
         $condition['account']=$rest_name;
-        $rest_no=$column->where($condition)->field('rest_no')->select();
+        $rest_no=$column->where($condition)->field('rest_no')->find();
         $this->display();
     }
     public function admin_table()
@@ -239,30 +239,36 @@ $this->display();
             }
 
             //上传文件
+
+//            header("content-type:text/html;charset=utf-8");
             $upload = new \Think\Upload();// 实例化上传类
-            $upload->maxSize=10145728;//大小
+            $upload->maxSize = 3145728;
+            $upload->rootPath = './Uploads/';
+            $upload->savePath = '';
+            $upload->exts     = array('jpg', 'gif', 'png', 'jpeg');
+            $upload->autoSub  = true;
+            $upload->subName  = array('date','Ymd');
+            $upload->saveRule = 'com_create_guid';
             $upload->saveName=$_POST['file'];
-            $upload->exts=array('jpg','png','gif','jpeg');//类型
-            $upload->rootPath  ='./Public/Dish_img/'; // 设置附件上传根目录
-            $upload->savePath  =''; // 设置附件上传（子）目录
-            $fileName=$_POST['file'];
-          //  $fileExtensions=strrchr($fileName, '.');
-           // $fileName = trim($fileName,$fileExtensions);
-          //  $upload->saveName= $fileName;
-            $data['finish_pic']='http://localhost/tp/PUBLIC/Dish_img/right/'.$fileName;
-           /* dump($data);
+           // $upload->exts=array('jpg','png','gif','jpeg');//类型
+           // $upload->rootPath  ='./Uploads/'; // 设置附件上传根目录
+           // $upload->savePath  =''; // 设置附件上传（子）目录
+            //$fileName=$_POST['file'];
+           $fileName=$_FILES["file"]["name"];
+           $fileExtensions=strrchr($fileName, '.');
+            $fileName = trim($fileName,$fileExtensions);
+            $data['finish_pic']=$fileName;
             $info   =   $upload->upload();
-
-
             //生成缩略图
             $image = new \Think\Image();
-            $image->open($data['finish_pic']);
-            $savename =$data['finish_pic'];
+            $realfilepath = './Uploads/'.$info['file']['savepath'].'/';
+            $image->open($realfilepath.$info['file']['savename']);
+            $savename = $realfilepath.'crop_'.$info['file']['savename'];
             if($image->width() > 80){
                 $image->thumb(80, 60,\Think\Image::IMAGE_THUMB_CENTER)->save($savename);
             }else{
                 $image->save($savename);
-            }*/
+            }
             $result = $User->add($data);
                 if (!$result) {
                     $this->error('上传失败', 'admin_dish');
@@ -293,8 +299,10 @@ $this->display();
 
 
     public function modifyDish(){
+
        // $dish_name=$_SESSION['dish_name'];
        $dish_name= $_SESSION['dishname'];
+
         //$rest_no=$_SESSION['rest_no'];
         $modify_name=$_POST['dish_name'];
         $price=$_POST['price'];

@@ -171,6 +171,7 @@
 
               <td>{$vo['dish_no']}</td>
               <td><a href="admin_dish.html">{$vo['dish_name']}</a></td>
+
               <td>{$vo['description']}</td>
               <td>{$vo['price']}</td>
               <td>{$vo['type']}
@@ -179,7 +180,9 @@
                 <div class="am-btn-toolbar">
                   <div class="am-btn-group am-btn-group-xs">
                     <button class="am-btn am-btn-default am-btn-xs am-text-secondary" type="button" onclick="location.href='admin_modify_dish.html'"/><span class="am-icon-pencil-square-o"></span> 编辑</button>
+                    <script type="text/javascript">
 
+                    </script>
                     <button class="am-btn am-btn-default am-btn-xs am-text-danger"onclick="del()"/><span class="am-icon-trash-o"></span> 删除</button>
                     <script type="text/javascript">
                     function del()
