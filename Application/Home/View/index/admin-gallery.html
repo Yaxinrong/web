@@ -34,12 +34,12 @@
       <li><a href="javascript:;"><span class="am-icon-envelope-o"></span> 收件箱 <span class="am-badge am-badge-warning">5</span></a></li>
       <li class="am-dropdown" data-am-dropdown>
         <a class="am-dropdown-toggle" data-am-dropdown-toggle href="javascript:;">
-          <span class="am-icon-users"></span> 管理员 <span class="am-icon-caret-down"></span>
+          <span class="am-icon-users"></span> 欢迎，{$_SESSION['username']}  <span class="am-icon-caret-down"></span>
         </a>
         <ul class="am-dropdown-content">
-          <li><a href="#"><span class="am-icon-user"></span> 资料</a></li>
-          <li><a href="#"><span class="am-icon-cog"></span> 设置</a></li>
-          <li><a href="#"><span class="am-icon-power-off"></span> 退出</a></li>
+          <li><a href="admin_user.html"><span class="am-icon-user"></span> 资料</a></li>
+          <li><a href="admin_changePassword.html"><span class="am-icon-cog"></span> 修改密码</a></li>
+          <li><a href="index.html"><span class="am-icon-power-off"></span> 退出</a></li>
         </ul>
       </li>
       <li><a href="javascript:;" id="admin-fullscreen"><span class="am-icon-arrows-alt"></span> <span class="admin-fullText">开启全屏</span></a></li>
@@ -55,14 +55,14 @@
       <li class="admin-parent">
         <a class="am-cf" data-am-collapse="{target: '#collapse-nav'}"><span class="am-icon-file"></span> 页面模块 <span class="am-icon-angle-right am-fr am-margin-right"></span></a>
         <ul class="am-list am-collapse admin-sidebar-sub am-in" id="collapse-nav">
-          <li><a href="admin-user.html" class="am-cf"><span class="am-icon-check"></span> 个人资料<span class="am-icon-star am-fr am-margin-right admin-icon-yellow"></span></a></li>
+          <li><a href="admin_user.html" class="am-cf"><span class="am-icon-check"></span> 商家资料<span class="am-icon-star am-fr am-margin-right admin-icon-yellow"></span></a></li>
           <li><a href="admin-help.html"><span class="am-icon-puzzle-piece"></span> 帮助页</a></li>
           <li><a href="admin-gallery.html"><span class="am-icon-th"></span> 相册页面<span class="am-badge am-badge-secondary am-margin-right am-fr">24</span></a></li>
-          <li><a href="admin_log.html"><span class="am-icon-calendar"></span> 系统日志</a></li>
-          <li><a href="admin-404.html"><span class="am-icon-bug"></span> 404</a></li>
+          <li><a href="admin_log.html"><span class="am-icon-calendar"></span> 查看评论</a></li>
+          <li><a href="admin_dish.html"><span class="am-icon-bug"></span> 上传新菜</a></li>
         </ul>
       </li>
-      <li><a href="admin_table.html"><span class="am-icon-table"></span> 表格</a></li>
+      <li><a href="admin_table.html"><span class="am-icon-table"></span> 我的菜单</a></li>
       <li><a href="admin-form.html"><span class="am-icon-pencil-square-o"></span> 表单</a></li>
       <li><a href="#"><span class="am-icon-sign-out"></span> 注销</a></li>
     </ul>
@@ -93,91 +93,91 @@
     <ul class="am-avg-sm-2 am-avg-md-4 am-avg-lg-6 am-margin gallery-list">
       <li>
         <a href="#">
-          <img class="am-img-thumbnail am-img-bdrs" src="http://cn.bing.com/az/hprichv/LondonTrainStation_GettyRR_139321755_ZH-CN742316019.jpg" alt=""/>
+          <img class="am-img-thumbnail am-img-bdrs" src="__PUBLIC__/Dish_img/fanshukaoyu.jpg" alt=""/>
           <div class="gallery-title">远方 有一个地方 那里种有我们的梦想</div>
           <div class="gallery-desc">2375-09-26</div>
         </a>
       </li>
       <li>
         <a href="#">
-          <img class="am-img-thumbnail am-img-bdrs" src="http://pic.33.la/tt/1920x1080/webshots_zhiwu-027.jpg" alt=""/>
+          <img class="am-img-thumbnail am-img-bdrs" src="http://locahost/tp/Public/Dish_img/fanshukaoyu.jpg" alt=""/>
           <div class="gallery-title">君可见漫天落霞</div>
           <div class="gallery-desc">2375-09-26</div>
         </a>
       </li>
       <li>
         <a href="#">
-          <img class="am-img-thumbnail am-img-bdrs" src="http://s.cn.bing.net/az/hprichbg/rb/CardinalsBerries_ZH-CN10679090179_1366x768.jpg" alt=""/>
+          <img class="am-img-thumbnail am-img-bdrs" src="http://locahost/tp/Public/Dish_img/fanshukaoyu.jpg" alt=""/>
           <div class="gallery-title">此刻鲜花满天幸福在身边</div>
           <div class="gallery-desc">2375-09-26</div>
         </a>
       </li>
       <li>
         <a href="#">
-          <img class="am-img-thumbnail am-img-bdrs" src="http://s.cn.bing.net/az/hprichbg/rb/QingdaoJiaozhou_ZH-CN10690497202_1366x768.jpg" alt=""/>
+          <img class="am-img-thumbnail am-img-bdrs" src="http://locahost/tp/Public/Dish_img/fanshukaoyu.jpg" alt=""/>
           <div class="gallery-title">你当我是浮夸吧</div>
           <div class="gallery-desc">2375-09-26</div>
         </a>
       </li>
       <li>
         <a href="#">
-          <img class="am-img-thumbnail am-img-bdrs" src="http://s.cn.bing.net/az/hprichbg/rb/FennecFox_ZH-CN13720911949_1366x768.jpg" alt=""/>
+          <img class="am-img-thumbnail am-img-bdrs" src="http://locahost/tp/Public/Dish_img/fanshukaoyu.jpg" alt=""/>
           <div class="gallery-title">远方 有一个地方 那里种有我们的梦想</div>
           <div class="gallery-desc">2375-09-26</div>
         </a>
       </li>
       <li>
         <a href="#">
-          <img class="am-img-thumbnail am-img-bdrs" src="http://cn.bing.com/az/hprichv/LondonTrainStation_GettyRR_139321755_ZH-CN742316019.jpg" alt=""/>
+          <img class="am-img-thumbnail am-img-bdrs" src="" alt=""/>
           <div class="gallery-title">斜阳染幽草 几度飞红</div>
           <div class="gallery-desc">2375-09-26</div>
         </a>
       </li>
       <li>
         <a href="#">
-          <img class="am-img-thumbnail am-img-bdrs" src="http://cn.bing.com/az/hprichv/LondonTrainStation_GettyRR_139321755_ZH-CN742316019.jpg" alt=""/>
+          <img class="am-img-thumbnail am-img-bdrs" src="" alt=""/>
           <div class="gallery-title">远方 有一个地方 那里种有我们的梦想</div>
           <div class="gallery-desc">2375-09-26</div>
         </a>
       </li>
       <li>
         <a href="#">
-          <img class="am-img-thumbnail am-img-bdrs" src="http://s.cn.bing.net/az/hprichbg/rb/FennecFox_ZH-CN13720911949_1366x768.jpg" alt=""/>
+          <img class="am-img-thumbnail am-img-bdrs" src="" alt=""/>
           <div class="gallery-title">你当我是浮夸吧</div>
           <div class="gallery-desc">2375-09-26</div>
         </a>
       </li>
       <li>
         <a href="#">
-          <img class="am-img-thumbnail am-img-bdrs" src="http://s.cn.bing.net/az/hprichbg/rb/QingdaoJiaozhou_ZH-CN10690497202_1366x768.jpg" alt=""/>
+          <img class="am-img-thumbnail am-img-bdrs" src="" alt=""/>
           <div class="gallery-title">远方 有一个地方 那里种有我们的梦想</div>
           <div class="gallery-desc">2375-09-26</div>
         </a>
       </li>
       <li>
         <a href="#">
-          <img class="am-img-thumbnail am-img-bdrs" src="http://pic.33.la/tt/1920x1080/webshots_zhiwu-027.jpg" alt=""/>
+          <img class="am-img-thumbnail am-img-bdrs" src="" alt=""/>
           <div class="gallery-title">君可见漫天落霞</div>
           <div class="gallery-desc">2375-09-26</div>
         </a>
       </li>
       <li>
         <a href="#">
-          <img class="am-img-thumbnail am-img-bdrs" src="http://s.cn.bing.net/az/hprichbg/rb/FennecFox_ZH-CN13720911949_1366x768.jpg" alt=""/>
+          <img class="am-img-thumbnail am-img-bdrs" src="" alt=""/>
           <div class="gallery-title">你当我是浮夸吧</div>
           <div class="gallery-desc">2375-09-26</div>
         </a>
       </li>
       <li>
         <a href="#">
-          <img class="am-img-thumbnail am-img-bdrs" src="http://pic.33.la/tt/1920x1080/webshots_zhiwu-027.jpg" alt=""/>
+          <img class="am-img-thumbnail am-img-bdrs" src="" alt=""/>
           <div class="gallery-title">君可见漫天落霞</div>
           <div class="gallery-desc">2375-09-26</div>
         </a>
       </li>
       <li>
         <a href="#">
-          <img class="am-img-thumbnail am-img-bdrs" src="http://cn.bing.com/az/hprichv/LondonTrainStation_GettyRR_139321755_ZH-CN742316019.jpg" alt=""/>
+          <img class="am-img-thumbnail am-img-bdrs" src="" alt=""/>
           <div class="gallery-title">斜阳染幽草 几度飞红</div>
           <div class="gallery-desc">2375-09-26</div>
         </a>
@@ -205,7 +205,7 @@
 
 <footer>
   <hr>
-  <p class="am-padding-left">© 2014 AllMobilize, Inc. Licensed under MIT license. <a href="http://www.mycodes.net/" target="_blank">源码之家</a></p>
+  <p class="am-padding-left">© 2014 AllMobilize, Inc. Licensed under MIT license. </p>
 </footer>
 
 <!--[if lt IE 9]>

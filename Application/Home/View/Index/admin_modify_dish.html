@@ -15,15 +15,15 @@
   <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/amazeui.min.css"/>
   <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/admin.css">
 </head>
- <script type="text/javascript">
-        function check(){ var val2="{$signature}";
-            if(val2 == "true")
-                document.getElementById("signature").checked=true;
-            else
-                document.getElementById("signature").checked=false;
+<script type="text/javascript">
+  function check(){ var val2="{$signature}";
+    if(val2 == "true")
+      document.getElementById("signature").checked=true;
+    else
+      document.getElementById("signature").checked=false;
 
-        }
-    </script>
+  }
+</script>
 <body>
 <!--[if lte IE 9]>
 <p class="browsehappy">你正在使用<strong>过时</strong>的浏览器，Amaze UI 暂不支持。 请 <a href="http://browsehappy.com/" target="_blank">升级浏览器</a>
@@ -106,16 +106,13 @@
         <div class="am-panel am-panel-default">
           <div class="am-panel-bd">
             <div class="am-g">
-              <div class="am-u-md-4">
-                <img class="am-img-circle am-img-thumbnail" src="http://amui.qiniudn.com/bw-2014-06-19.jpg?imageView/1/w/1000/h/1000/q/80" alt=""/>
+              <div class="am-u-md-4"  >
+                <img class="am-img-circle am-img-thumbnail" name="portrait" src="{$portrait}" />
               </div>
               <div class="am-u-md-8">
                 <p>你可以使用<a href="#">gravatar.com</a>提供的头像或者使用本地上传头像。 </p>
-                <form class="am-form">
+                <form class="am-form" enctype=”multipart/form-data>
                   <div class="am-form-group">
-                    <input type="file" id="user-pic">
-                    <p class="am-form-help">请选择要上传的文件...</p>
-                    <button type="button" class="am-btn am-btn-primary am-btn-xs">保存</button>
                   </div>
                 </form>
               </div>
@@ -173,58 +170,58 @@
           <div class="am-form-group">
             <label  class="am-u-sm-3 am-form-label">菜品价格 / Price</label>
             <div class="am-u-sm-9">
-               <input type="text" value="{$price}" name="price">
+              <input type="text" value="{$price}" name="price">
               <small>价格你懂得...</small>
             </div>
 
 
-          <div class="am-form-group">
-            <label  class="am-u-sm-3 am-form-label">种类 / Type</label>
-            <div class="am-u-sm-9">
-              <p>
-              <select name="type" class="utype" value="{$type}" id="val">
-                            var val1=document.getElementById('val');
-                            if(val1== "热菜")
-                            <option value="热菜" >热菜</option>；
-                            else if(val1== "凉菜")
-                            <option value="凉菜" >凉菜</option>；
-                            else if(val1=="汤羹煲炖类")
-                            <option value="汤羹煲炖类" >汤羹煲炖类</option>;
-                            else if(val1=="甜品")
-                            <option value="甜品" >甜品</option>;
-                            else if(val1=="饮品果汁类")
-                            <option value="饮品果汁类" >饮品果汁类</option>;
-                            else
-                            <option value="val">所有类别</option>；
-                        </select>
+            <div class="am-form-group">
+              <label  class="am-u-sm-3 am-form-label">种类 / Type</label>
+              <div class="am-u-sm-9">
+                <p>
+                  <select name="type" class="utype" value="{$type}" id="val">
+                    var val1=document.getElementById('val');
+                    if(val1== "热菜")
+                    <option value="热菜" >热菜</option>；
+                    else if(val1== "凉菜")
+                    <option value="凉菜" >凉菜</option>；
+                    else if(val1=="汤羹煲炖类")
+                    <option value="汤羹煲炖类" >汤羹煲炖类</option>;
+                    else if(val1=="甜品")
+                    <option value="甜品" >甜品</option>;
+                    else if(val1=="饮品果汁类")
+                    <option value="饮品果汁类" >饮品果汁类</option>;
+                    else
+                    <option value="val">所有类别</option>；
+                  </select>
 
-              </p>
+                </p>
+              </div>
             </div>
-          </div>
 
-          <div class="am-form-group">
-            <label  class="am-u-sm-3 am-form-label">招牌菜</label>
-            <div class="am-u-sm-9">
+            <div class="am-form-group">
+              <label  class="am-u-sm-3 am-form-label">招牌菜</label>
+              <div class="am-u-sm-9">
 
-              <p><input type="checkbox" name="checked" id="signature" value = "{$signature}">是否设置为招牌菜？</p>
+                <p><input type="checkbox" name="checked" id="signature" value = "{$signature}">是否设置为招牌菜？</p>
 
+              </div>
             </div>
-          </div>
 
 
-          <div class="am-form-group">
-            <label class="am-u-sm-3 am-form-label">菜品简介 / Intro</label>
-            <div class="am-u-sm-9">
-              <input type="text" id="description" name="description" value="{$description}">
-              <small>250字以内...</small>
+            <div class="am-form-group">
+              <label class="am-u-sm-3 am-form-label">菜品简介 / Intro</label>
+              <div class="am-u-sm-9">
+                <input type="text" id="description" name="description" value="{$description}">
+                <small>250字以内...</small>
+              </div>
             </div>
-          </div>
 
-          <div class="am-form-group">
-            <div class="am-u-sm-9 am-u-sm-push-3">
-              <button type="submit" class="am-btn am-btn-primary">确认修改</button>
+            <div class="am-form-group">
+              <div class="am-u-sm-9 am-u-sm-push-3">
+                <button type="submit" class="am-btn am-btn-primary">确认修改</button>
+              </div>
             </div>
-          </div>
         </form>
       </div>
     </div>

@@ -97,18 +97,27 @@
         <div class="am-panel am-panel-default">
           <div class="am-panel-bd">
             <div class="am-g">
+              <form class="am-form" action="__URL__/portrait" enctype="multipart/form-data" method="post" >
               <div class="am-u-md-4">
-                <img class="am-img-circle am-img-thumbnail" src="http://amui.qiniudn.com/bw-2014-06-19.jpg?imageView/1/w/1000/h/1000/q/80" alt=""/>
+                <a class="addphoto">
+                  <input type="file" id="file" name="file" draggable="false" single accept="image/*">
+                </a>
+                <!--允许file控件接受的文件类型  single  multiple-->
+                <div id="destination"></div>
+
+                <button type="submit" class="am-btn am-btn-primary am-btn-xs">保存</button>
+                <script src="__PUBLIC__/js/jquery-1.10.1.min.js"></script>
+                <script src="__PUBLIC__/js/base.js"></script>
+                <script>
+                  $(function(){
+                    previewImage()
+                  });
+
+                </script>
               </div>
+              </form>
               <div class="am-u-md-8">
-                <p>你可以使用<a href="#">gravatar.com</a>提供的头像或者使用本地上传头像。 </p>
-                <form class="am-form">
-                  <div class="am-form-group">
-                    <input type="file" id="user-pic">
-                    <p class="am-form-help">请选择要上传的文件...</p>
-                    <button type="button" class="am-btn am-btn-primary am-btn-xs">保存</button>
-                  </div>
-                </form>
+                <br><p>你可以使用<a href="#">gravatar.com</a>提供的头像或者使用本地上传头像。 </p>
               </div>
             </div>
           </div>

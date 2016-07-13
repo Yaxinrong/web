@@ -123,7 +123,9 @@ class IndexController extends Controller {
         $rest_name=$_SESSION['username'];
         $column=M('Restaurant');
         $condition['account']=$rest_name;
-        $rest_no=$column->where($condition)->field('rest_no')->find();
+        $information=$column->where($condition)->find();
+        $this->assign('portrait',$information['portrait']);
+
         $this->display();
     }
     public function admin_table()
@@ -194,7 +196,10 @@ $this->display();
             $data['zone'] = $zone;
             $data['addr'] = $addr;
             $data['description'] = $description;
+           // $data['portrait']='__PUBLIC__/Dish_img/'.$pic;
             $condition['account']=$account;
+      //     $result=$User->where($condition)->field('account','password')->filter('strip_tags')->save($data);
+
             $result = $User->where($condition)->save($data);
             if (!$result) {
                 $this->error('修改不成功！','admin_user');
@@ -247,7 +252,6 @@ $this->display();
             $upload->savePath = '';
             $upload->exts     = array('jpg', 'gif', 'png', 'jpeg');
             $upload->autoSub  = true;
-            $upload->subName  = array('date','Ymd');
             $upload->saveRule = 'com_create_guid';
             $upload->saveName=$_POST['file'];
            // $upload->exts=array('jpg','png','gif','jpeg');//类型
@@ -255,15 +259,16 @@ $this->display();
            // $upload->savePath  =''; // 设置附件上传（子）目录
             //$fileName=$_POST['file'];
            $fileName=$_FILES["file"]["name"];
-           $fileExtensions=strrchr($fileName, '.');
-            $fileName = trim($fileName,$fileExtensions);
-            $data['finish_pic']=$fileName;
+           //$fileExtensions=strrchr($fileName, '.');
+           // $fileName = trim($fileName,$fileExtensions);
+
             $info   =   $upload->upload();
             //生成缩略图
             $image = new \Think\Image();
             $realfilepath = './Uploads/'.$info['file']['savepath'].'/';
             $image->open($realfilepath.$info['file']['savename']);
             $savename = $realfilepath.'crop_'.$info['file']['savename'];
+            $data['finish_pic']='http://localhost/tp/Uploads/'.$info['file']['savepath'].$fileName;
             if($image->width() > 80){
                 $image->thumb(80, 60,\Think\Image::IMAGE_THUMB_CENTER)->save($savename);
             }else{
@@ -286,13 +291,18 @@ $this->display();
     public function admin_modify_dish(){
         $dish_name=$_SESSION['dishname'];
         $column=M('restdish');
-        $condition['dish_name']=$dish_name;
-        $information=$column->where($condition)->find();
-        $this->assign('dish_name',$information['dish_name']);
-        $this->assign('price',$information['price']);
-        $this->assign('type',$information['type']);
-        $this->assign('signature',$information['signature']);
-        $this->assign('description',$information['description']);
+        $condition1['dish_name']=$dish_name;
+        $information1=$column->where($condition1)->find();
+        $this->assign('dish_name',$information1['dish_name']);
+        $this->assign('price',$information1['price']);
+        $this->assign('type',$information1['type']);
+        $this->assign('signature',$information1['signature']);
+        $this->assign('description',$information1['description']);
+        $rest_no=$information1['rest_no'];
+        $user=M('Restaurant');
+        $condition2['rest_no']=(int)$rest_no;
+        $information2=$user->where($condition2)->find();
+        $this->assign('portrait',$information2['portrait']);
         $this->display();
     }
 
@@ -322,6 +332,7 @@ $this->display();
             $rest_no=$User->where($condition)->field('rest_no')->find();
             $finish_pic=$User->where($condition)->field('finish_pic')->find();
             $data['rest_no'] = $rest_no;
+
             $data['description'] = $description;
             $data['dish_name'] = $modify_name;
             $data['price'] = $price;
@@ -389,5 +400,44 @@ $this->display();
 
 
 
+
+    public function portrait(){
+        $rest_name=$_SESSION['username'];
+        $column=M('Restaurant');
+        $condition['account']=$rest_name;
+        $rest_no=$column->where($condition)->field('rest_no')->select();
+        $upload = new \Think\Upload();// 实例化上传类
+        $upload->maxSize = 3145728;
+        $upload->rootPath = './Uploads/';
+        $upload->savePath = '';
+        $upload->exts     = array('jpg', 'gif', 'png', 'jpeg');
+        $upload->autoSub  = true;
+        //  $upload->subName  = array('date','Ymd');
+        $upload->saveRule = 'com_create_guid';
+        $upload->saveName=$_POST['file'];
+        $info   =   $upload->upload();
+        //生成缩略图
+        $image = new \Think\Image();
+        $fileName=$_FILES["file"]["name"];
+        $realfilepath = './Uploads/'.$info['file']['savepath'].'/';
+        $image->open($realfilepath.$info['file']['savename']);
+        $savename = $realfilepath.'crop_'.$info['file']['savename'];
+        $data['portrait']='http://localhost/tp/Uploads/'.$info['file']['savepath'].$fileName;
+        if($image->width() > 80){
+            $image->thumb(80, 60,\Think\Image::IMAGE_THUMB_CENTER)->save($savename);
+        }else{
+            $image->save($savename);
+        }
+        $result=$column->where($condition)->field('portrait')->filter('strip_tags')->save($data);
+       // $result = $column->execute("update restaurant set portrait= '$data['portrait']’ where account='$rest_name'");
+        if( $result){
+            $this->success('密码修改成功！','admin_user');
+
+        }else{
+            $this->error('密码修改不成功！','admin_user');
+
+        }
+
+    }
 
 }
