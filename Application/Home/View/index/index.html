@@ -17,6 +17,7 @@
     <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/style.css" />
     <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/animate-custom.css" />
 </head>
+
 <body>
 <div class="container">
     <!-- Codrops top bar -->
@@ -46,86 +47,99 @@
             <a class="hiddenanchor" id="tologin"></a>
             <div id="wrapper">
                 <div id="login" class="animate form">
-                    <form  action="__URL__/check" autocomplete="on" method="post">
-                        <h1>Log in</h1>
+                    <form  action="__URL__/checked" autocomplete="on" method="post" charset="UTF-8">
+                        <h1>登录</h1>
                         <p>
-                            <label for="username" class="uname" > Your email or username </label>
+                            <label for="username" class="uname" > 账户名 </label>
                             <input id="username" name="username" required="required" type="text" placeholder="myusername or mymail@mail.com"/>
                         </p>
                         <p>
-                            <label for="password" class="youpasswd" > Your password </label>
+                            <label for="password" class="youpasswd" > 密码 </label>
                             <input id="password" name="password" required="required" type="password" placeholder="eg. X8df!90EO" />
                         </p>
+
+                        <p>
+                            <label for="password" class="t">验证码：</label>
+                            <input type="text" name="check"><img width="30%" class="left15" height="50" src="{:U('Home/Index/verify_c',array())}" >
+                        </p>
+
+
                         <p class="keeplogin">
                             <input type="checkbox" name="loginkeeping" id="loginkeeping" value="loginkeeping" />
-                            <label for="loginkeeping">Keep me logged in</label>
+                            <label for="loginkeeping">记住我</label>
                         </p>
                         <p class="login button">
-                            <input type="submit" value="Login" />
+                            <input type="submit" value="登录" />
                         </p>
                         <p class="change_link">
-                            Not a member yet ?
-                            <a href="#toregister" class="to_register">Join us</a>
+                           忘记密码 ?
+                            <a href="#toregister" class="to_register">加入我们</a>
                         </p>
                     </form>
                 </div>
 
                 <div id="register" class="animate form">
                     <form  action="__URL__/register" autocomplete="on" method="post">
-                        <h1> Sign up </h1>
+                        <h1> 注册 </h1>
                         <p>
-                            <label for="account_register" class="uname" data-icon="u">Your username</label>
+                            <label for="account_register" class="uname"> 账户名 </label>
                             <input id="account_register" name="account_register" required="required" type="text" placeholder="mysuperusername690" />
                         </p>
                         <p>
-                            <label for="phone_num" class="youtel" > Your tel </label>
+                            <label for="phone_num" class="youtel" > 电话 </label>
                             <input id="phone_num" name="phone_num" required="required" type="text" placeholder="10123456789"/>
                         </p>
+
                         <p>
-                            <label for="password_register" class="youpasswd" >Your password </label>
+                            <label for="description" class="ushopdexcription" > 邮箱 </label>
+                            <input id="email" name="email" required="required" type="text" placeholder="shopdescription" />
+                        </p>
+
+                        <p>
+                            <label for="password_register" class="youpasswd" > 密码 </label>
                             <input id="password_register" name="password_register" required="required" type="password" placeholder="eg. X8df!90EO"/>
                         </p>
                         <p>
-                            <label for="pwd_again_register" class="youpasswd" >Please confirm your password </label>
+                            <label for="pwd_again_register" class="youpasswd" > 重复密码 </label>
                             <input id="pwd_again_register" name="pwd_again_register" required="required" type="password" placeholder="eg. X8df!90EO"/>
                         </p>
 
                         <p>
-                            <label for="rest_name" class="ushop" >Shop name </label>
+                            <label for="rest_name" class="ushop" > 店铺名称 </label>
                             <input id="rest_name" name="rest_name" required="required" type="text" placeholder="shopname" />
                         </p>
 
                         <p>
-                            <label for="description" class="ushopdexcription" >Shop description </label>
+                            <label for="description" class="ushopdexcription" > 店铺描述 </label>
                             <input id="description" name="description" required="required" type="text" placeholder="shopdescription" />
                         </p>
 
 
                         <p>
-                            <label for="province" class="province" >Province </label>
+                            <label for="province" class="province" > 省 </label>
                             <input id="province" name="province" required="required" type="text"placeholder="Your province..."   />
                         </p>
 
                         <p>
-                            <label for="city" class="ucity" >City </label>
+                            <label for="city" class="ucity" > 市 </label>
                             <input id="city" name="city" required="required" type="text" placeholder="Your city..."  />
                         </p>
 
                         <p>
-                            <label for="zone" class="uzone" >Zone </label>
+                            <label for="zone" class="uzone" > 区 </label>
                             <input id="zone" name="zone" required="required" type="text"placeholder="Your zone..."   />
                         </p>
 
                         <p>
-                            <label for="addr" class="uaddr" >Your address </label>
+                            <label for="addr" class="uaddr" > 详细地址 </label>
                             <input id="addr" name="addr" required="required" type="text" placeholder="Your address..." />
                         </p>
                         <p class="signin button">
-                            <input type="submit" value="Sign up"/>
+                            <input type="submit" value="注册"/>
                         </p>
                         <p class="change_link">
                             Already a member ?
-                            <a href="#tologin" class="to_register"> Go and log in </a>
+                            <a href="#tologin" class="to_register"> 去登录 </a>
                         </p>
                     </form>
                 </div>

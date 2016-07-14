@@ -1,25 +1,63 @@
 <?php
 namespace Home\Controller;
 use Think\Controller;
+use Think\Verify;
 class IndexController extends Controller {
-    public function index(){
-        $this->display();
+
+    public function verify_c(){
+        // 设置验证码字符为纯数字
+        $Verify = new \Think\Verify();
+        $Verify->fontSize = 18;
+        $Verify->length   = 4;
+        $Verify->useNoise = false;
+        $Verify->codeSet = '0123456789';
+        $Verify->imageW = 130;
+        $Verify->imageH = 50;
+        //$Verify->expire = 600;
+        $Verify->entry();
 
     }
-    public function check()
+
+     /* 验证码校验 */
+    function check_verify($code, $id = ''){
+        $verify = new \Think\Verify();
+        return $verify->check($code, $id);
+    }
+
+
+    public function index(){
+       // header("content-type:text/html;charset:utf-8;");
+       // ob_clean();
+        $this->display();
+    }
+
+    public function checked()
     {
+        $v = new \Think\Verify();
+
+
         $name = $_POST['username'];
         $password = $_POST['password'];
+        $c=$_POST['check'];
+        $verify = I('param.verify',$c);
+        $b= $v->check($verify);
         if ($name == "") {
             echo "请填写用户名<br>";
             echo "<script type='text/javascript'>alert('请填写用户名');
         </script>";
 
 
-        } elseif ($password == "") {
+        } else if ($password == "") {
             echo "<script type='text/javascript'>alert('请填写密码');</script>";
 
-        } else {
+
+        }
+        
+       else if(!$b){
+            $this->error("亲，验证码输错了哦！",$this->site_url,9);
+        }
+
+        else {
             $colum = M("Restaurant");
             $condition['account'] = $name;
             $condition['password'] = $password;
@@ -46,11 +84,11 @@ class IndexController extends Controller {
         $rest_name=$_POST['rest_name'];
         $description=$_POST['description'];
         $province=$_POST['province'];
+        $email=$_POST['email'];
         $city=$_POST['city'];
         $zone=$_POST['zone'];
         $addr=$_POST['addr'];
-
-        if($account_register==""|| $password_register=="" || $addr=="" || $city=="" || $description=="" || $phone_num=="" || $province=="" || $rest_name=="" || $zone=="" )
+        if( $email =="" || $account_register==""|| $password_register=="" || $addr=="" || $city=="" || $description=="" || $phone_num=="" || $province=="" || $rest_name=="" || $zone=="" )
         {
             $this->error('用户名、密码、电话、店铺名、店铺描述、省、市、区、详细地址都不能为空','Index/index#toregister');
         }
@@ -69,7 +107,8 @@ class IndexController extends Controller {
                 $data['zone'] = $zone;
                 $data['addr'] = $addr;
                 $data['description'] = $description;
-
+                $data['email'] = $email;
+                
                 if (($this->checkStatus($account_register))) {
                     $this->error('用户名已存在！','Index/index#toregister');
                 } else {
@@ -97,7 +136,6 @@ class IndexController extends Controller {
         $map['rest_no']=array('gt',0);
         return $authInfo=$User->where($map)->find();
     }
-
     public function admin_user()
 {
     $account=$_SESSION['username'];
@@ -114,8 +152,8 @@ class IndexController extends Controller {
     $this->assign('city',$info['city']);
     $this->assign('zone',$info['zone']);
     $this->assign('addr',$info['addr']);
-
-
+    $this->assign('email',$info['email']);
+    $this->assign('portrait',$info['portrait']);
     $this->display();
 }
     public function admin_dish()
@@ -284,10 +322,6 @@ $this->display();
             }
 
         }
-
-
-
-
     public function admin_modify_dish(){
         $dish_name=$_SESSION['dishname'];
         $column=M('restdish');
@@ -305,9 +339,6 @@ $this->display();
         $this->assign('portrait',$information2['portrait']);
         $this->display();
     }
-
-
-
     public function modifyDish(){
 
        // $dish_name=$_SESSION['dish_name'];
@@ -397,10 +428,6 @@ $this->display();
         $this->assign('list',$resultDish);
         $this->display();
     }
-
-
-
-
     public function portrait(){
         $rest_name=$_SESSION['username'];
         $column=M('Restaurant');
@@ -408,7 +435,7 @@ $this->display();
         $rest_no=$column->where($condition)->field('rest_no')->select();
         $upload = new \Think\Upload();// 实例化上传类
         $upload->maxSize = 3145728;
-        $upload->rootPath = './Uploads/';
+        $upload->rootPath = './Upload/';
         $upload->savePath = '';
         $upload->exts     = array('jpg', 'gif', 'png', 'jpeg');
         $upload->autoSub  = true;
@@ -419,10 +446,10 @@ $this->display();
         //生成缩略图
         $image = new \Think\Image();
         $fileName=$_FILES["file"]["name"];
-        $realfilepath = './Uploads/'.$info['file']['savepath'].'/';
+        $realfilepath = './Upload/'.$info['file']['savepath'].'/';
         $image->open($realfilepath.$info['file']['savename']);
         $savename = $realfilepath.'crop_'.$info['file']['savename'];
-        $data['portrait']='http://localhost/tp/Uploads/'.$info['file']['savepath'].$fileName;
+        $data['portrait']='http://localhost/tp/Upload/'.$info['file']['savepath'].$fileName;
         if($image->width() > 80){
             $image->thumb(80, 60,\Think\Image::IMAGE_THUMB_CENTER)->save($savename);
         }else{
@@ -431,10 +458,10 @@ $this->display();
         $result=$column->where($condition)->field('portrait')->filter('strip_tags')->save($data);
        // $result = $column->execute("update restaurant set portrait= '$data['portrait']’ where account='$rest_name'");
         if( $result){
-            $this->success('密码修改成功！','admin_user');
+            $this->success('头像保存成功！','admin_user');
 
         }else{
-            $this->error('密码修改不成功！','admin_user');
+            $this->error('头像保存不成功！','admin_user');
 
         }
 
