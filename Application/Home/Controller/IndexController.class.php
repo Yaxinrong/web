@@ -2,8 +2,14 @@
 namespace Home\Controller;
 use Think\Controller;
 use Think\Verify;
+// Author: Yaxinrong Huhuaiwen
+
 class IndexController extends Controller {
 
+    /*
+     *生成验证码函数
+     *
+     * */
     public function verify_c(){
         // 设置验证码字符为纯数字
         $Verify = new \Think\Verify();
@@ -17,20 +23,27 @@ class IndexController extends Controller {
         $Verify->entry();
 
     }
-
-     /* 验证码校验 */
+    /*
+    *判断所输入的验证码是否正确
+    *
+    * */
     function check_verify($code, $id = ''){
         $verify = new \Think\Verify();
         return $verify->check($code, $id);
     }
-
-
+    /*
+    *显示index.html函数
+    *
+    * */
     public function index(){
        // header("content-type:text/html;charset:utf-8;");
        // ob_clean();
         $this->display();
     }
-
+    /*
+    *登录验证函数
+    *
+    * */
     public function checked()
     {
         $v = new \Think\Verify();
@@ -67,7 +80,7 @@ class IndexController extends Controller {
 
                 session_start();
                 $_SESSION['username']=$_POST['username'];
-                $this->success("登陆成功！", U("Index/admin_user"));
+                $this->success("登录成功！", U("Index/admin_user"));
 
             } else
                 $this->success("密码错误！", U("Index/index"));
@@ -75,6 +88,30 @@ class IndexController extends Controller {
         }
 
     }
+    /*
+    *显示admin_gallery.html函数
+    *
+    * */
+    public function admin_gallery(){
+        $name = $_SESSION['username'];
+        $colum = M("Restaurant");
+        $condition['account'] =$name ;
+        $restno = $colum->where($condition)->field('rest_no')->select();
+        $dish = M("Restdish");
+        $info=$restno[0];
+        $conditionDish['rest_no'] =$info['rest_no'];
+        $resultDish = $dish->where($conditionDish)->select();
+        $image = $dish->where($conditionDish)->select();
+        $this->assign('list',$image);
+        $sum = count($resultDish);//获得当前总数
+        $this->assign('sum',$sum);
+        $this->display();
+
+    }
+    /*
+    *注册验证函数
+    *
+    * */
     public function register()
     {
         $account_register=$_POST['account_register'];
@@ -129,6 +166,10 @@ class IndexController extends Controller {
             }
         }
     }
+    /*
+    *判断注册的account是否有重复函数
+    *
+    * */
     public function checkStatus($name){
         $User = M("Restaurant");
         $map=array();
@@ -136,6 +177,10 @@ class IndexController extends Controller {
         $map['rest_no']=array('gt',0);
         return $authInfo=$User->where($map)->find();
     }
+    /*
+    *显示admin_user函数
+    *
+    * */
     public function admin_user()
 {
     $account=$_SESSION['username'];
@@ -156,6 +201,10 @@ class IndexController extends Controller {
     $this->assign('portrait',$info['portrait']);
     $this->display();
 }
+    /*
+    *显示admin_dish函数
+    *
+    * */
     public function admin_dish()
     {
         $rest_name=$_SESSION['username'];
@@ -166,6 +215,10 @@ class IndexController extends Controller {
 
         $this->display();
     }
+    /*
+    *显示admin_table函数
+    *
+    * */
     public function admin_table()
     {
         $name = $_SESSION['username'];
@@ -188,6 +241,10 @@ class IndexController extends Controller {
         $this->assign('sum',$sum);
 $this->display();
 }
+    /*
+    *显示admin_table_search函数
+    *
+    * */
     public function admin_table_search()
     {
 
@@ -202,12 +259,20 @@ $this->display();
             $this->display();
         }
     }
+    /*
+    *search函数
+    *
+    * */
     public function search()
     {
         $dish = $_POST['dishname'];
         $_SESSION['dishname']=$dish;
         $this->success("搜索成功！", U("Index/admin_table_search"));
     }
+    /*
+    *修改个人信息函数
+    *
+    * */
     public function modify(){
         $account=$_SESSION['username'];
         $password=$_SESSION['password'];
@@ -246,6 +311,10 @@ $this->display();
             }
         }
     }
+    /*
+    *上传菜单函数
+    *
+    * */
     public function upload()
     {
         $rest_name=$_SESSION['username'];
@@ -257,7 +326,6 @@ $this->display();
         $finish_pic = $_POST['file'];
         $price = $_POST['price'];
         $type = $_POST['type'];
-        $checked = $_POST['checked'];
         $description = $_POST['description'];
         if ($dish_name == "" || $price == "" || $type == "" || $description == "") {
             $this->error('菜名、价格、类型、描述都不能为空！','admin_dish');
@@ -270,17 +338,7 @@ $this->display();
             $data['dish_name'] = $dish_name;
             $data['price'] = $price;
             $data['type'] = $type;
-            $data['signature'] = $checked;
             $data['finish_pic']=$finish_pic;
-            if($checked)
-            {
-                                $data['signature'] = 'true';
-            }
-            else {
-
-                               $data['signature'] ='false';
-            }
-
             //上传文件
 
 //            header("content-type:text/html;charset=utf-8");
@@ -305,13 +363,9 @@ $this->display();
             $image = new \Think\Image();
             $realfilepath = './Uploads/'.$info['file']['savepath'].'/';
             $image->open($realfilepath.$info['file']['savename']);
-            $savename = $realfilepath.'crop_'.$info['file']['savename'];
+           // $savename = $realfilepath.'crop_'.$info['file']['savename'];
             $data['finish_pic']='http://localhost/tp/Uploads/'.$info['file']['savepath'].$fileName;
-            if($image->width() > 80){
-                $image->thumb(80, 60,\Think\Image::IMAGE_THUMB_CENTER)->save($savename);
-            }else{
-                $image->save($savename);
-            }
+
             $result = $User->add($data);
                 if (!$result) {
                     $this->error('上传失败', 'admin_dish');
@@ -322,6 +376,10 @@ $this->display();
             }
 
         }
+    /*
+    *显示菜单函数
+    *
+    * */
     public function admin_modify_dish(){
         $dish_name=$_SESSION['dishname'];
         $column=M('restdish');
@@ -332,26 +390,28 @@ $this->display();
         $this->assign('type',$information1['type']);
         $this->assign('signature',$information1['signature']);
         $this->assign('description',$information1['description']);
+        //dump($information1);
+        $this->assign('file',$information1['finish_pic']);
         $rest_no=$information1['rest_no'];
         $user=M('Restaurant');
         $condition2['rest_no']=(int)$rest_no;
         $information2=$user->where($condition2)->find();
         $this->assign('portrait',$information2['portrait']);
+
         $this->display();
     }
+    /*
+    *修改菜单函数
+    *
+    * */
     public function modifyDish(){
 
-       // $dish_name=$_SESSION['dish_name'];
        $dish_name= $_SESSION['dishname'];
 
-        //$rest_no=$_SESSION['rest_no'];
         $modify_name=$_POST['dish_name'];
         $price=$_POST['price'];
         $type=$_POST['type'];
-        $checked=$_POST['signature'];
         $description=$_POST['description'];
-
-
         if($description=="" || $price=="" || $type=="")
         {
             $this->error('价格，类型，和描述都不能为空','admin_modify_dish');
@@ -363,21 +423,28 @@ $this->display();
             $rest_no=$User->where($condition)->field('rest_no')->find();
             $finish_pic=$User->where($condition)->field('finish_pic')->find();
             $data['rest_no'] = $rest_no;
-
             $data['description'] = $description;
             $data['dish_name'] = $modify_name;
             $data['price'] = $price;
             $data['type'] = $type;
-            if($checked)
-            {
-                $data['signature'] = 'true';
+            $upload = new \Think\Upload();// 实例化上传类
+            $upload->maxSize = 3145728;
+            $upload->rootPath = './Uploads/';
+            $upload->savePath = '';
+            $upload->exts     = array('jpg', 'gif', 'png', 'jpeg');
+            $upload->autoSub  = true;
+            //  $upload->subName  = array('date','Ymd');
+            $upload->saveRule = 'com_create_guid';
+            $upload->saveName=$_POST['file'];
+            $info   =   $upload->upload();
+            $fileName=$_FILES["file"]["name"];
+            if($info){
+                $data['finish_pic']='http://localhost/tp/Uploads/'.$info['file']['savepath'].$fileName;
+                $result = $User->where($condition)->save($data);
             }
-            else {
-                $data['signature'] ='false';
+            else{
+                $result = $User->where($condition)->save($data);
             }
-            $data['finish_pic'] = $finish_pic;
-
-            $result = $User->where($condition)->save($data);
             if (!$result) {
                 $this->error('修改不成功！','admin_modify_dish');
             } else {
@@ -387,9 +454,17 @@ $this->display();
 
         }
     }
+    /*
+    *显示admin_changePassword函数
+    *
+    * */
     public function admin_changePassword(){
         $this->display();
     }
+    /*
+    *修改密码函数
+    *
+    * */
     public function modifyPassword(){
         $rest_name=$_SESSION['username'];
         $column=M('Restaurant');
@@ -416,6 +491,10 @@ $this->display();
         }
 
     }
+    /*
+    *显示admin_log函数
+    *
+    * */
     public function admin_log(){
         $rest_name=$_SESSION['username'];
         $column=M('Restaurant');
@@ -428,6 +507,10 @@ $this->display();
         $this->assign('list',$resultDish);
         $this->display();
     }
+    /*
+    *上传头像函数
+    *
+    * */
     public function portrait(){
         $rest_name=$_SESSION['username'];
         $column=M('Restaurant');
@@ -448,13 +531,9 @@ $this->display();
         $fileName=$_FILES["file"]["name"];
         $realfilepath = './Upload/'.$info['file']['savepath'].'/';
         $image->open($realfilepath.$info['file']['savename']);
-        $savename = $realfilepath.'crop_'.$info['file']['savename'];
+        //$savename = $realfilepath.'crop_'.$info['file']['savename'];
         $data['portrait']='http://localhost/tp/Upload/'.$info['file']['savepath'].$fileName;
-        if($image->width() > 80){
-            $image->thumb(80, 60,\Think\Image::IMAGE_THUMB_CENTER)->save($savename);
-        }else{
-            $image->save($savename);
-        }
+
         $result=$column->where($condition)->field('portrait')->filter('strip_tags')->save($data);
        // $result = $column->execute("update restaurant set portrait= '$data['portrait']’ where account='$rest_name'");
         if( $result){
