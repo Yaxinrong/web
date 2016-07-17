@@ -75,8 +75,8 @@ function showPicture(){
 				var freader = new FileReader();
 				freader.readAsDataURL(file);
 				freader.onload = function(e) {
-					var img = '<div class="container"><div class="close" onclick="del(this)">×</div><div style="width:200px;height:200px;overflow:hidden"><img src="' + e.target.result
-							+ '" style="width:200px;height:200px" id="pic1"/></div></div>';
+					var img = '<div class="container"><div class="close" onclick="del(this)">×</div><div style="width:100px;height:100px;overflow:hidden"><img src="' + e.target.result
+							+ '" style="width:100px;height:100px" id="pic1"/></div></div>';
 					$("#destination").empty().append(img);
 					var imgs = document.getElementById("pic1");
 					//$("#destination").empty().append(img);

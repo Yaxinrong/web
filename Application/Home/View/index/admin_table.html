@@ -65,7 +65,7 @@
   <!-- sidebar start -->
   <div class="admin-sidebar">
     <ul class="am-list admin-sidebar-list">
-      <li><a href="admin-index.html"><span class="am-icon-home"></span> 首页</a></li>
+      <li><a href="admin_index.html"><span class="am-icon-home"></span> 首页</a></li>
       <li class="admin-parent">
         <a class="am-cf" data-am-collapse="{target: '#collapse-nav'}"><span class="am-icon-file"></span> 页面模块 <span class="am-icon-angle-right am-fr am-margin-right"></span></a>
         <ul class="am-list am-collapse admin-sidebar-sub am-in" id="collapse-nav">
@@ -109,19 +109,19 @@
         <div class="am-fl am-cf">
           <div class="am-btn-toolbar am-fl">
             <div class="am-btn-group am-btn-group-xs">
-              <button type="button" class="am-btn am-btn-default" type="button" onclick="location.href='admin_modify_dish.html'"/><span class="am-icon-plus"></span> 新增</button>
+              <button type="button" class="am-btn am-btn-default" type="button" onclick="location.href='admin_dish.html'"/><span class="am-icon-plus"></span> 新增</button>
 
             </div>
 
             <div class="am-form-group am-margin-left am-fl">
               <select>
-                <option value="option1">所有类别</option>
-                <option value="option2">凉菜</option>
-                <option value="option3">招牌菜</option>
-                <option value="option3">热菜</option>
-                <option value="option3">汤羹煲炖类</option>
-                <option value="option3">甜品</option>
-                <option value="option3">饮品果汁类</option>
+                <option value="-1">所有类别</option>
+                <option value="凉菜">凉菜</option>
+                <option value="招牌菜">招牌菜</option>
+                <option value="热菜">热菜</option>
+                <option value="汤羹煲炖类">汤羹煲炖类</option>
+                <option value="甜品">甜品</option>
+                <option value="饮品果汁类">饮品果汁类</option>
               </select>
             </div>
           </div>
@@ -170,7 +170,7 @@
             <tr>
 
               <td><img src="{$vo['finish_pic']}"></td>
-              <td><a href="admin_dish.html">{$vo['dish_name']}</a></td>
+              <td><a href="admin_modify_dish.html">{$vo['dish_name']}</a></td>
 
               <td>{$vo['description']}</td>
               <td>{$vo['price']}</td>
@@ -225,7 +225,7 @@
 
 <footer>
   <hr>
-  <p class="am-padding-left">© 2014 AllMobilize <a href="Index.html" target="_blank">Nourriture</a></p>
+  <p class="am-padding-left">© 2014 AllMobilize <a href="account.html" target="_blank">Nourriture</a></p>
 </footer>
 
 

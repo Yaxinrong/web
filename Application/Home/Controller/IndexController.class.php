@@ -83,7 +83,7 @@ class IndexController extends Controller {
                 $this->success("登录成功！", U("Index/admin_user"));
 
             } else
-                $this->success("密码错误！", U("Index/index"));
+                $this->success("密码错误！", U("Index/account"));
 
         }
 
@@ -127,11 +127,11 @@ class IndexController extends Controller {
         $addr=$_POST['addr'];
         if( $email =="" || $account_register==""|| $password_register=="" || $addr=="" || $city=="" || $description=="" || $phone_num=="" || $province=="" || $rest_name=="" || $zone=="" )
         {
-            $this->error('用户名、密码、电话、店铺名、店铺描述、省、市、区、详细地址都不能为空','Index/index#toregister');
+            $this->error('用户名、密码、电话、店铺名、店铺描述、省、市、区、详细地址都不能为空','Index/account#toregister');
         }
         else {
             if ($password_register != $pwd_again_register) {
-                $this->error('两次输入的密码不一致,请重新输入！','Index/index#toregister');
+                $this->error('两次输入的密码不一致,请重新输入！','Index/account#toregister');
             }
             else {
                 $User = M("Restaurant"); // 实例化User对象
@@ -147,12 +147,12 @@ class IndexController extends Controller {
                 $data['email'] = $email;
                 
                 if (($this->checkStatus($account_register))) {
-                    $this->error('用户名已存在！','Index/index#toregister');
+                    $this->error('用户名已存在！','Index/account#toregister');
                 } else {
 
                     $result = $User->add($data);
                     if (!$result) {
-                        $this->error('注册不成功！','Index/index#toregister');
+                        $this->error('注册不成功！','Index/account#toregister');
                     } else {
                         session_start();
                         $_SESSION['account']=$account_register;
@@ -227,7 +227,7 @@ class IndexController extends Controller {
         $restno = $colum->where($condition)->field('rest_no')->select();
         $dish = M("Restdish");
         $info=$restno[0];
-      $conditionDish['rest_no'] =$info['rest_no'];
+        $conditionDish['rest_no'] =$info['rest_no'];
         $resultDish = $dish->where($conditionDish)->select();
         $dishname = $dish->where($conditionDish)->field('dish_name')->select();
         $i=$dishname[0];
@@ -239,7 +239,7 @@ class IndexController extends Controller {
         $this->assign('list',$list);
         $this->assign('page', $page);
         $this->assign('sum',$sum);
-$this->display();
+        $this->display();
 }
     /*
     *显示admin_table_search函数
@@ -250,7 +250,7 @@ $this->display();
 
         $dish = $_SESSION['dishname'];
         if ($dish == "") {
-            echo "<script> alert('请输入你要查询的菜品名');parent.location.href='http://localhost/tp/index.php/Home/Index/admin_table.html'; </script>";
+            echo "<script> alert('请输入你要查询的菜品名');parent.location.href='http://43.241.236.209/www/tp/index.php/Home/Index/admin_table.html'; </script>";
 
         } else {
             $colum = M("Restdish");
@@ -364,7 +364,7 @@ $this->display();
             $realfilepath = './Uploads/'.$info['file']['savepath'].'/';
             $image->open($realfilepath.$info['file']['savename']);
            // $savename = $realfilepath.'crop_'.$info['file']['savename'];
-            $data['finish_pic']='http://localhost/tp/Uploads/'.$info['file']['savepath'].$fileName;
+            $data['finish_pic']='http://43.241.236.209/www/tp/Uploads/'.$info['file']['savepath'].$fileName;
 
             $result = $User->add($data);
                 if (!$result) {
@@ -439,7 +439,7 @@ $this->display();
             $info   =   $upload->upload();
             $fileName=$_FILES["file"]["name"];
             if($info){
-                $data['finish_pic']='http://localhost/tp/Uploads/'.$info['file']['savepath'].$fileName;
+                $data['finish_pic']='http://43.241.236.209/www/tp/Uploads/'.$info['file']['savepath'].$fileName;
                 $result = $User->where($condition)->save($data);
             }
             else{
@@ -532,7 +532,7 @@ $this->display();
         $realfilepath = './Upload/'.$info['file']['savepath'].'/';
         $image->open($realfilepath.$info['file']['savename']);
         //$savename = $realfilepath.'crop_'.$info['file']['savename'];
-        $data['portrait']='http://localhost/tp/Upload/'.$info['file']['savepath'].$fileName;
+        $data['portrait']='http://43.241.236.209/www/tp/Upload/'.$info['file']['savepath'].$fileName;
 
         $result=$column->where($condition)->field('portrait')->filter('strip_tags')->save($data);
        // $result = $column->execute("update restaurant set portrait= '$data['portrait']’ where account='$rest_name'");
