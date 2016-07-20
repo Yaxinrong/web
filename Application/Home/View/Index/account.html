@@ -18,6 +18,7 @@
     <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/animate-custom.css" />
 </head>
 
+<<<<<<< HEAD
 <script>
     var captcha_img = $('#captcha-container').find('img')
     var verifyimg = captcha_img.attr("src");
@@ -31,6 +32,8 @@
     });
 </script>
 
+=======
+>>>>>>> 9e91c63796417774f738941c4632c407b4529706
 <body>
 <div class="container">
     <!-- Codrops top bar -->
@@ -71,10 +74,16 @@
                             <input id="password" name="password" required="required" type="password" placeholder="eg. X8df!90EO" />
                         </p>
 
+<<<<<<< HEAD
                         <p id="captcha-container" class="top15 captcha">
                             <input name="verify" width="50%" height="50" class="captcha-text" placeholder="验证码" type="text">
                             <img  width="30%" class="left15" height="50" alt="验证码" src="{:U('Home/Index/verify_c',array())}" title="点击刷新" onclick="this.src=this.src+'?'" >
                             点击图片可刷新验证码
+=======
+                        <p>
+                            <label for="password" class="t">验证码：</label>
+                            <input type="text" name="check"><img width="30%" class="left15" height="50" src="{:U('Home/Index/verify_c',array())}" >
+>>>>>>> 9e91c63796417774f738941c4632c407b4529706
                         </p>
 
 
@@ -86,8 +95,13 @@
                             <input type="submit" value="登录" />
                         </p>
                         <p class="change_link">
+<<<<<<< HEAD
                            没有账号 ?
                             <a href="#toregister" class="to_register">立即注册</a>
+=======
+                           忘记密码 ?
+                            <a href="#toregister" class="to_register">加入我们</a>
+>>>>>>> 9e91c63796417774f738941c4632c407b4529706
                         </p>
                     </form>
                 </div>

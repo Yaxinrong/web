@@ -248,7 +248,11 @@ class IndexController extends Controller {
 
         $dish = $_SESSION['dishname'];
         if ($dish == "") {
+<<<<<<< HEAD
             echo "<script> alert('请输入你要查询的菜品名');parent.location.href='http://43.241.236.209/www/think/index.php/Home/Index/admin_table.html'; </script>";
+=======
+            echo "<script> alert('请输入你要查询的菜品名');parent.location.href='http://43.241.236.209/www/tp/index.php/Home/Index/admin_table.html'; </script>";
+>>>>>>> 9e91c63796417774f738941c4632c407b4529706
 
         } else {
             $colum = M("Restdish");
@@ -359,7 +363,11 @@ class IndexController extends Controller {
             $realfilepath = './Uploads/'.$info['file']['savepath'].'/';
             $image->open($realfilepath.$info['file']['savename']);
            // $savename = $realfilepath.'crop_'.$info['file']['savename'];
+<<<<<<< HEAD
             $data['finish_pic']='http://43.241.236.209/www/think/Uploads/'.$info['file']['savepath'].$info['file']['savename'];
+=======
+            $data['finish_pic']='http://43.241.236.209/www/tp/Uploads/'.$info['file']['savepath'].$fileName;
+>>>>>>> 9e91c63796417774f738941c4632c407b4529706
 
             $result = $User->add($data);
                 if (!$result) {
@@ -477,7 +485,11 @@ class IndexController extends Controller {
 
             $info   =   $upload->upload();
             if($info){
+<<<<<<< HEAD
                 $data['finish_pic']='http://43.241.236.209/www/think/Uploads/'.$info['file']['savepath'].$info['file']['savename'];
+=======
+                $data['finish_pic']='http://43.241.236.209/www/tp/Uploads/'.$info['file']['savepath'].$fileName;
+>>>>>>> 9e91c63796417774f738941c4632c407b4529706
                 $result = $User->where($condition)->save($data);
             }
             else{
@@ -572,7 +584,12 @@ class IndexController extends Controller {
      //   $realfilepath = './Upload/'.$info['file']['savepath'].'/';
       //  $image->open($realfilepath.$info['file']['savename']);
         //$savename = $realfilepath.'crop_'.$info['file']['savename'];
+<<<<<<< HEAD
         $data['portrait']='http://43.241.236.209/www/think/Upload/'.$info['file']['savepath'].$info['file']['savename'];
+=======
+        $data['portrait']='http://43.241.236.209/www/tp/Upload/'.$info['file']['savepath'].$fileName;
+
+>>>>>>> 9e91c63796417774f738941c4632c407b4529706
         $result=$column->where($condition)->field('portrait')->filter('strip_tags')->save($data);
        // $result = $column->execute("update restaurant set portrait= '$data['portrait']’ where account='$rest_name'");
         if( $result){
