@@ -20,11 +20,13 @@
   <script src="__PUBLIC__/js/polyfill/rem.min.js"></script>
   <script src="__PUBLIC__/js/polyfill/respond.min.js"></script>
   <script src="__PUBLIC__/js/amazeui.legacy.js"></script>
+  <script src="__PUBLIC__/js/jquery.js"></script>
   <script type="text/javascript">
   <![endif]-->
 
   <!--[if (gte IE 9)|!(IE)]><!-->
   <script src="__PUBLIC__/js/jquery.min.js"></script>
+  <script src="__PUBLIC__/js/jquery.js"></script>
   <script src="__PUBLIC__/js/amazeui.min.js"></script>
   <!--<![endif]-->
   <script src="__PUBLIC__/js/app.js"></script>
@@ -45,7 +47,7 @@
   <div class="am-collapse am-topbar-collapse" id="topbar-collapse">
 
     <ul class="am-nav am-nav-pills am-topbar-nav am-topbar-right admin-header-list">
-      <li><a href="admin_log.html"><span class="am-icon-envelope-o"></span> 收件箱 <span class="am-badge am-badge-warning">new</span></a></li>
+
       <li class="am-dropdown" data-am-dropdown>
         <a class="am-dropdown-toggle" data-am-dropdown-toggle href="javascript:;">
           <span class="am-icon-users"></span> 欢迎，{$_SESSION['username']} <span class="am-icon-caret-down"></span>
@@ -53,7 +55,7 @@
         <ul class="am-dropdown-content">
           <li><a href="admin_user.html"><span class="am-icon-user"></span> 资料</a></li>
           <li><a href="admin_changePassword.html"><span class="am-icon-cog"></span> 修改密码</a></li>
-          <li><a href="Index.html"><span class="am-icon-power-off"></span> 退出</a></li>
+          <li><a href="account.html"><span class="am-icon-power-off"></span> 退出</a></li>
         </ul>
       </li>
       <li><a href="javascript:;" id="admin-fullscreen"><span class="am-icon-arrows-alt"></span> <span class="admin-fullText">开启全屏</span></a></li>
@@ -65,7 +67,7 @@
   <!-- sidebar start -->
   <div class="admin-sidebar">
     <ul class="am-list admin-sidebar-list">
-      <li><a href="admin-index.html"><span class="am-icon-home"></span> 首页</a></li>
+      <li><a href="admin_index.html"><span class="am-icon-home"></span> 首页</a></li>
       <li class="admin-parent">
         <a class="am-cf" data-am-collapse="{target: '#collapse-nav'}"><span class="am-icon-file"></span> 页面模块 <span class="am-icon-angle-right am-fr am-margin-right"></span></a>
         <ul class="am-list am-collapse admin-sidebar-sub am-in" id="collapse-nav">
@@ -77,14 +79,13 @@
         </ul>
       </li>
       <li><a href="admin_table.html"><span class="am-icon-table"></span> 我的菜单</a></li>
-      <li><a href="admin-form.html"><span class="am-icon-pencil-square-o"></span> 表单</a></li>
-      <li><a href="Index.html"><span class="am-icon-sign-out"></span> 注销</a></li>
+      <li><a href="account.html"><span class="am-icon-sign-out"></span> 注销</a></li>
     </ul>
 
     <div class="am-panel am-panel-default admin-sidebar-panel">
       <div class="am-panel-bd">
         <p><span class="am-icon-bookmark"></span> 公告</p>
-        <p>时光静好，与君语；细水流年，与君同。—— Nourriture</p>
+        <p>建议使用火狐浏览器，以获得更好的浏览体验！—— Nourriture</p>
       </div>
     </div>
 
@@ -109,21 +110,11 @@
         <div class="am-fl am-cf">
           <div class="am-btn-toolbar am-fl">
             <div class="am-btn-group am-btn-group-xs">
-              <button type="button" class="am-btn am-btn-default" type="button" onclick="location.href='admin_modify_dish.html'"/><span class="am-icon-plus"></span> 新增</button>
+              <button type="button" class="am-btn am-btn-default" type="button" onclick="location.href='admin_dish.html'"/><span class="am-icon-plus"></span> 新增</button>
 
             </div>
 
-            <div class="am-form-group am-margin-left am-fl">
-              <select>
-                <option value="option1">所有类别</option>
-                <option value="option2">凉菜</option>
-                <option value="option3">招牌菜</option>
-                <option value="option3">热菜</option>
-                <option value="option3">汤羹煲炖类</option>
-                <option value="option3">甜品</option>
-                <option value="option3">饮品果汁类</option>
-              </select>
-            </div>
+
           </div>
         </div>
       </div>
@@ -167,10 +158,11 @@
 
 
           <volist name="list" id="vo" >
-            <tr>
+            <tr onclick = "selectRow(this)";>
 
-              <td><img src="{$vo['finish_pic']}"></td>
-              <td><a href="admin_dish.html">{$vo['dish_name']}</a></td>
+              <td><img src="{$vo['finish_pic']}" width="70" height="70"></td>
+
+              <td><a href="admin_modify_dish.html" >{$vo['dish_name']}</a></td>
 
               <td>{$vo['description']}</td>
               <td>{$vo['price']}</td>
@@ -179,17 +171,54 @@
               <td>
                 <div class="am-btn-toolbar">
                   <div class="am-btn-group am-btn-group-xs">
-                    <button class="am-btn am-btn-default am-btn-xs am-text-secondary" type="button" onclick="location.href='admin_modify_dish.html'"/><span class="am-icon-pencil-square-o"></span> 编辑</button>
+                    <button class="am-btn am-btn-default am-btn-xs am-text-secondary" type="button" onclick="selectRow(this)"/><span class="am-icon-pencil-square-o"></span> 编辑</button>
                     <script type="text/javascript">
+                      function getRowObj(obj)
+                      {   var i = 0;
+                        while(obj.tagName.toLowerCase() != "tr")
+                        {    obj = obj.parentNode;
+                          if(obj.tagName.toLowerCase() == "table")
+                            return null;
+                        }
+                        return obj;
+                      }
+                      function delRow(obj){
+                        var tr = this.getRowObj(obj);
+                        if(tr != null){
+                          tr.parentNode.removeChild(tr);
+                        }else{
+                          throw new Error("the given object is not contained by the table");
+                        }
+                      }
+                      function selectRow(obj)
+                      {   var trObj = getRowObj(obj);
+                        var trArr = trObj.parentNode.children;
+                        for(var trNo= 0; trNo < trArr.length; trNo++)
+                        {  if(trObj == trObj.parentNode.children[trNo])
+                        {
+                          var r=trNo+1;
+
+                          $.ajax({
+                            type:"GET",
+                            url:"__URL__/admin_m_dish",
+                            data:{i:r},
+                            dataType: "json"
+                          // data:"Name="+r,//可有可无
+                        });
+                         
+                        //  $.post("__URL__/admin_modify_dish",{name:trNo+1});
+                          location.href='admin_modify_dish.html';
+
+                        }
+                        }
+                      }
 
                     </script>
-                    <button class="am-btn am-btn-default am-btn-xs am-text-danger"onclick="del()"/><span class="am-icon-trash-o"></span> 删除</button>
-                    <script type="text/javascript">
-                    function del()
-                    {
+                    <br>
+                    <form  action="__URL__/delete_dish" autocomplete="on" method="post" charset="UTF-8">
 
-                    }
-                    </script>
+                    <button class="am-btn am-btn-default am-btn-xs am-text-danger" type="submit" /><span class="am-icon-trash-o"></span> 删除</button>
+                   </form>
                   </div>
                 </div>
               </td>
@@ -225,7 +254,7 @@
 
 <footer>
   <hr>
-  <p class="am-padding-left">© 2014 AllMobilize <a href="Index.html" target="_blank">Nourriture</a></p>
+  <p class="am-padding-left">© 2014 AllMobilize <a href="account.html" target="_blank">Nourriture</a></p>
 </footer>
 
 

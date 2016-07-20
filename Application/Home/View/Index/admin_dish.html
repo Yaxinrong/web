@@ -31,7 +31,7 @@
   <div class="am-collapse am-topbar-collapse" id="topbar-collapse">
 
     <ul class="am-nav am-nav-pills am-topbar-nav am-topbar-right admin-header-list">
-      <li><a href="admin_log.html"><span class="am-icon-envelope-o"></span> 收件箱 <span class="am-badge am-badge-warning">new</span></a></li>
+
       <li class="am-dropdown" data-am-dropdown>
         <a class="am-dropdown-toggle" data-am-dropdown-toggle href="javascript:;">
           <span class="am-icon-users"></span> 欢迎，{$_SESSION['username']}  <span class="am-icon-caret-down"></span>
@@ -51,7 +51,7 @@
   <!-- sidebar start -->
   <div class="admin-sidebar">
     <ul class="am-list admin-sidebar-list">
-      <li><a href="admin-index.html"><span class="am-icon-home"></span> 首页</a></li>
+      <li><a href="admin_index.html"><span class="am-icon-home"></span> 首页</a></li>
       <li class="admin-parent">
         <a class="am-cf" data-am-collapse="{target: '#collapse-nav'}"><span class="am-icon-file"></span> 页面模块 <span class="am-icon-angle-right am-fr am-margin-right"></span></a>
         <ul class="am-list am-collapse admin-sidebar-sub am-in" id="collapse-nav">
@@ -63,14 +63,13 @@
         </ul>
       </li>
       <li><a href="admin_table.html"><span class="am-icon-table"></span> 我的菜单</a></li>
-      <li><a href="admin-form.html"><span class="am-icon-pencil-square-o"></span> 表单</a></li>
-      <li><a href="#"><span class="am-icon-sign-out"></span> 注销</a></li>
+      <li><a href="account.html"><span class="am-icon-sign-out"></span> 注销</a></li>
     </ul>
 
     <div class="am-panel am-panel-default admin-sidebar-panel">
       <div class="am-panel-bd">
         <p><span class="am-icon-bookmark"></span> 公告</p>
-        <p>时光静好，与君语；细水流年，与君同。—— Nourriture</p>
+        <p>建议使用火狐浏览器，以获得更好的浏览体验！—— Nourriture</p>
       </div>
     </div>
 
@@ -94,42 +93,9 @@
     <div class="am-g">
 
       <div class="am-u-sm-12 am-u-md-4 am-u-md-push-8">
-        <div class="am-panel am-panel-default">
-          <div class="am-panel-bd">
             <div class="am-g">
-              <div class="am-u-md-4">
-                <img class="am-img-circle am-img-thumbnail" src="{$portrait}" name="portrait" />
-              </div>
-              <div class="am-u-md-8">
-                <p>你可以使用<a href="#">gravatar.com</a>提供的头像或者使用本地上传头像。 </p>
-                <form class="am-form" enctype=”multipart/form-data>
-                  <div class="am-form-group" >
-                  </div>
-                </form>
-              </div>
+                <img class="am-img-circle am-img-thumbnail" src="{$portrait}" name="portrait" width="200" height="200" />
             </div>
-          </div>
-        </div>
-
-        <div class="am-panel am-panel-default">
-          <div class="am-panel-bd">
-            <div class="user-info">
-              <p>等级信息</p>
-              <div class="am-progress am-progress-sm">
-                <div class="am-progress-bar" style="width: 60%"></div>
-              </div>
-              <p class="user-info-order">当前等级：<strong>LV8</strong> 活跃天数：<strong>587</strong> 距离下一级别：<strong>160</strong></p>
-            </div>
-            <div class="user-info">
-              <p>信用信息</p>
-              <div class="am-progress am-progress-sm">
-                <div class="am-progress-bar am-progress-bar-success" style="width: 80%"></div>
-              </div>
-              <p class="user-info-order">信用等级：正常当前 信用积分：<strong>80</strong></p>
-            </div>
-          </div>
-        </div>
-
       </div>
 
       <div class="am-u-sm-12 am-u-md-8 am-u-md-pull-4">
@@ -218,7 +184,7 @@
 
 <footer>
   <hr>
-  <p class="am-padding-left">© 2014 AllMobilize <a href="Index.html" target="_blank">Nourriture</a></p>
+  <p class="am-padding-left">© 2014 AllMobilize <a href="account.html" target="_blank">Nourriture</a></p>
 </footer>
 
 <!--[if lt IE 9]>

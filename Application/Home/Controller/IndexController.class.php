@@ -67,7 +67,7 @@ class IndexController extends Controller {
         }
         
        else if(!$b){
-            $this->error("亲，验证码输错了哦！",$this->site_url,9);
+            $this->error("亲，验证码输错了哦！",$this->site_url,3);
         }
 
         else {
@@ -83,7 +83,7 @@ class IndexController extends Controller {
                 $this->success("登录成功！", U("Index/admin_user"));
 
             } else
-                $this->success("密码错误！", U("Index/index"));
+                $this->success("密码错误！", U("Index/account"));
 
         }
 
@@ -127,11 +127,11 @@ class IndexController extends Controller {
         $addr=$_POST['addr'];
         if( $email =="" || $account_register==""|| $password_register=="" || $addr=="" || $city=="" || $description=="" || $phone_num=="" || $province=="" || $rest_name=="" || $zone=="" )
         {
-            $this->error('用户名、密码、电话、店铺名、店铺描述、省、市、区、详细地址都不能为空','Index/index#toregister');
+            $this->error('用户名、密码、电话、店铺名、店铺描述、省、市、区、详细地址都不能为空','Index/account#toregister');
         }
         else {
             if ($password_register != $pwd_again_register) {
-                $this->error('两次输入的密码不一致,请重新输入！','Index/index#toregister');
+                $this->error('两次输入的密码不一致,请重新输入！','Index/account#toregister');
             }
             else {
                 $User = M("Restaurant"); // 实例化User对象
@@ -147,15 +147,15 @@ class IndexController extends Controller {
                 $data['email'] = $email;
                 
                 if (($this->checkStatus($account_register))) {
-                    $this->error('用户名已存在！','Index/index#toregister');
+                    $this->error('用户名已存在！','Index/account#toregister');
                 } else {
 
                     $result = $User->add($data);
                     if (!$result) {
-                        $this->error('注册不成功！','Index/index#toregister');
+                        $this->error('注册不成功！','Index/account#toregister');
                     } else {
                         session_start();
-                        $_SESSION['account']=$account_register;
+                        $_SESSION['username']=$account_register;
                         $_SESSION['password']=$password_register;
 
                      //   $this->success('注册成功!', 'modify_rest');
@@ -227,11 +227,9 @@ class IndexController extends Controller {
         $restno = $colum->where($condition)->field('rest_no')->select();
         $dish = M("Restdish");
         $info=$restno[0];
-      $conditionDish['rest_no'] =$info['rest_no'];
+        $conditionDish['rest_no'] =$info['rest_no'];
         $resultDish = $dish->where($conditionDish)->select();
         $dishname = $dish->where($conditionDish)->field('dish_name')->select();
-        $i=$dishname[0];
-        $_SESSION['dishname']=$i['dish_name'];
         $sum = count($resultDish);//获得当前总数
         $p =new \Think\Page($sum, 10);
         $page = $p->show();
@@ -239,7 +237,7 @@ class IndexController extends Controller {
         $this->assign('list',$list);
         $this->assign('page', $page);
         $this->assign('sum',$sum);
-$this->display();
+        $this->display();
 }
     /*
     *显示admin_table_search函数
@@ -250,7 +248,7 @@ $this->display();
 
         $dish = $_SESSION['dishname'];
         if ($dish == "") {
-            echo "<script> alert('请输入你要查询的菜品名');parent.location.href='http://localhost/tp/index.php/Home/Index/admin_table.html'; </script>";
+            echo "<script> alert('请输入你要查询的菜品名');parent.location.href='http://43.241.236.209/www/think/index.php/Home/Index/admin_table.html'; </script>";
 
         } else {
             $colum = M("Restdish");
@@ -317,6 +315,7 @@ $this->display();
     * */
     public function upload()
     {
+        $arr=rand();
         $rest_name=$_SESSION['username'];
         $column=M('Restaurant');
         $condition['account']=$rest_name;
@@ -349,12 +348,8 @@ $this->display();
             $upload->exts     = array('jpg', 'gif', 'png', 'jpeg');
             $upload->autoSub  = true;
             $upload->saveRule = 'com_create_guid';
-            $upload->saveName=$_POST['file'];
-           // $upload->exts=array('jpg','png','gif','jpeg');//类型
-           // $upload->rootPath  ='./Uploads/'; // 设置附件上传根目录
-           // $upload->savePath  =''; // 设置附件上传（子）目录
-            //$fileName=$_POST['file'];
-           $fileName=$_FILES["file"]["name"];
+            $upload->saveName=$arr.'-'.$_FILES["file"]["name"];
+
            //$fileExtensions=strrchr($fileName, '.');
            // $fileName = trim($fileName,$fileExtensions);
 
@@ -364,7 +359,7 @@ $this->display();
             $realfilepath = './Uploads/'.$info['file']['savepath'].'/';
             $image->open($realfilepath.$info['file']['savename']);
            // $savename = $realfilepath.'crop_'.$info['file']['savename'];
-            $data['finish_pic']='http://localhost/tp/Uploads/'.$info['file']['savepath'].$fileName;
+            $data['finish_pic']='http://43.241.236.209/www/think/Uploads/'.$info['file']['savepath'].$info['file']['savename'];
 
             $result = $User->add($data);
                 if (!$result) {
@@ -380,7 +375,48 @@ $this->display();
     *显示菜单函数
     *
     * */
+    public function admin_m_dish(){
+        $in=$_GET['i'];
+        $_SESSION['i']=$in;
+        
+    }
+    public function delete_dish(){
+        $in= $_SESSION['i']-1;
+        $name = $_SESSION['username'];
+        $colum = M("Restaurant");
+        $condition['account'] =$name ;
+        $restno = $colum->where($condition)->field('rest_no')->select();
+        $dish = M("Restdish");
+        $info=$restno[0];
+        $conditionDish['rest_no'] =$info['rest_no'];
+        $dishname = $dish->where($conditionDish)->field('dish_name')->select();
+        $i=$dishname[$in];
+        $p=$i['dish_name'];
+        dump($p);
+        $c = M("Restdish");
+        $result = $c->execute("delete from restdish where dish_name='$p'");
+        if( $result){
+            $this->success('成功删除记录！！','admin_table');
+        }else{
+            $this->error('恭喜你，出错啦！','admin_table');
+
+        }
+
+    }
     public function admin_modify_dish(){
+
+        $in= $_SESSION['i']-1;
+        $name = $_SESSION['username'];
+        $colum = M("Restaurant");
+        $condition['account'] =$name ;
+        $restno = $colum->where($condition)->field('rest_no')->select();
+        $dish = M("Restdish");
+        $info=$restno[0];
+        $conditionDish['rest_no'] =$info['rest_no'];
+        $resultDish = $dish->where($conditionDish)->select();
+        $dishname = $dish->where($conditionDish)->field('dish_name')->select();
+        $i=$dishname[$in];
+        $_SESSION['dishname']=$i['dish_name'];
         $dish_name=$_SESSION['dishname'];
         $column=M('restdish');
         $condition1['dish_name']=$dish_name;
@@ -406,6 +442,7 @@ $this->display();
     * */
     public function modifyDish(){
 
+        $arr=rand();
        $dish_name= $_SESSION['dishname'];
 
         $modify_name=$_POST['dish_name'];
@@ -435,11 +472,12 @@ $this->display();
             $upload->autoSub  = true;
             //  $upload->subName  = array('date','Ymd');
             $upload->saveRule = 'com_create_guid';
-            $upload->saveName=$_POST['file'];
+            $upload->saveName=$arr.'-'.$_FILES["file"]["name"];
+
+
             $info   =   $upload->upload();
-            $fileName=$_FILES["file"]["name"];
             if($info){
-                $data['finish_pic']='http://localhost/tp/Uploads/'.$info['file']['savepath'].$fileName;
+                $data['finish_pic']='http://43.241.236.209/www/think/Uploads/'.$info['file']['savepath'].$info['file']['savename'];
                 $result = $User->where($condition)->save($data);
             }
             else{
@@ -512,6 +550,7 @@ $this->display();
     *
     * */
     public function portrait(){
+        $arr=rand();
         $rest_name=$_SESSION['username'];
         $column=M('Restaurant');
         $condition['account']=$rest_name;
@@ -524,16 +563,16 @@ $this->display();
         $upload->autoSub  = true;
         //  $upload->subName  = array('date','Ymd');
         $upload->saveRule = 'com_create_guid';
-        $upload->saveName=$_POST['file'];
+        $upload->saveName=$arr.'-'.$_FILES["file"]["name"];
+
         $info   =   $upload->upload();
         //生成缩略图
-        $image = new \Think\Image();
-        $fileName=$_FILES["file"]["name"];
-        $realfilepath = './Upload/'.$info['file']['savepath'].'/';
-        $image->open($realfilepath.$info['file']['savename']);
+     //   $image = new \Think\Image();
+     //   $fileName=$arr.'-'.$_FILES["file"]["name"];
+     //   $realfilepath = './Upload/'.$info['file']['savepath'].'/';
+      //  $image->open($realfilepath.$info['file']['savename']);
         //$savename = $realfilepath.'crop_'.$info['file']['savename'];
-        $data['portrait']='http://localhost/tp/Upload/'.$info['file']['savepath'].$fileName;
-
+        $data['portrait']='http://43.241.236.209/www/think/Upload/'.$info['file']['savepath'].$info['file']['savename'];
         $result=$column->where($condition)->field('portrait')->filter('strip_tags')->save($data);
        // $result = $column->execute("update restaurant set portrait= '$data['portrait']’ where account='$rest_name'");
         if( $result){
@@ -544,6 +583,11 @@ $this->display();
 
         }
 
+    }
+
+    public function account(){
+        unset($_SESSION['username']);
+        $this->display();
     }
 
 }

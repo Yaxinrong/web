@@ -8432,7 +8432,7 @@
 
           qq: {
             title: 'QQ 好友',
-            url: 'http://connect.qq.com/widget/shareqq/index.html',
+            url: 'http://connect.qq.com/widget/shareqq/account.html',
             icon: 'qq'
           },
           // url:,

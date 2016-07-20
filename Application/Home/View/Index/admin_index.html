@@ -8,7 +8,7 @@
     <script src="__PUBLIC__/js/jquery.min.js"></script>
     <!-- Custom Theme files -->
     <link href="__PUBLIC__/css/s.css" rel="stylesheet" type="text/css">
-	
+
     <!-- Custom Theme files -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
@@ -39,8 +39,8 @@
         </div>
         <div class="menu">
             <ul class="menu-top">
-                <li><a class="play-icon popup-with-zoom-anim" href="index.php/Home/Index/account.html">登录</a></li>
-                <li><a class="play-icon popup-with-zoom-anim" href="index.php/Home/Index/account#toregister">注册</a></li>
+                <li><a class="play-icon popup-with-zoom-anim" href="#"> 欢迎，{$_SESSION['username']}</a></li>
+
                 <li><div class="main">
                     <section>
                         <button id="showRight" class="navig"></button>
@@ -64,14 +64,14 @@
                     <a href="#about" class="scroll">关于我们</a>
                     <a href="#interduce" class="scroll">项目开发人员</a>
                     <a href="#join" class="scroll">下载app</a>
-					<a href="#center_end" class="scroll">扫一扫</a>
+                    <a href="#center_end" class="scroll">扫一扫</a>
                 </nav>
             </div>
             <script src="__PUBLIC__/js/classie.js"></script>
             <script>
                 var menuRight = document.getElementById( 'cbp-spmenu-s2' ),
-                    showRight = document.getElementById( 'showRight' ),
-                    body = document.body;
+                        showRight = document.getElementById( 'showRight' ),
+                        body = document.body;
 
                 showRight.onclick = function() {
                     classie.toggle( this, 'active' );
@@ -95,7 +95,7 @@
             <p>Welcome To</p>
             <br>
             <h1>Nourriture</h1>
-            <a href="index.php/Home/Index/account.html">点击进入</a>
+            <a href="admin_user.html">点击进入</a>
         </div>
 
     </div>
@@ -104,7 +104,7 @@
 <!---<img class="home-bg" src="images/home-bg.png">--->
 <!-- Aboutus Starts Here --->
 <div class="aboutus" id="about">
-<img class="home-bg" src="__PUBLIC__/images/fy1.png" style="text-align:center">
+    <img class="home-bg" src="__PUBLIC__/images/fy1.png" style="text-align:center">
     <div class="container">
         <div class="row aboutus-row">
             <br><br>
@@ -126,7 +126,7 @@
                 <span class="line-red"></span>
                 <p>在web端查看用户对您餐馆的评价！在美食图片下有评论按钮，点击弹出编辑框可输入想发表的评论与美食分享者交流。查看与分享学习后的成果照片，与大家一起聊美食，精进厨艺。</p>
             </div>
-            
+
         </div>
     </div>
 </div>
@@ -134,7 +134,7 @@
 
 <!-- Interduce Starts Here  ---->
 <div class="interduce" id="interduce">
-<img class="home-bg" src="__PUBLIC__/images/fy.png">
+    <img class="home-bg" src="__PUBLIC__/images/fy.png">
     <div class="container">
         <div class="center_content">
             <div class="cen_left">
@@ -150,9 +150,9 @@
                 <img src="__PUBLIC__/images/people-9.png">
                 <div class="font">
                     <h2>胡咪喳喳</h2>
-					<img src="__PUBLIC__/images/heng.png" class="heng">
+                    <img src="__PUBLIC__/images/heng.png" class="heng">
                     <span>胡同学 杭州人</span>
-                   
+
                     <p>写代码不如吃饭，写代码不如吃饭</p>
                 </div>
             </div>
@@ -169,61 +169,61 @@
                 <img src="__PUBLIC__/images/people-4.png" class="toutu">
                 <div class="font">
                     <h2>哈哈大王</h2>
-					<img src="__PUBLIC__/images/heng.png" class="heng">
+                    <img src="__PUBLIC__/images/heng.png" class="heng">
                     <span>崔同学 潍坊人</span>
-                 
+
                     <p>原谅我放荡不羁爱吃肉/原谅我一生不羁放纵爱吃肉</p>
                 </div>
             </div>
-	
+
         </div>
     </div>
-	 <div class="container">
+    <div class="container">
         <div class="center_content">
-          
-			 <div class="cen_left">
+
+            <div class="cen_left">
                 <img src="__PUBLIC__/images/people-5.png" class="toutu">
                 <div class="font">
                     <h2>看不懂</h2>
-					<img src="__PUBLIC__/images/heng.png" class="heng">
+                    <img src="__PUBLIC__/images/heng.png" class="heng">
                     <span>李同学 北京人</span>
-                    
+
                     <p>任何一种爱，都不比对美食的热爱真切。</p>
                 </div>
             </div>
-			 <div class="cen_left">
+            <div class="cen_left">
                 <img src="__PUBLIC__/images/people-6.png" class="toutu">
                 <div class="font">
                     <h2>Deft我是你的宝宝啊</h2>
-					<img src="__PUBLIC__/images/heng.png" class="heng">
+                    <img src="__PUBLIC__/images/heng.png" class="heng">
                     <span>聂同学 晋中人</span>
-                  
+
                     <p>你长得这么可爱，一定很好吃</p>
                 </div>
             </div>
-			<div class="cen_left">
+            <div class="cen_left">
                 <img src="__PUBLIC__/images/people-2.png" class="toutu">
                 <div class="font">
                     <h2>Mr.刘JF</h2>
-					<img src="__PUBLIC__/images/heng.png" class="heng">
+                    <img src="__PUBLIC__/images/heng.png" class="heng">
                     <span>刘先生 辽宁人</span>
-                    
+
                     <p>宁可食无肉，不可居无竹</p>
                 </div>
             </div>
-			<div class="cen_left">
+            <div class="cen_left">
                 <img src="__PUBLIC__/images/people-8.png" class="toutu">
                 <div class="font">
                     <h2>Mr.XX</h2>
-					<img src="__PUBLIC__/images/heng.png" class="heng">
+                    <img src="__PUBLIC__/images/heng.png" class="heng">
                     <span>邢先生 火星人</span>
-                    
+
                     <p>吃吃吃，就知道吃</p>
                 </div>
             </div>
         </div>
     </div>
-	
+
 </div>
 <!-- Interduce Ends Here  ---->
 
@@ -235,28 +235,28 @@
             <span class="linet-red"></span>
         </div>
     </div >
-	<div class="clearfix"></div>
-			
+    <div class="clearfix"></div>
+
 </div>
 <!--- Portfolio Ends Here --->
 <img class="home-bg" src="__PUBLIC__/images/fy3.png">
 
 <div class="center_end" id="center_end">
-		<div class="end_wrap">
-			<dl>
-				<dt><img src='__PUBLIC__/images/erweima_d_1.png' style='width:100%;height:auto'></dt>
-				<dd><p>用户端<br/>APP下载</p></dd>
-			</dl>
-			<dl>
-				<dt><img src='__PUBLIC__/images/erweima_d_3.jpg' style='width:100%;height:auto'></dt>
-				<dd><p>关注微信<br/>公众号</p></dd>
-			</dl>
-			<dl style='margin:0'>
-				<dt><img src='__PUBLIC__/images/erweima_d_4.png'></dt>
-				<dd><p>需要帮助？<br/>扫一扫加好友</p></dd>
-			</dl>
-		</div>
-	</div>
+    <div class="end_wrap">
+        <dl>
+            <dt><img src='__PUBLIC__/images/erweima_d_1.png' style='width:100%;height:auto'></dt>
+            <dd><p>用户端<br/>APP下载</p></dd>
+        </dl>
+        <dl>
+            <dt><img src='__PUBLIC__/images/erweima_d_3.jpg' style='width:100%;height:auto'></dt>
+            <dd><p>关注微信<br/>公众号</p></dd>
+        </dl>
+        <dl style='margin:0'>
+            <dt><img src='__PUBLIC__/images/erweima_d_4.png'></dt>
+            <dd><p>需要帮助？<br/>扫一扫加好友</p></dd>
+        </dl>
+    </div>
+</div>
 
 
 <!-- Footer Starts Here ---->

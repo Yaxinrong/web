@@ -1,0 +1,3649 @@
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    border: 0 none;
+    font: inherit;
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: outside none none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote::before, blockquote::after, q::before, q::after {
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+#colorbox, #cboxOverlay, #cboxWrapper {
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    z-index: 9999;
+}
+#cboxOverlay {
+    height: 100%;
+    position: fixed;
+    width: 100%;
+}
+#cboxMiddleLeft, #cboxBottomLeft {
+    clear: left;
+}
+#cboxContent {
+    overflow: hidden;
+    position: relative;
+}
+#cboxLoadedContent {
+    overflow: auto;
+}
+#cboxLoadedContent iframe {
+    border: 0 none;
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+#cboxTitle {
+    margin: 0;
+}
+#cboxLoadingOverlay, #cboxLoadingGraphic {
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+#cboxPrevious, #cboxNext, #cboxClose, #cboxSlideshow {
+    cursor: pointer;
+}
+#cboxOverlay {
+    background: #a0a0a0 none repeat scroll 0 0;
+}
+#colorBox {
+}
+#cboxTopLeft {
+    background: rgba(0, 0, 0, 0) url("/static/images/colorbox/border1.png") no-repeat scroll 0 0;
+    height: 25px;
+    width: 25px;
+}
+#cboxTopCenter {
+    background: rgba(0, 0, 0, 0) url("/static/images/colorbox/border1.png") repeat-x scroll 0 -50px;
+    height: 25px;
+}
+#cboxTopRight {
+    background: rgba(0, 0, 0, 0) url("/static/images/colorbox/border1.png") no-repeat scroll -25px 0;
+    height: 25px;
+    width: 25px;
+}
+#cboxBottomLeft {
+    background: rgba(0, 0, 0, 0) url("/static/images/colorbox/border1.png") no-repeat scroll 0 -25px;
+    height: 25px;
+    width: 25px;
+}
+#cboxBottomCenter {
+    background: rgba(0, 0, 0, 0) url("/static/images/colorbox/border1.png") repeat-x scroll 0 -75px;
+    height: 25px;
+}
+#cboxBottomRight {
+    background: rgba(0, 0, 0, 0) url("/static/images/colorbox/border1.png") no-repeat scroll -25px -25px;
+    height: 25px;
+    width: 25px;
+}
+#cboxMiddleLeft {
+    background: rgba(0, 0, 0, 0) url("/static/images/colorbox/border2.png") repeat-y scroll 0 0;
+    width: 25px;
+}
+#cboxMiddleRight {
+    background: rgba(0, 0, 0, 0) url("/static/images/colorbox/border2.png") repeat-y scroll -25px 0;
+    width: 25px;
+}
+#cboxContent {
+    background: #fff none repeat scroll 0 0;
+}
+#cboxLoadedContent {
+    margin-bottom: 20px;
+}
+#cboxTitle {
+    bottom: 0;
+    color: #999;
+    left: 0;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+}
+#cboxCurrent {
+    bottom: 0;
+    color: #999;
+    left: 100px;
+    position: absolute;
+}
+#cboxSlideshow {
+    bottom: 0;
+    color: #444;
+    position: absolute;
+    right: 42px;
+}
+#cboxPrevious {
+    bottom: 0;
+    color: #444;
+    left: 0;
+    position: absolute;
+}
+#cboxNext {
+    bottom: 0;
+    color: #444;
+    left: 63px;
+    position: absolute;
+}
+#cboxLoadingOverlay {
+    background: #fff url("/static/images/colorbox/loading.gif") no-repeat scroll 5px 5px;
+}
+#cboxClose {
+    background: rgba(0, 0, 0, 0) url("/static/images/colorbox/cboxclose.png") no-repeat scroll 0 0;
+    display: block;
+    height: 18px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 18px;
+}
+.cboxIE #cboxTopLeft {
+    background: transparent none repeat scroll 0 0;
+}
+.cboxIE #cboxTopCenter {
+    background: transparent none repeat scroll 0 0;
+}
+.cboxIE #cboxTopRight {
+    background: transparent none repeat scroll 0 0;
+}
+.cboxIE #cboxBottomLeft {
+    background: transparent none repeat scroll 0 0;
+}
+.cboxIE #cboxBottomCenter {
+    background: transparent none repeat scroll 0 0;
+}
+.cboxIE #cboxBottomRight {
+    background: transparent none repeat scroll 0 0;
+}
+.cboxIE #cboxMiddleLeft {
+    background: transparent none repeat scroll 0 0;
+}
+.cboxIE #cboxMiddleRight {
+    background: transparent none repeat scroll 0 0;
+}
+.foobarcar {
+    color: gray;
+}
+.foobarbaz {
+    width: 0;
+}
+body {
+    font: 12px/1.5 微软雅黑,arial,sans-serif;
+    min-width: 960px;
+}
+hr {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: #ccc;
+    border-image: none;
+    border-style: solid;
+    border-width: 1px 0 0;
+    clear: both;
+    height: 0;
+}
+.keyword {
+    color: #278c8c;
+}
+.container {
+    margin: 0 auto;
+    width: 960px;
+}
+.box {
+    display: inline;
+    float: left;
+    position: relative;
+}
+.clear {
+    clear: both;
+    display: block;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    width: 0;
+}
+.clearleft {
+    clear: left;
+}
+.clearfix::before, .clearfix::after, .container::before, .container::after {
+    content: ".";
+    display: block;
+    font-size: 0;
+    height: 0;
+    line-height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    width: 0;
+}
+.clearfix::after, .container::after {
+    clear: both;
+}
+.clearfix, .container {
+}
+.w728 {
+    width: 728px;
+}
+.h90 {
+    height: 90px;
+}
+.w960 {
+    width: 960px;
+}
+.w468 {
+    width: 468px;
+}
+.h60 {
+    height: 60px;
+}
+.w200 {
+    width: 220px;
+}
+.h200 {
+    height: 200px;
+}
+.ml10 {
+    margin-left: 10px;
+}
+.mt0 {
+    margin-top: 0;
+}
+.mt10 {
+    margin-top: 10px;
+}
+.mb10 {
+    margin-bottom: 10px;
+}
+.ml20 {
+    margin-left: 20px;
+}
+.hide {
+    display: none;
+}
+a {
+    color: #666;
+    text-decoration: none;
+}
+a:visited {
+    color: #0287ca;
+}
+a:hover {
+    color: #0287ca;
+    text-decoration: underline;
+}
+h3 {
+    font-size: 2em;
+}
+h4 {
+    color: #000;
+    font-size: 1.5em;
+}
+h5 {
+    font-size: 1.333em;
+}
+h5.line-1 {
+    line-height: 1.5em;
+    overflow: hidden;
+}
+h6 {
+    font-size: 1.167em;
+}
+h6.line-1 {
+    line-height: 1.5em;
+    overflow: hidden;
+}
+h4 a {
+    text-decoration: none;
+}
+h4 a.selected {
+    color: #0287ca;
+}
+h5 a {
+    color: #f60;
+    text-decoration: none;
+}
+h5 a:hover {
+    text-decoration: none;
+}
+h6 a {
+    color: #f60;
+    text-decoration: none;
+}
+h6 a:hover {
+    text-decoration: none;
+}
+.line-1 {
+    height: 1.5em;
+    overflow: hidden;
+}
+.line-5 {
+    height: 7.5em;
+    overflow: hidden;
+}
+body {
+    background: #fff8f0 none repeat scroll 0 0;
+}
+#top-left-bar {
+    width: 300px;
+}
+#top-left-bar ul li {
+    float: left;
+    position: relative;
+}
+#top-left-bar .c-arrow {
+    background: rgba(0, 0, 0, 0) url("http://static.bettyskitchen.com.cn/bk3/images/new-header.png?370eb244af33") no-repeat scroll -10px 0;
+    display: inline-block;
+    height: 10px;
+    width: 15px;
+}
+#top-left-bar .top-nav-content li {
+    float: left;
+    width: 55px;
+}
+#add-favorite .folder {
+    background: rgba(0, 0, 0, 0) url("http://static.bettyskitchen.com.cn/bk3/images/new-header.png?370eb244af33") no-repeat scroll -12px -12px;
+    display: inline-block;
+    height: 10px;
+    margin-left: 2px;
+    width: 15px;
+}
+#top-nav-bar {
+    margin-left: 50px;
+}
+#top-nav-bar .w-arrow {
+    background: rgba(0, 0, 0, 0) url("http://static.bettyskitchen.com.cn/bk3/images/new-header.png?370eb244af33") no-repeat scroll 3px 0;
+    display: inline-block;
+    float: left;
+    height: 36px;
+    width: 15px;
+}
+#top-nav-bar .top-nav {
+    color: #fff;
+    float: left;
+}
+#top-nav-bar .top-nav:hover {
+    color: #fff;
+}
+#top-nav-bar ul li {
+    display: inline-block;
+    float: left;
+    position: relative;
+    width: 55px;
+}
+.angle {
+    left: 5px;
+    position: absolute;
+    top: -7px;
+    z-index: 100;
+}
+#top-left-bar .top-nav-content, #top-nav-bar .top-nav-content, #menu .menu-content {
+    background-color: #fff;
+    border-radius: 3px;
+    box-shadow: 2px 2px 2px rgba(50, 50, 50, 0.3);
+    display: none;
+    left: 0;
+    margin: 0;
+    padding: 0 5px;
+    position: absolute;
+    top: 35px;
+    width: 165px;
+    z-index: 99;
+}
+#top-left-bar .top-nav-content {
+    width: 65px;
+}
+#top-nav-bar .nav-3 {
+    width: 65px;
+}
+#top-nav-bar .top-nav-content li, #top-left-bar .top-nav-content li {
+    line-height: 28px;
+}
+#top-nav-bar .top-nav-content li a, #top-left-bar .top-nav-content li a {
+    color: #399;
+}
+#top-nav-bar .active .top-nav-content, #menu .active .menu-content, #top-left-bar .active .top-nav-content {
+    display: block;
+}
+#status {
+    background: #630 none repeat scroll 0 0;
+    display: block;
+    position: fixed;
+    width: 100%;
+    z-index: 100000000;
+}
+#status .container {
+    line-height: 36px;
+}
+#status a {
+    color: #333;
+    text-decoration: none;
+}
+#status a:hover {
+    color: #0287ca;
+}
+#status iframe {
+    float: left;
+    margin-top: 6px;
+}
+#logo-wrapper {
+    background: #fff8f0 url("http://static.bettyskitchen.com.cn/bk3/images/mr3/nav.jpg?370eb244af33") repeat-x scroll 0 30px;
+    padding-top: 30px;
+}
+#logo-bar {
+    height: 90px;
+    padding-top: 15px;
+}
+#logo {
+    margin: 0;
+}
+#nav {
+    margin-top: -20px;
+    min-width: 1006px;
+}
+#menu {
+    height: 30px;
+    padding: 0 0 0 15px;
+    width: 977px;
+}
+#menu ul {
+    display: inline;
+    float: left;
+    padding-left: 25px;
+    position: relative;
+}
+#menu ul .has_more {
+    height: 36px;
+}
+#menu li {
+    display: inline;
+    float: left;
+    font-size: 16px;
+    margin: 5px 0 0 40px;
+    position: relative;
+    white-space: nowrap;
+}
+#menu li.first {
+    margin-left: 0;
+}
+#menu .menu-content {
+    top: 30px;
+    width: 65px;
+}
+#menu .menu-content li {
+    border-bottom: 1px solid #fdecdc;
+    text-align: center;
+    width: 100%;
+}
+#menu .menu-content li a {
+    font-size: 13px;
+}
+#menu li.clear {
+}
+#menu a {
+    color: #630;
+    text-decoration: none;
+}
+#menu .nav-recipe {
+    color: #dd6b94;
+    text-decoration: none;
+}
+#menu .has_more {
+    height: 30px;
+}
+#menu .arrow {
+    background: rgba(0, 0, 0, 0) url("http://static.bettyskitchen.com.cn/bk3/images/new-header.png?370eb244af33") no-repeat scroll 2px -1px;
+    display: inline-block;
+    height: 10px;
+    margin-left: 2px;
+    width: 15px;
+}
+#menu a.selected, #menu a:hover {
+    text-decoration: none;
+}
+.placeholder {
+    color: #ccc;
+}
+#menu .add_recipe {
+    background: #630 url("http://static.bettyskitchen.com.cn/bk3/images/plus.png?370eb244af33") no-repeat scroll 11px 9px;
+    border-radius: 3px;
+    color: #fff;
+    display: inline-block;
+    float: right;
+    font-size: 16px;
+    height: 30px;
+    line-height: 30px;
+    margin: 5px 0 0;
+    padding: 0 10px 0 40px;
+}
+#menu .living {
+    float: right;
+    height: 17px;
+    padding: 5px 0 0 20px;
+    width: 165px;
+}
+#menu .living a {
+    color: #666;
+    font-size: 15px;
+}
+#menu .living img {
+    position: relative;
+    top: 3px;
+}
+#search-wrapper {
+    color: #399;
+    float: right;
+    height: 30px;
+    line-height: 30px;
+    margin: 10px 0;
+    width: 485px;
+}
+#search-wrapper form {
+    background: transparent url("http://static.bettyskitchen.com.cn/bk3/images/search.png?51f0972c5fcc") no-repeat scroll 0 0;
+    display: inline;
+    float: right;
+    height: 33px;
+    margin-top: 3px;
+    position: relative;
+    width: 476px;
+}
+#search-wrapper .select-style {
+    background: rgba(0, 0, 0, 0) url("http://static.bettyskitchen.com.cn/bk3/images/s-a.png?370eb244af33") no-repeat scroll right center;
+    border: 0 none;
+    float: left;
+    height: 34px;
+    overflow: hidden;
+    width: 53px;
+}
+#search-wrapper select {
+    background: transparent none repeat scroll 0 0;
+    border: 0 none;
+    border-radius: 0;
+    color: rgba(0, 0, 0, 0);
+    font-size: 14px;
+    height: 34px;
+    outline: medium none;
+    overflow: hidden;
+    padding: 7px 5px;
+    text-shadow: 0 0 0 #666;
+    width: 80px;
+}
+#search-wrapper select option {
+    color: #666;
+}
+#search-wrapper select:focus, #search-wrapper select::-moz-focus-inner {
+    border: medium none;
+    outline: medium none;
+}
+#search-wrapper form p {
+    line-height: 34px;
+}
+#search-wrapper .s-q {
+    background-color: transparent;
+    border: medium none;
+    color: #ccc;
+    float: left;
+    font-size: 14px;
+    height: 34px;
+    margin: 0 0 0 12px;
+    padding: 0 6px 0 0;
+    width: 330px;
+}
+#search-wrapper .s-q:focus {
+    border: medium none;
+    color: #666;
+    outline: medium none;
+}
+#search-wrapper .s-s::-moz-focus-inner {
+    border: 0 none;
+}
+#search-wrapper .s-s {
+    background: transparent none repeat scroll 0 0;
+    border: medium none;
+    cursor: pointer;
+    float: left;
+    height: 34px;
+    margin: 0;
+    padding: 0;
+    text-indent: -999em;
+    width: 75px;
+}
+#search-wrapper span.sep {
+    margin: 0 0.75em;
+}
+#search-wrapper a {
+    color: #399;
+    text-decoration: none;
+}
+#search-wrapper a:hover {
+    color: #0287ca;
+}
+#nav2 {
+    background: transparent url("http://static.bettyskitchen.com.cn/bk3/images/mr3/tiao.png?d51f73d35d29") no-repeat scroll 0 10px;
+    margin: 0 auto;
+    width: 960px;
+}
+#menu2 {
+    display: block;
+    height: 45px;
+    padding: 5px 0 0 20px;
+}
+#menu2 a {
+    text-decoration: none;
+}
+#menu2 ul {
+    display: inline;
+    float: left;
+    height: 50px;
+    position: relative;
+    width: 960px;
+}
+#menu2 ul li {
+    display: inline;
+    float: left;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    width: 80px;
+}
+#menu2 ul .children:hover {
+    background: transparent url("http://static.bettyskitchen.com.cn/bk3/images/mr3/tiao-03.png?d51f73d35d29") no-repeat scroll -6px 10px;
+}
+#menu2 ul li a {
+    color: #c96;
+    font-size: 14px;
+    text-decoration: none;
+}
+#menu2 ul li a:hover {
+    color: #f60;
+}
+#menu2 ul .parent {
+    background: transparent url("http://static.bettyskitchen.com.cn/bk3/images/mr3/tiao-02.png?d51f73d35d29") no-repeat scroll 0 2px;
+    width: 85px;
+}
+#menu2 ul .parent a {
+    color: #ff6;
+    font-size: 15px;
+    text-decoration: none;
+}
+#menu2 ul .first {
+    margin-left: 20px;
+}
+#menu2 ul .selected {
+    background: transparent url("http://static.bettyskitchen.com.cn/bk3/images/mr3/tiao-03.png?d51f73d35d29") no-repeat scroll -6px 10px;
+}
+#menu2 ul .selected a {
+    color: #f60;
+    text-decoration: none;
+}
+#breadcrumb {
+    color: #666;
+    height: 30px;
+    line-height: 30px;
+    padding-left: 10px;
+}
+.site-index #breadcrumb {
+    height: 10px;
+    line-height: 10px;
+}
+#breadcrumb h1 {
+    display: inline;
+}
+#breadcrumb a {
+    color: #999;
+    text-decoration: none;
+}
+#breadcrumb a:visited {
+    color: #0287ca;
+    text-decoration: none;
+}
+#breadcrumb a:hover {
+    color: #0287ca;
+    text-decoration: none;
+}
+#breadcrumb .bread-right {
+    display: inline;
+    float: right;
+    position: relative;
+}
+#breadcrumb .bread-right a.add {
+    background: rgba(0, 0, 0, 0) url("http://static.bettyskitchen.com.cn/bk3/images/mr3/add_recipe.png?d51f73d35d29") no-repeat scroll 0 0;
+    height: 28px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 145px;
+}
+#breadcrumb .bread-right a.signup {
+    background: rgba(0, 0, 0, 0) url("http://static.bettyskitchen.com.cn/bk3/images/mr3/signup.png?d51f73d35d29") no-repeat scroll 0 0;
+    height: 28px;
+    position: absolute;
+    right: 125px;
+    top: 0;
+    width: 145px;
+}
+#breadcrumb .bread-right a:hover {
+    z-index: 9;
+}
+#footer {
+    margin-bottom: 10px;
+    text-align: center;
+}
+#footer ul {
+    background-color: #ffb87a;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+}
+#footer ul li {
+    color: #fff;
+    display: inline;
+    font-size: 14px;
+}
+#footer ul a {
+    color: #fff;
+    text-decoration: none;
+}
+#footer ul a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+#short-cut {
+    display: block;
+    position: relative;
+}
+#short-cut .short-cut {
+    display: inline;
+    float: left;
+    height: 110px;
+    position: relative;
+    width: 319px;
+}
+#short-cut .short-cut a {
+    bottom: 0;
+    position: absolute;
+    text-decoration: none;
+}
+#short-cut .short-cut a:hover {
+    bottom: 0;
+    position: absolute;
+    text-decoration: none;
+}
+#editor-wrapper {
+    margin-top: 10px;
+    position: relative;
+}
+#editor-wrapper .icon {
+    background: transparent url("http://static.bettyskitchen.com.cn/bk3/images/mr3/1-02.png?d51f73d35d29") no-repeat scroll 0 0;
+    height: 100px;
+    position: absolute;
+    right: -6px;
+    top: -6px;
+    width: 101px;
+}
+#editor-wrapper .sd-1 {
+    background: transparent url("http://static.bettyskitchen.com.cn/bk3/images/mr3/sd_1.png?d51f73d35d29") no-repeat scroll 0 0;
+    height: 410px;
+    left: -19px;
+    position: absolute;
+    top: 20px;
+    width: 19px;
+}
+#editor-wrapper .sd-2 {
+    background: transparent url("http://static.bettyskitchen.com.cn/bk3/images/mr3/sd_2.png?d51f73d35d29") no-repeat scroll 0 0;
+    height: 410px;
+    position: absolute;
+    right: -19px;
+    top: 20px;
+    width: 19px;
+}
+#editor-pickup {
+    background: #fff url("http://static.bettyskitchen.com.cn/bk3/images/mr3/sd.png?d51f73d35d29") repeat-x scroll 0 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    height: 468px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    position: relative;
+}
+#editor-pickup .pa {
+    border-right: 1px solid #ccc;
+    padding: 9px;
+    width: 640px;
+}
+#editor-pickup .pb {
+    height: 468px;
+    padding: 0 10px;
+    width: 278px;
+}
+#calendar {
+    padding-bottom: 6px;
+}
+#calendar .week {
+    background: transparent url("http://static.bettyskitchen.com.cn/bk3/images/mr3/cal.png?d51f73d35d29") no-repeat scroll 0 0;
+    margin-top: 6px;
+}
+#calendar .week p {
+    color: #f60;
+    font-size: 14px;
+    text-align: center;
+    width: 88px;
+}
+#calendar .week .weekday {
+    color: #fff;
+    font-size: 12px;
+    margin-top: 14px;
+    text-align: center;
+}
+#calendar .week p span {
+    color: #666;
+    font-size: 28px;
+    font-weight: bold;
+    height: 46px;
+    line-height: 46px;
+}
+#calendar .calendar {
+    margin-top: 22px;
+}
+#calendar .calendar p {
+    color: #666;
+    font-size: 12px;
+    line-height: 22px;
+    width: 190px;
+}
+.site-index #slides_wrapper {
+    border: 1px solid #ccc;
+    height: 450px;
+    overflow: hidden;
+    width: 300px;
+}
+.site-index #showcase {
+    height: 450px;
+    overflow: hidden;
+    width: 300px;
+}
+.site-index .coin-slider {
+    overflow: hidden;
+    position: relative;
+}
+.site-index .coin-slider a {
+    border: medium none;
+    color: #fff;
+    outline: medium none;
+    text-decoration: none;
+}
+.site-index .coin-slider .cs-title a {
+    font-size: 1.333em;
+}
+.site-index .coin-slider a:hover {
+    border: medium none;
+    color: #0287ca;
+    outline: medium none;
+    text-decoration: none;
+}
+.site-index .cs-buttons {
+    float: left;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+}
+.site-index .cs-buttons {
+    bottom: 63px;
+    position: absolute;
+    right: 0;
+}
+.site-index .cs-buttons a {
+    background: #333 none repeat scroll 0 0;
+    color: #b8c4cf;
+    float: left;
+    height: 22px;
+    line-height: 22px;
+    margin-right: 6px;
+    opacity: 1;
+    text-decoration: none;
+    width: 24px;
+}
+.site-index #slides_wrapper .cs-active {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #f96;
+    padding-bottom: 3px;
+}
+.site-index .cs-title {
+    background-color: #000;
+    color: #fff;
+    display: block;
+    height: 4.25em;
+    overflow: hidden;
+    padding: 6px 10px;
+    width: 280px;
+}
+.site-index .cs-prev, .site-index .cs-next {
+    background-color: #000;
+    color: #fff;
+    display: none;
+    padding: 0 10px;
+}
+#slide {
+    border: 1px solid #ccc;
+    display: inline;
+    float: left;
+    height: 450px;
+    position: relative;
+    width: 300px;
+}
+#slide-side {
+    display: inline;
+    float: left;
+    height: 448px;
+    margin-left: 20px;
+    overflow: hidden;
+    position: relative;
+    width: 318px;
+}
+#slide-side h3 {
+    color: #666;
+}
+#slide-side h5 .tiny {
+    color: #999;
+    font-size: 12px;
+}
+#slide-side h5 .grey {
+    background-color: #999;
+    color: #fff;
+    font-size: 14px;
+    padding: 2px;
+}
+#slide-side .line-1 {
+    height: 1.5em;
+    overflow: hidden;
+}
+#slide-side h5.site-channel {
+    margin-top: 0;
+}
+#slide-side ul a.img, #slide-side .pre-li a.img {
+    float: left;
+    margin-right: 10px;
+}
+#slide-side .pre-li {
+    height: 78px;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+h5.site-channel .more {
+    display: inline;
+    float: right;
+    position: relative;
+}
+h5.site-channel .more-img {
+    background: #fff url("http://static.bettyskitchen.com.cn/bk3/images/mr3/cooking-2.png?d51f73d35d29") no-repeat scroll 0 50%;
+    height: 14px;
+    line-height: 14px;
+    width: 75px;
+}
+#today-focus {
+    border-bottom: 1px dashed #ccc;
+    margin-bottom: 0.75em;
+    padding-bottom: 0.5em;
+}
+h5.site-channel {
+    font-size: 12px;
+    line-height: 14px;
+    margin-bottom: 6px;
+}
+h5.site-channel-2 .more-img {
+    background-image: url("http://static.bettyskitchen.com.cn/bk3/images/mr3/health.png?d51f73d35d29");
+}
+h5.site-channel-3 .more-img {
+    background-image: url("http://static.bettyskitchen.com.cn/bk3/images/mr3/life.png?d51f73d35d29");
+}
+.tabs-1 {
+    border-bottom: 2px solid #fc9;
+}
+.tabs-1 a {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: transparent url("http://static.bettyskitchen.com.cn/bk3/images/mr3/1-03.png?d51f73d35d29") repeat-x scroll 0 0;
+    border-color: #ccc #ccc -moz-use-text-color;
+    border-image: none;
+    border-style: solid solid none;
+    border-width: 1px 1px medium;
+    color: #333;
+    display: inline;
+    float: left;
+    font-size: 1.333em;
+    line-height: 27px;
+    margin-right: 1px;
+    text-align: center;
+    text-decoration: none;
+    width: 90px;
+}
+.tabs-1 a.last {
+    margin: 0;
+}
+.tabs-1 a.selected, .tabs-1 a:hover {
+    background-image: url("http://static.bettyskitchen.com.cn/bk3/images/mr3/1-04.png?d51f73d35d29");
+    border-bottom-color: #ffb87a;
+    color: #c30;
+    text-decoration: none;
+}
+#tabs-1-target {
+    padding-top: 5px;
+}
+#tabs-1-target a.img {
+    float: left;
+    margin-right: 10px;
+}
+#tabs-1-target li {
+    height: 78px;
+    margin: 5px 0 0;
+    overflow: hidden;
+}
+#filter-shortcut-wrapper {
+    height: 382px;
+    margin-bottom: 10px;
+}
+#filter-shortcut {
+    background: #fff url("http://static.bettyskitchen.com.cn/bk3/images/mr3/2-01.jpg?d51f73d35d29") no-repeat scroll 0 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    height: 327px;
+    margin-right: 12px;
+    overflow: hidden;
+    padding: 53px 10px 0;
+    width: 706px;
+}
+#filter-shortcut-wrapper .pb {
+    height: 380px;
+    width: 220px;
+}
+#filter-shortcut-ingredient {
+    background-color: #fff;
+    border: 3px solid #ffb87a;
+    border-radius: 4px;
+    box-shadow: 3px 3px 3px #999;
+    height: 148px;
+    margin-bottom: 1.5em;
+    padding: 3px 0 6px 11px;
+}
+#filter-shortcut-ingredient li {
+    display: inline;
+    float: left;
+    margin: 8px 13px 4px 0;
+    position: relative;
+    width: 40px;
+}
+#filter-shortcut-ingredient li a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+}
+#filter-shortcut-ingredient li a.img {
+    border: 1px solid #ccc;
+    height: 40px;
+    margin-bottom: 2px;
+    width: 40px;
+}
+#filter-shortcut-ingredient li a.img:hover {
+    border-color: #ffb87a;
+}
+#filter-shortcut .cuisine {
+    background: #fff url("http://static.bettyskitchen.com.cn/bk3/images/mr3/2-02.png?d51f73d35d29") no-repeat scroll 0 0;
+    display: inline;
+    float: left;
+    height: 43px;
+    margin: 0 10px 1.5em;
+    overflow: hidden;
+    padding: 35px 0 0 12px;
+    position: relative;
+    width: 200px;
+}
+#filter-shortcut .cuisine h5 {
+    color: #f60;
+    left: 35px;
+    position: absolute;
+    top: 3px;
+}
+#filter-shortcut .cuisine a {
+    line-height: 1.8em;
+    text-decoration: none;
+    white-space: nowrap;
+}
+#filter-shortcut .cuisine h5 a {
+    color: #f60;
+    line-height: 1.5em;
+}
+.link-btn {
+    background: #fff url("http://static.bettyskitchen.com.cn/bk3/images/mr3/2-03-A.png?d51f73d35d29") no-repeat scroll 0 0;
+    display: inline;
+    float: left;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    text-decoration: none;
+    width: 73px;
+}
+#filter-shortcut .flavor {
+    padding-left: 5px;
+}
+#filter-shortcut .link-btn {
+    margin: 0 7px;
+}
+#filter-shortcut .flavor a {
+    color: #333;
+    text-decoration: none;
+}
+#filter-shortcut .flavor a:hover {
+    background-image: url("http://static.bettyskitchen.com.cn/bk3/images/mr3/2-03-B.png?d51f73d35d29");
+    color: #369;
+}
+#pop-spec {
+    background-color: #fff;
+    border: 1px solid #fc9;
+    height: 165px;
+    overflow: hidden;
+}
+#pop-spec h5 {
+    background-color: #fc9;
+    border-radius: 6px 6px 0 0;
+    line-height: 34px;
+    margin: 2px;
+    padding-left: 0.5em;
+}
+#pop-spec li {
+    font-size: 1.167em;
+    margin: 0 10px;
+}
+#cook-a {
+    padding-bottom: 0;
+    padding-top: 0;
+}
+#cook-a .pa {
+    border-right: 1px solid #cfc;
+    padding: 1em 0;
+}
+#cook-a .pb-2 {
+    width: 247px;
+}
+#tabs-3 {
+    background: #fff url("http://static.bettyskitchen.com.cn/bk3/images/mr3/line-lightgreen.png?d51f73d35d29") repeat-x scroll 0 0;
+    line-height: 29px;
+    padding-left: 10px;
+}
+#tabs-3 a {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: transparent url("http://static.bettyskitchen.com.cn/bk3/images/mr3/line-lightgray.png?d51f73d35d29") repeat-x scroll 0 0;
+    border-color: -moz-use-text-color #ccc;
+    border-image: none;
+    border-style: none solid;
+    border-width: medium 1px;
+    display: inline;
+    float: left;
+    font-size: 1.167em;
+    line-height: 27px;
+    position: relative;
+    text-align: center;
+    width: 111px;
+}
+#tabs-3 a.selected, #tabs-3 a:hover {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: #fff none repeat scroll 0 0;
+    border-color: #99dbbf #99dbbf #fff;
+    border-image: none;
+    border-radius: 6px 6px 0 0;
+    border-style: solid;
+    border-width: 2px;
+    color: #333;
+    line-height: 25px;
+}
+#tabs-3-1, #tabs-3-2 {
+    padding: 10px 10px 0;
+}
+#tabs-3-1 .heading, #tabs-3-2 .heading {
+    color: #f60;
+    font-size: 1.167em;
+}
+#tabs-3-1 .img, #tabs-3-2 .img {
+    margin-right: 10px;
+}
+#tabs-3-1 li, #tabs-3-2 li {
+    height: 75px;
+    margin-bottom: 10px;
+}
+.cook-process {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: #fff url("http://static.bettyskitchen.com.cn/bk3/images/mr3/Angle-01.png?d51f73d35d29") no-repeat scroll 0 0;
+    border-color: #ffb87a;
+    border-image: none;
+    border-radius: 6px;
+    border-style: solid;
+    border-width: 3px 1px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    padding: 1em 0 0 25px;
+}
+.cook-process .pa {
+    display: inline;
+    float: left;
+    padding-right: 27px;
+    position: relative;
+    width: 685px;
+}
+.cook-process .pb {
+    display: inline;
+    float: left;
+    position: relative;
+    width: 220px;
+}
+.cook-process .tag-line {
+    float: right;
+    font-size: 12px;
+    line-height: 26px;
+    margin-bottom: 6px;
+    text-indent: 0;
+    width: 370px;
+}
+.cook-process .tag-line a, .cook-process .tag-line span {
+    display: inline;
+    float: left;
+    font-weight: normal;
+    margin-left: 0.5em;
+}
+#cook-a {
+    border-color: #b7e7d4;
+}
+#cook-b {
+    background-image: url("http://static.bettyskitchen.com.cn/bk3/images/mr3/Angle-02.png?d51f73d35d29");
+    border-color: #ccf;
+}
+#cook-c {
+    background-image: url("http://static.bettyskitchen.com.cn/bk3/images/mr3/Angle-03.png?d51f73d35d29");
+    border-color: #fcc;
+}
+#cook-a .pa h4 {
+    background: #fff url("http://static.bettyskitchen.com.cn/bk3/images/mr3/3-01.png?d51f73d35d29") no-repeat scroll 0 0;
+    height: 26px;
+    margin-bottom: 6px;
+}
+#cook-b .pa h4 {
+    background: #fff url("http://static.bettyskitchen.com.cn/bk3/images/mr3/4-01.png?d51f73d35d29") no-repeat scroll 0 0;
+    height: 26px;
+    margin-bottom: 6px;
+}
+#cook-c .pa h4 {
+    background: #fff url("http://static.bettyskitchen.com.cn/bk3/images/mr3/5-01.png?d51f73d35d29") no-repeat scroll 0 0;
+    height: 26px;
+    margin-bottom: 6px;
+}
+#cook-a .paa {
+    display: inline;
+    float: left;
+    width: 300px;
+}
+#cook-a .paa a.img {
+    float: left;
+    height: 100px;
+    margin-right: 14px;
+}
+#cook-a .paa ul {
+    height: 100px;
+    margin-bottom: 1.75em;
+    overflow: hidden;
+}
+#cook-a .pab {
+    display: inline;
+    float: left;
+    width: 385px;
+}
+#cook-a .pab li {
+    display: inline;
+    float: left;
+    margin-bottom: 0.5em;
+    margin-left: 14px;
+    position: relative;
+    width: 82px;
+}
+#cook-a .pab .line-2 {
+    display: block;
+    height: 3em;
+    line-height: 1.5em;
+    margin-top: 2px;
+    overflow: hidden;
+    text-align: center;
+}
+#cook-a .pab a.img {
+    border: 1px solid #ccc;
+    display: block;
+    height: 80px;
+    text-align: center;
+}
+#cook-a .pab a.img:hover {
+    border-color: #ffb87a;
+}
+#cook-a .pb h4 {
+    background: #fff url("http://static.bettyskitchen.com.cn/bk3/images/mr3/3-02.png?d51f73d35d29") no-repeat scroll 0 30%;
+    padding-left: 10px;
+}
+.top-list li {
+    margin-bottom: 3px;
+}
+.top-list span.n {
+    background: #fff url("http://static.bettyskitchen.com.cn/bk3/images/mr3/3-03.png?d51f73d35d29") no-repeat scroll 0 0;
+    color: #fff;
+    float: left;
+    font-weight: bold;
+    height: 14px;
+    line-height: 14px;
+    margin: 2px 0.5em 0 0;
+    position: relative;
+    text-align: center;
+    width: 14px;
+}
+.top-list span.n4 {
+    background-image: url("http://static.bettyskitchen.com.cn/bk3/images/mr3/3-04.png?d51f73d35d29");
+}
+.top-list li span.box img {
+    border: 1px solid #ccc;
+}
+.top-list li span.box {
+    display: none;
+}
+.top-list li.over span.box {
+    display: inline;
+    margin-right: 0.75em;
+}
+.top-list li.over span.n {
+}
+.top-list li.over div.line-1 a {
+    color: #f60;
+    font-size: 1.167em;
+}
+.top-list li.over div.line-1 {
+    height: 92px;
+}
+.top-list li div.detail {
+    display: none;
+}
+.top-list li.over div.detail {
+    display: block;
+    height: 54px;
+    overflow: hidden;
+    padding-right: 0.75em;
+}
+.top-list li.over div.detail a {
+    color: #666;
+    font-size: 12px;
+    text-decoration: none;
+}
+.top-list li.over div.detail a:hover {
+    color: #0287ca;
+}
+#cook-b {
+    padding-bottom: 0.5em;
+}
+#cook-b .paa {
+    border: 1px solid #ccf;
+    display: inline;
+    float: left;
+    height: 228px;
+    margin-bottom: 10px;
+    position: relative;
+    width: 328px;
+}
+#cook-b .paa h5 {
+    background-color: #ccf;
+    bottom: 0;
+    left: 0;
+    opacity: 0.5;
+    position: absolute;
+    text-align: center;
+    width: 328px;
+}
+#cook-b .paa .play {
+    background: transparent url("http://static.bettyskitchen.com.cn/bk3/images/mr3/play-a.png?d51f73d35d29") no-repeat scroll 0 0;
+    cursor: pointer;
+    height: 58px;
+    left: 136px;
+    position: absolute;
+    top: 80px;
+    width: 58px;
+}
+#cook-b .pab {
+    display: inline;
+    float: left;
+    position: relative;
+    width: 330px;
+}
+#cook-b .pab h5 {
+    color: #666;
+    line-height: 1.8;
+    margin-top: 0.35em;
+}
+#cook-b .pab ul {
+    border-top: 1px dashed #ccc;
+    margin-top: 1em;
+    padding-top: 1em;
+}
+#cook-b .pab ul li {
+    display: inline;
+    float: left;
+    height: 1.5em;
+    margin-right: 8px;
+    position: relative;
+    width: 156px;
+}
+.icon-v {
+}
+.icon-r {
+}
+.icon-a {
+}
+#cook-b .cooking-star {
+    background-color: #f7f7f7;
+    border: 1px solid #c8afe2;
+    border-radius: 4px;
+    display: inline;
+    float: left;
+    height: 105px;
+    overflow: hidden;
+    padding: 5px 10px 10px;
+    position: relative;
+    width: 310px;
+}
+#cook-b .cooking-star .img {
+    display: inline;
+    float: left;
+    height: 75px;
+    margin-right: 10px;
+    position: relative;
+    width: 75px;
+}
+#cook-b .cooking-star a {
+    text-decoration: none;
+}
+#cook-b .cooking-star p {
+    height: 6em;
+    overflow: hidden;
+}
+#cook-b .pb h4 {
+    background: #fff url("http://static.bettyskitchen.com.cn/bk3/images/mr3/4-02.png?d51f73d35d29") no-repeat scroll 0 30%;
+    padding-left: 10px;
+}
+#cook-b .top-list span.n {
+    background-image: url("http://static.bettyskitchen.com.cn/bk3/images/mr3/4-04.png?d51f73d35d29");
+}
+#cook-b .top-list span.n4 {
+    background-image: url("http://static.bettyskitchen.com.cn/bk3/images/mr3/4-05.png?d51f73d35d29");
+}
+#cook-b .top-list span.n9 {
+    background-image: url("http://static.bettyskitchen.com.cn/bk3/images/mr3/4-06.png?d51f73d35d29");
+}
+#cook-c {
+    padding-bottom: 0.5em;
+}
+#cook-c .pa {
+    padding-right: 0;
+    width: 712px;
+}
+#cook-c .pa .tag-line {
+    margin-right: 27px;
+}
+#cook-c .top-list span.n {
+    background-image: url("http://static.bettyskitchen.com.cn/bk3/images/mr3/5-03.png?d51f73d35d29");
+}
+#cook-c .top-list span.n4 {
+    background-image: url("http://static.bettyskitchen.com.cn/bk3/images/mr3/5-05.png?d51f73d35d29");
+}
+#cook-c .pb h4 {
+    background: #fff url("http://static.bettyskitchen.com.cn/bk3/images/mr3/5-02.png?d51f73d35d29") no-repeat scroll 0 30%;
+    padding-left: 10px;
+}
+#cook-c .paa {
+    display: inline;
+    float: left;
+    margin-right: 20px;
+    position: relative;
+    width: 333px;
+}
+#cook-c .paa .img {
+    border: 1px solid #ccc;
+    display: block;
+    height: 220px;
+    width: 331px;
+}
+#cook-c .paa h5 {
+    margin: 0.5em 0 0;
+}
+#cook-c .pab {
+    display: inline;
+    float: left;
+    position: relative;
+    width: 357px;
+}
+#cook-c .pab ul {
+    margin-right: 20px;
+}
+#cook-c .pab ul li {
+    display: inline;
+    float: left;
+    margin-right: 8px;
+    position: relative;
+    width: 156px;
+}
+#cook-c .tips {
+    background: #fff url("http://static.bettyskitchen.com.cn/bk3/images/mr3/tips.png?d51f73d35d29") no-repeat scroll 0 0;
+    height: 127px;
+    overflow: hidden;
+    padding: 6px 30px 10px 14px;
+    width: 313px;
+}
+#cook-c .tips .img {
+    display: inline;
+    float: left;
+    margin-right: 10px;
+}
+#cook-c .tips h5 a {
+    color: #333;
+    text-decoration: none;
+}
+#cook-c .tips h5 a:hover {
+    color: #0287ca;
+    text-decoration: underline;
+}
+#cook-c .tips-2 {
+    background: transparent url("http://static.bettyskitchen.com.cn/bk3/images/mr3/tips-2.png?d51f73d35d29") no-repeat scroll 0 0;
+    height: 45px;
+    left: 160px;
+    position: absolute;
+    top: -15px;
+    width: 24px;
+}
+#message_dlg, #waiting_dlg {
+    background-color: #fff;
+    border: 2px solid #f00;
+    color: #f90;
+    display: none;
+    padding: 4px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+#cboxLoadedContent #message_dlg_text, #cboxLoadedContent #waiting_dlg_msg {
+    text-align: center;
+}
+#mlogin {
+    float: right;
+    width: 330px;
+}
+#mlogin a {
+    color: #feb87a;
+}
+#mlogin .p-info span {
+    float: left;
+    margin-right: 5px;
+}
+#mlogin .p-info a {
+    float: left;
+    margin-right: 5px;
+    text-decoration: none;
+}
+#mlogin .p-info .priv-msg {
+    background: rgba(0, 0, 0, 0) url("http://static.bettyskitchen.com.cn/bk3/images/mr3/top-01.png") no-repeat scroll 5px 13px;
+    padding-left: 30px;
+}
+#mlogin #sinalogin, #mlogin #qqlogin {
+    display: block;
+    float: right;
+}
+#mlogin img {
+    vertical-align: middle;
+}
+.profile_recipe_list {
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 608px;
+}
+.profile_recipe_list li {
+    margin-bottom: 10px;
+    margin-right: 7px;
+    width: 290px;
+}
+.profile_recipe_list li .info {
+    width: 133px;
+}
+.profile_recipe_list li .v_img {
+    border: 1px solid #ccc;
+    display: block;
+    font-size: 0;
+    height: 100px;
+    line-height: 0;
+    padding: 5px;
+    width: 135px;
+}
+.profile_recipe_list li .v_img img {
+    display: block;
+    height: 100px;
+    width: 135px;
+}
+.profile_recipe_list li .v_info {
+    background-color: #ffc;
+    display: none;
+    height: 80px;
+    left: 6px;
+    opacity: 0.75;
+    padding: 10px;
+    position: absolute;
+    top: 6px;
+    width: 115px;
+}
+.people_item .user_profile {
+    background-color: #cfc;
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 608px;
+}
+.people_item .profile {
+    padding: 5px 0;
+    width: 180px;
+}
+.people_item .profile label {
+    color: #066;
+    font-weight: bold;
+    margin-right: 10px;
+}
+.people_item .profile p {
+    word-wrap: break-word;
+}
+.people_item .im_status {
+    width: 500px;
+}
+.people_item .im_status li {
+    float: left;
+    margin-right: 10px;
+}
+.people_item .im_status li a {
+    display: block;
+    line-height: 30px;
+    text-align: center;
+    text-decoration: none;
+}
+#mlogin .p-info .priv-msg {
+    background: rgba(0, 0, 0, 0) url("http://static.bettyskitchen.com.cn/bk3/images/mr3/top-01.png") no-repeat scroll 5px 13px;
+    padding-left: 30px;
+}
+#recipe-item {
+    background-color: #fff;
+    margin-right: 10px;
+    width: 728px;
+}
+.recipe-item #sidebar {
+    width: 220px;
+}
+#recipe-item-heading {
+    color: #f60;
+    font-size: 30px;
+    padding: 10px 10px 5px;
+}
+#recipe-item-heading .edit-recipe {
+    background: rgba(0, 0, 0, 0) url("http://static.bettyskitchen.com.cn/bk3/images/mr3/edit-recipe.png?d1ba6711da31") no-repeat scroll 0 0;
+    display: inline-block;
+    height: 17px;
+    width: 61px;
+}
+#recipe-item-sh {
+}
+.recipe-item #bdshare {
+    float: right;
+}
+#recipe-item-slider {
+    margin-right: 10px;
+    padding-left: 10px;
+    width: 350px;
+}
+#recipe-item-info {
+    margin-bottom: 6px;
+    padding-top: 6px;
+    width: 350px;
+}
+.recipe-item-attr {
+}
+.recipe-item-attr li {
+    background: #fff url("http://static.bettyskitchen.com.cn/bk3/images/mr3/recipe-icons.png?29f7666f53b9") no-repeat scroll 0 0;
+    display: inline;
+    float: left;
+    font-size: 1.167em;
+    height: 1.5em;
+    line-height: 1.5em;
+    margin-left: 0.25em;
+    overflow: hidden;
+    padding-left: 1.75em;
+    width: 146px;
+}
+.recipe-item-attr .attr-0 {
+    background-position: 0 2px;
+}
+.recipe-item-attr .attr-1 {
+    background-position: 0 -142px;
+}
+.recipe-item-attr .attr-2 {
+    background-position: 0 -22px;
+}
+.recipe-item-attr .attr-3 {
+    background-position: 0 -238px;
+}
+.recipe-item-attr .attr-4 {
+    background-position: 0 -190px;
+}
+.recipe-item-attr .attr-5 {
+    background-position: 0 -118px;
+}
+.recipe-item-attr .attr-6 {
+    background-position: 0 -45px;
+}
+.recipe-item-attr .attr-7 {
+    background-position: 0 -69px;
+}
+.recipe-item-attr .attr-8 {
+    background-position: 0 -213px;
+}
+.recipe-item-attr .attr-9 {
+    background-position: 0 -165px;
+}
+.recipe-item-attr .attr-10 {
+    background-position: 0 -93px;
+}
+.recipe-item-attr .attr-11 {
+    background-position: 0 -262px;
+}
+#recipe-food-group {
+    background: #fff url("http://static.bettyskitchen.com.cn/bk3/images/mr3/recipe-s1.png?d51f73d35d29") repeat-y scroll 0 0;
+    border-top: 1px solid #e0e0e0;
+    margin-top: 15px;
+    padding: 0 9px;
+    width: 313px;
+}
+#recipe-food-group ul {
+    padding: 35px 0 0;
+}
+#recipe-food-group-1 {
+    background: transparent url("http://static.bettyskitchen.com.cn/bk3/images/mr3/recipe-i1.png?d51f73d35d29") no-repeat scroll 0 0;
+    margin-top: -10px;
+}
+#recipe-food-group-2 {
+    background: #fff url("http://static.bettyskitchen.com.cn/bk3/images/mr3/recipe-i2.png?d51f73d35d29") no-repeat scroll 0 0;
+    margin-top: 10px;
+}
+#recipe-food-group-3 {
+    background: #fff url("http://static.bettyskitchen.com.cn/bk3/images/mr3/recipe-i3.png?d51f73d35d29") no-repeat scroll 0 0;
+    margin-top: 10px;
+}
+#recipe-food-group li {
+    display: inline;
+    float: left;
+    height: 47px;
+    line-height: 16px;
+    margin: 5px 5px 0 0;
+    overflow: hidden;
+    position: relative;
+    width: 98px;
+}
+#recipe-food-group li .thumb {
+    border: 1px solid #e0e0e0;
+    float: left;
+    margin-right: 4px;
+}
+#recipe-food-group span {
+    display: block;
+}
+.sub-heading {
+    color: #630;
+    margin: 0.5em 0 0.25em;
+}
+#recipe-item-steps {
+    font-size: 1.167em;
+    margin: 2em 0 0 2em;
+}
+#recipe-item-steps li {
+    margin-bottom: 1.5em;
+    width: 46%;
+}
+#recipe-item-steps li.odd {
+    margin-right: 7.9%;
+}
+#recipe-item-steps span {
+    background: transparent url("http://static.bettyskitchen.com.cn/bk3/images/mr3/s-bg.png?d51f73d35d29") no-repeat scroll 0 center;
+    color: #fff;
+    font-weight: bold;
+    height: 27px;
+    left: -2em;
+    line-height: 27px;
+    position: absolute;
+    text-align: center;
+    top: -1em;
+    width: 27px;
+}
+#recipe-item-steps img {
+    float: right;
+    margin-left: 10px;
+}
+.recipe-item-wrapper {
+    border-bottom: 1px solid #e0e0e0;
+    border-top: 1px solid #e0e0e0;
+    margin: 0 10px 10px;
+    padding: 0 20px 6px;
+}
+.to-top {
+    background: #999 none repeat scroll 0 0;
+    height: 75px;
+    left: -17px;
+    opacity: 0.8;
+    padding-left: 2px;
+    position: absolute;
+    width: 15px;
+}
+.to-top a {
+    color: #fff;
+    text-decoration: none;
+}
+#recipe-item-summary {
+    font-size: 1.167em;
+    padding-left: 20px;
+}
+#recipe-item-tips {
+    font-size: 1.167em;
+}
+#recipe-item-tips li {
+    list-style-position: inside;
+    list-style-type: disc;
+    padding-left: 20px;
+}
+#img_wrapper {
+    background: #fff url("http://static.bettyskitchen.com.cn/bk3/images/mr3/recipe-b1.jpg?d51f73d35d29") no-repeat scroll 0 0;
+    height: 465px;
+    padding: 13px 0 0 15px;
+}
+#img_wrapper .user-up, #img_wrapper .betty-up {
+    background: rgba(0, 0, 0, 0) url("http://static.bettyskitchen.com.cn/bk3/images/mr3/user-commit.png?d51f73d35d29") no-repeat scroll 0 0;
+    height: 90px;
+    left: 10px;
+    position: absolute;
+    top: -2px;
+    width: 88px;
+}
+#img_wrapper .betty-up {
+    background: rgba(0, 0, 0, 0) url("http://static.bettyskitchen.com.cn/bk3/images/mr3/betty-commit.png?d51f73d35d29") no-repeat scroll 0 0;
+}
+#img_gallery {
+    background: #fff url("http://static.bettyskitchen.com.cn/bk3/images/mr3/recipe-b2.jpg?d51f73d35d29") no-repeat scroll 0 0;
+    height: 110px;
+    margin-left: 8px;
+    width: 347px;
+}
+#img_gallery li a {
+    height: 65px;
+    text-decoration: none;
+    width: 65px;
+}
+#img_gallery li {
+    border: 1px solid #e0e0e0;
+    height: 65px;
+    margin: 15px 3px 0;
+    width: 65px;
+}
+#img_gallery li.over {
+    border-color: #ffb87a;
+}
+#img_gallery .jcarousel-clip-horizontal {
+    margin-left: 22px;
+    width: 289px;
+}
+#img_gallery.with-video .jcarousel-clip-horizontal {
+    width: 216px;
+}
+#img_gallery .jcarousel-prev, #img_gallery .jcarousel-next {
+    background: #fff url("http://static.bettyskitchen.com.cn/bk3/images/mr3/left.png?d51f73d35d29") no-repeat scroll 0 0;
+    cursor: pointer;
+    height: 49px;
+    left: 4px;
+    position: absolute;
+    top: 24px;
+    width: 15px;
+}
+#img_gallery .jcarousel-next {
+    background-image: url("http://static.bettyskitchen.com.cn/bk3/images/mr3/right.png?d51f73d35d29");
+    left: auto;
+    right: 14px;
+}
+#img_gallery.with-video .jcarousel-next {
+    right: 87px;
+}
+#img_gallery .jcarousel-prev-disabled-horizontal, #img_gallery .jcarousel-next-disabled-horizontal {
+    display: none !important;
+}
+#recipe-item-video {
+    position: absolute;
+    right: 17px;
+    top: 15px;
+}
+#r-h-2 {
+    background: #fff url("http://static.bettyskitchen.com.cn/bk3/images/mr3/recipe-s2.png?d51f73d35d29") no-repeat scroll 0 0;
+    display: block;
+    height: 22px;
+}
+.recipe-sidebar ul {
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+.recipe-sidebar h3, .recipe-sidebar h4 {
+    background: #fff url("http://static.bettyskitchen.com.cn/bk3/images/mr3/xian-01.jpg?d51f73d35d29") repeat-x scroll 0 0;
+    color: #9a6b3d;
+    font-size: 1.333em;
+    line-height: 39px;
+    margin-bottom: 7px;
+    padding-left: 10px;
+}
+.recipe-sidebar li {
+    height: 75px;
+    margin-bottom: 9px;
+    overflow: hidden;
+    padding: 0 9px;
+}
+#rs-youmaylike {
+    border-color: #fc9;
+}
+#rs-youmaylike h4 {
+    background-image: url("http://static.bettyskitchen.com.cn/bk3/images/mr3/xian-02.jpg?d51f73d35d29");
+    color: #333;
+}
+.recipe-sidebar ul a.img {
+    display: inline;
+    float: left;
+    height: 75px;
+    margin-right: 10px;
+    position: relative;
+    width: 75px;
+}
+#search-form {
+    background-color: #f7f7f7;
+    border: 1px solid #ccc;
+    margin: 0 10px 10px;
+    padding: 10px 10px 5px;
+}
+#search-q {
+    border: 1px solid #999;
+    font-size: 1.167em;
+    padding: 6px;
+}
+#search-go {
+    background-color: #c3eae9;
+    border: 2px solid #8fcbcb;
+    border-radius: 3px;
+    color: #333;
+    cursor: pointer;
+    font-size: 1.167em;
+    padding: 5px 10px;
+}
+#search-hot {
+    margin: 6px 0 0;
+}
+#search-hot li {
+    display: inline;
+    float: left;
+    margin-right: 10px;
+    position: relative;
+}
+#search-hot a, #search-hot a:visited {
+    color: #f60;
+    text-decoration: none;
+}
+#search-hot a:hover {
+    color: #0287ca;
+    text-decoration: none;
+}
+#search-left {
+    background-color: #fff;
+    display: inline;
+    float: left;
+    font-size: 1.167em;
+    padding: 0 15px;
+    position: relative;
+    text-align: right;
+    width: 70px;
+}
+#search-left a, #search-left a:visited {
+    color: #666;
+    text-decoration: none;
+}
+#search-left a.selected, #search-left a:hover {
+    color: #0287ca;
+    text-decoration: none;
+}
+.icon-r a, .icon-a a, .icon-v a, #search-left .r a, #search-left .a a, #search-left .v a {
+    background: #fff url("http://static.bettyskitchen.com.cn/bk3/images/mr3/s-r.png?d51f73d35d29") no-repeat scroll 0 50%;
+    padding-left: 20px;
+}
+.icon-r a, #search-left .r a {
+    background-image: url("http://static.bettyskitchen.com.cn/bk3/images/mr3/s-r.png?d51f73d35d29");
+}
+.icon-a a, #search-left .a a {
+    background-image: url("http://static.bettyskitchen.com.cn/bk3/images/mr3/s-a.png?d51f73d35d29");
+}
+.icon-v a, #search-left .v a {
+    background-image: url("http://static.bettyskitchen.com.cn/bk3/images/mr3/s-v.png?d51f73d35d29");
+}
+.icon-r a.selected, .icon-r a:hover, #search-left .r a.selected, #search-left .r a:hover {
+    background-image: url("http://static.bettyskitchen.com.cn/bk3/images/mr3/s-rs.png?d51f73d35d29");
+}
+.icon-a a.selected, .icon-a a:hover, #search-left .a a.selected, #search-left .a a:hover {
+    background-image: url("http://static.bettyskitchen.com.cn/bk3/images/mr3/s-as.png?d51f73d35d29");
+}
+.icon-v a.selected, .icon-v a:hover, #search-left .v a.selected, #search-left .v a:hover {
+    background-image: url("http://static.bettyskitchen.com.cn/bk3/images/mr3/s-vs.png?d51f73d35d29");
+}
+#search-right {
+    background-color: #fff;
+    display: inline;
+    float: left;
+    margin-right: 10px;
+    position: relative;
+    width: 850px;
+}
+#search-fs {
+    border: 4px solid #ffcd98;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    padding: 0 0 4px;
+}
+#search-fs h3 {
+    background: #fff url("http://static.bettyskitchen.com.cn/bk3/images/mr3/xian-01.jpg?d51f73d35d29") repeat-x scroll 0 0;
+    color: #666;
+    font-size: 1.333em;
+    line-height: 39px;
+    margin-bottom: 8px;
+    padding-left: 15px;
+}
+#search-fs h3 span {
+    background: transparent url("http://static.bettyskitchen.com.cn/bk3/images/mr3/q.png?d51f73d35d29") no-repeat scroll 0 5px;
+    color: #f60;
+    display: inline;
+    float: left;
+    line-height: 39px;
+    padding-left: 23px;
+}
+#search-fs ul {
+    margin-left: 100px;
+    padding-right: 10px;
+}
+#search-fs label {
+    background: #fff url("http://static.bettyskitchen.com.cn/bk3/images/mr3/recipe-icons.png?29f7666f53b9") no-repeat scroll 0 1px;
+    display: inline;
+    float: left;
+    font-size: 1.1167em;
+    margin-left: 15px;
+    text-align: right;
+    width: 50px;
+}
+#search-fs #label-id-z {
+    background-position: 0 -142px;
+}
+#search-fs #label-id-f {
+    background-position: 0 -22px;
+}
+#search-fs #label-id-e {
+    background-position: 0 -45px;
+}
+#search-fs #label-id-t {
+    background-position: 0 -118px;
+}
+#search-fs #label-id-d {
+    background-position: 0 -238px;
+}
+#search-fs #label-id-b {
+    background-position: 0 -262px;
+}
+#search-fs li {
+    display: inline;
+    float: left;
+    margin-bottom: 4px;
+    margin-right: 1em;
+    position: relative;
+}
+#search-fs a, #search-fs a:visited {
+    color: #666;
+    padding: 2px 5px;
+    text-decoration: none;
+}
+#search-fs a.selected, #search-fs a:hover {
+    background-color: #399995;
+    color: #fff;
+    padding: 2px 5px;
+    text-decoration: none;
+}
+#search-fs span {
+    color: #f60;
+}
+#search-fs a.selected span, #search-fs a:hover span {
+    color: #fff;
+}
+#search-result-recipe li, #search-result-article li {
+    border: 1px solid #ccc;
+    height: 116px;
+    margin-bottom: 8px;
+    overflow: hidden;
+    padding: 5px;
+}
+#search-result-recipe li.even, #search-result-article li.even {
+    background-color: #fffbef;
+}
+#search-result-recipe img, #search-result-article img {
+    display: inline;
+    float: left;
+}
+#search-result-recipe h5, #search-result-article h5 {
+    border-bottom: 1px dotted #ccc;
+    margin-bottom: 2px;
+    margin-left: 131px;
+}
+#search-result-recipe h5.video {
+    background: #fff url("http://static.bettyskitchen.com.cn/bk3/images/mr3/s-v.png?d51f73d35d29") no-repeat scroll 0 50%;
+    padding-left: 20px;
+}
+#search-result-recipe h5 span, #search-result-article h5 span {
+    font-size: 12px;
+    padding-left: 1.5em;
+}
+#search-result-recipe div, #search-result-article div {
+    margin-left: 131px;
+}
+#search-result-video {
+    margin-bottom: 10px;
+    padding-left: 20px;
+}
+#search-result-video div.clear {
+    padding: 10px 0;
+}
+#search-result-video li {
+    display: inline;
+    float: left;
+    margin-right: 40px;
+    position: relative;
+    width: 145px;
+}
+#search-result-video li img {
+    border: 1px solid #ccc;
+    padding: 4px;
+}
+#search-result-video .svp-bg-block {
+    background-color: #000;
+    height: 22px;
+    left: 5px;
+    line-height: 22px;
+    opacity: 0.5;
+    padding-left: 25px;
+    position: absolute;
+    top: 118px;
+    width: 110px;
+}
+#search-result-video li a.play {
+    background: transparent url("http://static.bettyskitchen.com.cn/bk3/images/mr3/s-vp.png?d51f73d35d29") no-repeat scroll 4px 50%;
+    color: #fff;
+    height: 22px;
+    left: 5px;
+    line-height: 22px;
+    padding-left: 25px;
+    position: absolute;
+    text-decoration: none;
+    top: 118px;
+    width: 110px;
+}
+#search-result-video li a.play:hover {
+    color: #f96;
+    text-decoration: none;
+}
+.pagination {
+    float: right;
+}
+.pagination a, .pagination span {
+    background: rgba(0, 0, 0, 0) linear-gradient(#fff, #efefef) repeat scroll 0 0;
+    border-radius: 3px;
+    display: inline;
+    float: left;
+    font-size: 1.167em;
+    line-height: 2em;
+    margin-left: 0.25em;
+    padding: 0 0.75em;
+    position: relative;
+}
+.pagination .page {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    text-decoration: none;
+}
+.pagination a:hover, .pagination span.current {
+    border-color: #f96;
+    color: #f96;
+}
+#search-404 {
+    background: #fff url("http://static.bettyskitchen.com.cn/bk3/images/mr3/search-404.jpg?d51f73d35d29") no-repeat scroll 10px 0;
+    font-size: 1.333em;
+    height: 98px;
+    padding-left: 125px;
+    padding-top: 40px;
+}
+#recipe-shortcut {
+    background: #fff url("http://static.bettyskitchen.com.cn/bk3/images/mr3/xian-01.jpg?d51f73d35d29") repeat-x scroll 0 0;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+#recipe-shortcut h3 {
+    color: #666;
+    display: inline;
+    float: left;
+    font-size: 1.333em;
+    height: 39px;
+    line-height: 39px;
+    padding-left: 15px;
+    position: relative;
+    width: 150px;
+}
+#recipe-shortcut h3 span {
+    background: transparent url("http://static.bettyskitchen.com.cn/bk3/images/mr3/q.png?d51f73d35d29") no-repeat scroll 0 50%;
+    color: #f60;
+    display: inline;
+    float: left;
+    line-height: 39px;
+    padding-left: 23px;
+}
+#recipe-shortcut #tabs-1 {
+    height: 39px;
+}
+#recipe-shortcut #tabs-1 a {
+    background: transparent url("http://static.bettyskitchen.com.cn/bk3/images/mr3/shortcut-nav.png?d51f73d35d29") repeat-x scroll 0 0;
+    color: #333;
+    display: inline;
+    float: left;
+    height: 30px;
+    line-height: 30px;
+    margin-left: 22px;
+    margin-top: 9px;
+    text-align: center;
+    text-decoration: none;
+    width: 104px;
+}
+#recipe-shortcut #tabs-1 a.selected, #recipe-shortcut #tabs-1 a:hover {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #fff;
+    background-image: none;
+    border-color: #f96 #f96 -moz-use-text-color;
+    border-image: none;
+    border-radius: 4px 4px 0 0;
+    border-style: solid solid none;
+    border-width: 3px 3px medium;
+    font-weight: bold;
+    height: 32px;
+    line-height: 32px;
+    margin-left: 24px;
+    margin-top: 7px;
+}
+#recipe-shortcut ul {
+    background-color: #fff;
+    background-image: none;
+    border: 3px solid #f96;
+    border-radius: 4px;
+    display: none;
+    margin: 0 0.5em 0.5em;
+    padding: 1em 1.5em;
+}
+#recipe-shortcut ul li {
+    display: inline;
+    float: left;
+    min-width: 8em;
+    position: relative;
+}
+#recipe-shortcut ul a {
+}
+#recipe-shortcut ul a:hover {
+}
+#recipe-heading {
+    margin-bottom: 10px;
+}
+#recipe-heading .pa {
+    background-color: #fff;
+    border: 1px solid #ffb87a;
+    display: inline;
+    float: left;
+    height: 300px;
+    margin-right: 10px;
+    position: relative;
+    width: 602px;
+}
+#recipe-heading .pa .img {
+    display: inline;
+    float: left;
+    height: 90px;
+    margin: 5px;
+    position: relative;
+    width: 110px;
+}
+#recipe-heading .pa .hover {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 20px #999;
+    display: block;
+    height: 90px;
+    width: 110px;
+}
+#recipe-heading .pb {
+    background-color: #fff;
+    border: 1px solid #ffb87a;
+    display: inline;
+    float: left;
+    height: 266px;
+    padding: 28px 10px 0.5em;
+    position: relative;
+    width: 324px;
+}
+#recipe-heading .pb .today-recommended {
+    background: #fff url("http://static.bettyskitchen.com.cn/bk3/images/mr3/today-recommended.png?d51f73d35d29") no-repeat scroll 0 0;
+    height: 34px;
+    left: 100px;
+    position: absolute;
+    top: -5px;
+    width: 137px;
+}
+#recipe-heading .pb .img {
+    border: 1px solid #ccc;
+    display: inline;
+    float: left;
+    height: 52px;
+    margin-right: 10px;
+    position: relative;
+    width: 70px;
+}
+#recipe-heading .pb li {
+    border-bottom: 1px solid #ccc;
+    padding: 5px 0;
+}
+#recipe-heading .pb li.last {
+    border-bottom: medium none;
+    padding-bottom: 0;
+}
+#recipe-heading .pb div.line-2 {
+    height: 3em;
+    line-height: 1.5em;
+    overflow: hidden;
+}
+#recipe-a, #recipe-b, #recipe-c {
+    margin-bottom: 10px;
+}
+#recipe-a .pa, #recipe-b .pa, #recipe-c .pa {
+    background: #fff url("http://static.bettyskitchen.com.cn/bk3/images/mr3/xian-01.jpg?d51f73d35d29") repeat-x scroll 0 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    display: inline;
+    float: left;
+    position: relative;
+    width: 726px;
+}
+#recipe-a .pa {
+    padding-bottom: 10px;
+}
+#recipe-a .pa h4, #recipe-b .pa h4, #recipe-c .pa h4 {
+    background: transparent url("http://static.bettyskitchen.com.cn/bk3/images/mr3/recipe-a.png?d51f73d35d29") no-repeat scroll 20px 75%;
+    height: 39px;
+    line-height: 39px;
+    margin-bottom: 0;
+    padding-right: 13px;
+}
+#recipe-b .pa h4 {
+    background-image: url("http://static.bettyskitchen.com.cn/bk3/images/mr3/recipe-b.png?d51f73d35d29");
+}
+#recipe-c .pa h4 {
+    background-image: url("http://static.bettyskitchen.com.cn/bk3/images/mr3/recipe-c.png?d51f73d35d29");
+}
+#recipe-a .paa, #recipe-b .paa {
+    background: #fff url("http://static.bettyskitchen.com.cn/bk3/images/mr3/recipe-aa.png?d51f73d35d29") no-repeat scroll 0 0;
+    display: inline;
+    float: left;
+    height: 255px;
+    margin: 10px;
+    overflow: hidden;
+    padding: 15px 20px 20px 15px;
+    position: relative;
+    width: 375px;
+}
+#recipe-b .paa {
+    background-image: url("http://static.bettyskitchen.com.cn/bk3/images/mr3/recipe-ba.png?d51f73d35d29");
+}
+#recipe-a .paaa, #recipe-b .paaa {
+    display: inline;
+    float: left;
+    margin-right: 10px;
+    position: relative;
+    width: 200px;
+}
+#recipe-a .paaa h6, #recipe-b .paaa h6 {
+    background: #f96 url("http://static.bettyskitchen.com.cn/bk3/images/mr3/love-01.png?d51f73d35d29") no-repeat scroll 5px 50%;
+    font-weight: bold;
+    height: 26px;
+    line-height: 26px;
+    overflow: hidden;
+    padding-left: 2em;
+    padding-right: 1em;
+}
+#recipe-b .paaa h6 {
+    background-color: #cc9b7d;
+    background-image: url("http://static.bettyskitchen.com.cn/bk3/images/mr3/love-02.png?d51f73d35d29");
+}
+#recipe-a .paaa h6 a, #recipe-b .paaa h6 a {
+    color: #fff;
+}
+#recipe-a .paaa h6 a:hover, #recipe-b .paaa h6 a:hover {
+    color: #fff;
+}
+#recipe-a .paaba, #recipe-b .paaba {
+    font-size: 1.167em;
+    margin-bottom: 10px;
+}
+#recipe-a .recipe-item-attr li, #recipe-b .recipe-item-attr li {
+    width: 137px;
+}
+#recipe-a .pab {
+    display: inline;
+    float: left;
+    margin-top: 10px;
+    position: relative;
+    width: 288px;
+}
+#recipe-a .pab li {
+    background: #fff url("http://static.bettyskitchen.com.cn/bk3/images/mr3/recipe-ab.png?d51f73d35d29") no-repeat scroll 0 0;
+    display: inline;
+    float: left;
+    height: 128px;
+    overflow: hidden;
+    padding: 9px 0 0 10px;
+    position: relative;
+    width: 86px;
+}
+#recipe-a .pab li .line-1 {
+    display: block;
+    height: 1.5em;
+    margin-top: 4px;
+    overflow: hidden;
+}
+#recipe-a .pac, #recipe-a .pad {
+    background: #fff url("http://static.bettyskitchen.com.cn/bk3/images/mr3/recipe-ac.png?d51f73d35d29") no-repeat scroll 0 0;
+    border: 1px solid #c0ddeb;
+    display: inline;
+    float: left;
+    margin-left: 15px;
+    padding: 30px 0 6px;
+    position: relative;
+    width: 339px;
+}
+#recipe-a .pad {
+    background-image: url("http://static.bettyskitchen.com.cn/bk3/images/mr3/recipe-ad.png?d51f73d35d29");
+    border-color: #f4d497;
+}
+#recipe-a .pac h6.color-a a {
+    background-color: #69c;
+    color: #fff;
+    padding: 2px 5px;
+}
+#recipe-a .pad h6.color-b a {
+    background-color: #b89b5e;
+    color: #fff;
+    padding: 2px 5px;
+}
+.recipe-index a.user-link {
+    color: #666;
+}
+#recipe-a .pac p {
+    height: 6em;
+}
+#recipe-a .pac .big, #recipe-a .pad .big {
+    border-bottom: 1px dotted #c0ddeb;
+    margin: 0 5px 6px;
+    padding: 10px;
+}
+#recipe-a .pad .big {
+    border-color: #f4d497;
+}
+#recipe-a .pac .big .img, #recipe-a .pad .big .img {
+    border: 1px solid #ccc;
+    display: inline;
+    float: left;
+    height: 100px;
+    margin-right: 10px;
+    position: relative;
+    width: 100px;
+}
+#recipe-a .pac li, #recipe-a .pad li {
+    float: left;
+    list-style-position: inside;
+    list-style-type: square;
+    margin-left: 15px;
+    position: relative;
+    width: 152px;
+}
+.recipe .bbs-sidebar {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    display: inline;
+    float: left;
+    margin-left: 18px;
+    padding: 45px 5px 0;
+    position: relative;
+    width: 198px;
+}
+.recipe .bbs-sidebar a.heading {
+    color: #fd973f;
+}
+.recipe .bbs-sidebar a.comment_link {
+    color: #278c8c;
+}
+.recipe .bbs-sidebar a.heading:hover, .recipe .bbs-sidebar a.comment_link:hover {
+    text-decoration: underline;
+}
+.recipe .bbs-sidebar ul {
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.recipe .bbs-sidebar .bbs-icon {
+    background: transparent url("http://static.bettyskitchen.com.cn/bk3/images/mr3/recipe-bbs-1.png?d51f73d35d29") repeat-x scroll 0 0;
+    height: 29px;
+    left: -6px;
+    position: absolute;
+    top: 10px;
+    width: 220px;
+}
+#recipe-b .bbs-icon {
+    background-image: url("http://static.bettyskitchen.com.cn/bk3/images/mr3/recipe-bbs-2.png?d51f73d35d29");
+}
+#recipe-c .bbs-icon {
+    background-image: url("http://static.bettyskitchen.com.cn/bk3/images/mr3/recipe-bbs-3.png?d51f73d35d29");
+}
+.recipe .bbs-sidebar li {
+    border-top: 1px dotted #ccc;
+    padding: 3px 5px;
+}
+.recipe .bbs-sidebar li.last {
+}
+#recipe-a .bbs-sidebar ul {
+    height: 525px;
+    overflow: hidden;
+}
+#recipe-a .bbs-sidebar li {
+    height: 67px;
+    overflow: hidden;
+}
+#recipe-b .bbs-sidebar ul {
+    height: 305px;
+    overflow: hidden;
+}
+#recipe-b .bbs-sidebar li {
+    height: 54px;
+    overflow: hidden;
+}
+#recipe-b .pa h4 {
+    padding-left: 16px;
+}
+#recipe-c .pa h4 {
+    padding-left: 16px;
+}
+.vsp-link {
+    float: left;
+    line-height: 34px;
+    position: relative;
+    text-indent: -999em;
+    width: 80px;
+}
+#recipe-c .bbs-sidebar li {
+    height: 53px;
+    overflow: hidden;
+}
+.recipe .bbs-sidebar .avatar {
+    height: 30px;
+    margin-top: 4px;
+    width: 30px;
+}
+.recipe .bbs-sidebar div {
+    margin-left: 40px;
+}
+#to-add-recipe {
+    background: transparent url("http://static.bettyskitchen.com.cn/bk3/images/mr3/upload.png?d51f73d35d29") no-repeat scroll 0 0;
+    float: right;
+    height: 24px;
+    margin-top: 3px;
+    position: relative;
+    width: 93px;
+}
+.recipe-index .tag-line {
+    float: right;
+    font-size: 12px;
+    text-indent: 0;
+}
+.recipe-index .tag-line a, .recipe-index .tag-line span {
+    display: inline;
+    float: left;
+    font-weight: normal;
+    margin-left: 0.5em;
+}
+#recipe-b .pab li {
+    border: 1px solid #cc9b7d;
+    border-radius: 4px;
+    display: inline;
+    float: left;
+    height: 55px;
+    margin: 17px 6px 0;
+    padding-right: 2px;
+    position: relative;
+    width: 128px;
+}
+#recipe-b .pab li .line-1 {
+    display: block;
+    line-height: 1.5em;
+    overflow: hidden;
+}
+#recipe-b .pab li div {
+    border-right: 1px solid #cc9b7d;
+    display: inline;
+    float: left;
+    height: 45px;
+    margin-right: 0.25em;
+    padding: 10px 0.25em 0;
+    position: relative;
+    text-align: center;
+    width: 2em;
+}
+#recipe-b .pab li .foreign {
+    height: 51px;
+    left: -12px;
+    position: absolute;
+    top: -10px;
+    width: 35px;
+}
+#recipe-b .pab li.foreign-50 .foreign {
+    background: transparent url("http://static.bettyskitchen.com.cn/bk3/images/mr3/flag-50.png?d51f73d35d29") no-repeat scroll 0 0;
+}
+#recipe-b .pab li.foreign-51 .foreign {
+    background: transparent url("http://static.bettyskitchen.com.cn/bk3/images/mr3/flag-51.png?d51f73d35d29") no-repeat scroll 0 0;
+}
+#recipe-b .pab li.foreign-52 .foreign {
+    background: transparent url("http://static.bettyskitchen.com.cn/bk3/images/mr3/flag-52.png?d51f73d35d29") no-repeat scroll 0 0;
+}
+#recipe-b .pab li.foreign-53 .foreign {
+    background: transparent url("http://static.bettyskitchen.com.cn/bk3/images/mr3/flag-53.png?d51f73d35d29") no-repeat scroll 0 0;
+}
+#recipe-b .pab li.foreign-54 .foreign {
+    background: transparent url("http://static.bettyskitchen.com.cn/bk3/images/mr3/flag-54.png?d51f73d35d29") no-repeat scroll 0 0;
+}
+#recipe-b .pab li.foreign-55 .foreign {
+    background: transparent url("http://static.bettyskitchen.com.cn/bk3/images/mr3/flag-55.png?d51f73d35d29") no-repeat scroll 0 0;
+}
+#recipe-b .pab li.foreign-56 .foreign {
+    background: transparent url("http://static.bettyskitchen.com.cn/bk3/images/mr3/flag-56.png?d51f73d35d29") no-repeat scroll 0 0;
+}
+#recipe-b .pab li.foreign-57 .foreign {
+    background: transparent url("http://static.bettyskitchen.com.cn/bk3/images/mr3/flag-57.png?d51f73d35d29") no-repeat scroll 0 0;
+}
+#recipe-c .pa ul {
+    padding: 10px 10px 0;
+}
+#recipe-c li.first-video {
+    background: transparent url("http://static.bettyskitchen.com.cn/bk3/images/mr3/recipe-c1.jpg?d51f73d35d29") no-repeat scroll 0 0;
+    display: inline;
+    float: left;
+    height: 228px;
+    padding: 16px 16px 51px 17px;
+    position: relative;
+    width: 368px;
+}
+#recipe-c li.first-video .img {
+    height: 204px;
+}
+#recipe-c li.first-video h6 {
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+}
+#recipe-c li.first-video .play {
+    background: transparent url("http://static.bettyskitchen.com.cn/bk3/images/mr3/play-a.png?d51f73d35d29") no-repeat scroll 0 0;
+    cursor: pointer;
+    height: 58px;
+    left: 175px;
+    position: absolute;
+    top: 90px;
+    width: 58px;
+}
+#recipe-c li.first-video a.v-title {
+    color: #fff;
+    padding: 0 9px;
+    text-decoration: none;
+}
+#recipe-c li.videos {
+    background: transparent url("http://static.bettyskitchen.com.cn/bk3/images/mr3/recipe-c2.jpg?d51f73d35d29") no-repeat scroll 0 0;
+    display: inline;
+    float: left;
+    height: 110px;
+    margin: 7px 0 0 20px;
+    padding: 10px 10px 12px;
+    position: relative;
+    width: 110px;
+}
+#recipe-c li.videos .play {
+    background: transparent url("http://static.bettyskitchen.com.cn/bk3/images/mr3/play-b.png?d51f73d35d29") no-repeat scroll 0 0;
+    cursor: pointer;
+    height: 33px;
+    left: 48px;
+    position: absolute;
+    top: 45px;
+    width: 33px;
+}
+#recipe-c li.videos .v-bg-block {
+    background-color: #000;
+    bottom: 12px;
+    height: 22px;
+    left: 10px;
+    line-height: 22px;
+    opacity: 0.5;
+    position: absolute;
+    text-align: center;
+    width: 110px;
+}
+#recipe-c li.videos a.v-title {
+    bottom: 12px;
+    color: #fff;
+    height: 22px;
+    left: 10px;
+    line-height: 22px;
+    overflow: hidden;
+    padding: 0 5px;
+    position: absolute;
+    text-decoration: none;
+    width: 100px;
+}
+#recipe-comment {
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin: 0 10px 10px;
+}
+#recipe-comment h5, #recipe-comment-form h5 {
+    background: #f6f6f6 url("http://static.bettyskitchen.com.cn/bk3/images/mr3/rc-1.png?d51f73d35d29") no-repeat scroll 6px 50%;
+    border-bottom: 1px solid #ccc;
+    border-left: 1px solid #e0e0e0;
+    border-radius: 6px;
+    border-right: 1px solid #e0e0e0;
+    height: 38px;
+    line-height: 38px;
+    padding-left: 45px;
+}
+#recipe-comment h5 span, #recipe-comment-form h5 span {
+    color: #f60;
+}
+.to-comment {
+    background: transparent url("http://static.bettyskitchen.com.cn/bk3/images/mr3/pops.png?d51f73d35d29") no-repeat scroll -60px 50%;
+    padding-left: 22px;
+}
+.recipe-item .comment {
+    margin: 1em 10px 1em 5px;
+}
+.recipe-item .comment-last {
+}
+.recipe-item .comment-avatar {
+    display: inline;
+    float: left;
+    position: relative;
+    text-align: center;
+    width: 100px;
+}
+.recipe-item .comment-avatar .img {
+    display: block;
+    height: 62px;
+    margin: 0 auto;
+    width: 62px;
+}
+.recipe-item .sub-comment-avatar {
+    display: inline;
+    float: left;
+    position: relative;
+    text-align: center;
+    width: 35px;
+}
+.recipe-item .sub-comment-avatar .img {
+    display: block;
+    height: 35px;
+    width: 35px;
+}
+.recipe-item .comment-body {
+    margin-left: 100px;
+}
+.recipe-item .sub-comment {
+    padding-top: 0.5em;
+}
+.recipe-item .sub-comment-body {
+    border-bottom: 1px solid #ccc;
+    margin-left: 45px;
+    padding-bottom: 0.5em;
+}
+.recipe-item .last-sub .sub-comment-body {
+    border-bottom: medium none;
+}
+.recipe-item .comment-heading {
+    background-color: #f6f6f6;
+    border: 1px solid #ccc;
+    border-radius: 6px 6px 0 0;
+    line-height: 34px;
+    padding: 0 1em;
+}
+.recipe-item .comment-content {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: -moz-use-text-color #ccc #ccc;
+    border-image: none;
+    border-radius: 0 0 6px 6px;
+    border-style: none solid solid;
+    border-width: medium 1px 1px;
+    padding: 0.5em 1em;
+}
+#recipe-comment-form {
+    border: 1px solid #f96;
+    border-radius: 6px;
+    margin: 0 10px;
+    padding-bottom: 8px;
+}
+#recipe-comment-form h5 {
+    background: #feecd8 url("http://static.bettyskitchen.com.cn/bk3/images/mr3/rc-2.png?d51f73d35d29") no-repeat scroll 8px 65%;
+    border-bottom: 1px solid #f96;
+    border-left: 1px solid #fc9;
+    border-right: 1px solid #fc9;
+}
+#recipe-comment-form textarea {
+    border: 1px solid #ccc;
+    height: 120px;
+    margin: 10px 0 0 48px;
+    padding: 2px;
+    width: 594px;
+}
+#recipe-comment-form .submit {
+    margin-left: 48px;
+}
+#article-comment {
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin: 0 10px 10px;
+}
+#article-comment h5, #article-comment-form h5 {
+    background: #f6f6f6 url("http://static.bettyskitchen.com.cn/bk3/images/mr3/rc-1.png?d51f73d35d29") no-repeat scroll 6px 50%;
+    border-bottom: 1px solid #ccc;
+    border-left: 1px solid #e0e0e0;
+    border-radius: 6px;
+    border-right: 1px solid #e0e0e0;
+    height: 38px;
+    line-height: 38px;
+    padding-left: 45px;
+}
+#article-comment h5 span, #article-comment-form h5 span {
+    color: #f60;
+}
+.to-comment {
+    background: transparent url("http://static.bettyskitchen.com.cn/bk3/images/mr3/pops.png?d51f73d35d29") no-repeat scroll -60px 50%;
+    padding-left: 22px;
+}
+.article-item .comment {
+    margin: 1em 10px 1em 5px;
+}
+.article-item .comment-last {
+}
+.article-item .comment-avatar {
+    display: inline;
+    float: left;
+    position: relative;
+    text-align: center;
+    width: 100px;
+}
+.article-item .comment-avatar .img {
+    display: block;
+    height: 62px;
+    margin: 0 auto;
+    width: 62px;
+}
+.article-item .sub-comment-avatar {
+    display: inline;
+    float: left;
+    position: relative;
+    text-align: center;
+    width: 35px;
+}
+.article-item .sub-comment-avatar .img {
+    display: block;
+    height: 35px;
+    width: 35px;
+}
+.article-item .comment-body {
+    margin-left: 100px;
+}
+.article-item .sub-comment {
+    padding-top: 0.5em;
+}
+.article-item .sub-comment-body {
+    border-bottom: 1px solid #ccc;
+    margin-left: 45px;
+    padding-bottom: 0.5em;
+}
+.article-item .last-sub .sub-comment-body {
+    border-bottom: medium none;
+}
+.article-item .comment-heading {
+    background-color: #f6f6f6;
+    border: 1px solid #ccc;
+    border-radius: 6px 6px 0 0;
+    line-height: 34px;
+    padding: 0 1em;
+}
+.article-item .comment-content {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: -moz-use-text-color #ccc #ccc;
+    border-image: none;
+    border-radius: 0 0 6px 6px;
+    border-style: none solid solid;
+    border-width: medium 1px 1px;
+    padding: 0.5em 1em;
+}
+#article-comment-form {
+    border: 1px solid #f96;
+    border-radius: 6px;
+    margin: 0 10px;
+    padding-bottom: 8px;
+}
+#article-comment-form h5 {
+    background: #feecd8 url("http://static.bettyskitchen.com.cn/bk3/images/mr3/rc-2.png?d51f73d35d29") no-repeat scroll 8px 65%;
+    border-bottom: 1px solid #f96;
+    border-left: 1px solid #fc9;
+    border-right: 1px solid #fc9;
+}
+#article-comment-form textarea {
+    border: 1px solid #ccc;
+    height: 120px;
+    margin: 10px 0 0 48px;
+    padding: 2px;
+    width: 594px;
+}
+#article-comment-form .submit {
+    margin-left: 48px;
+}
+#trial-comment {
+    margin: 0 10px 10px;
+}
+#trial-comment-form h5 {
+    background: #f6f6f6 url("http://static.bettyskitchen.com.cn/bk3/images/mr3/rc-1.png?d51f73d35d29") no-repeat scroll 6px 50%;
+    border-bottom: 1px solid #ccc;
+    border-left: 1px solid #e0e0e0;
+    border-radius: 6px;
+    border-right: 1px solid #e0e0e0;
+    height: 38px;
+    line-height: 38px;
+    padding-left: 45px;
+}
+#trial-comment-form h5 span {
+    color: #f60;
+}
+#box-g .to-comment {
+    background: transparent url("http://static.bettyskitchen.com.cn/bk3/images/mr3/pops.png?d51f73d35d29") no-repeat scroll -60px 50%;
+    float: right;
+    padding-right: 44px;
+}
+#box-g .comment {
+    margin: 1em 10px 1em 5px;
+}
+#box-g .comment-last {
+}
+#box-g .comment-avatar {
+    display: inline;
+    float: left;
+    position: relative;
+    text-align: center;
+    width: 100px;
+}
+#box-g .comment-avatar .img {
+    display: block;
+    height: 62px;
+    margin: 0 auto;
+    width: 62px;
+}
+#box-g .sub-comment-avatar {
+    display: inline;
+    float: left;
+    position: relative;
+    text-align: center;
+    width: 35px;
+}
+#box-g .sub-comment-avatar .img {
+    display: block;
+    height: 35px;
+    width: 35px;
+}
+#box-g .comment-body {
+    margin-left: 100px;
+}
+#box-g .sub-comment {
+    padding-top: 0.5em;
+}
+#box-g .sub-comment-body {
+    border-bottom: 1px solid #ccc;
+    margin-left: 45px;
+    padding-bottom: 0.5em;
+}
+#box-g .last-sub .sub-comment-body {
+    border-bottom: medium none;
+}
+#box-g .comment-heading {
+    background-color: #f6f6f6;
+    border: 1px solid #ccc;
+    line-height: 34px;
+    padding: 0 1em;
+    position: relative;
+}
+#box-g .comment-content {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: -moz-use-text-color #ccc #ccc;
+    border-image: none;
+    border-style: none solid solid;
+    border-width: medium 1px 1px;
+    padding: 0.5em 1em;
+}
+#trial-comment-form {
+    border: 1px solid #f96;
+    border-radius: 6px;
+    margin: 10px;
+    padding-bottom: 8px;
+    width: 706px;
+}
+#trial-comment-form h5 {
+    background: #feecd8 url("http://static.bettyskitchen.com.cn/bk3/images/mr3/rc-2.png?d51f73d35d29") no-repeat scroll 8px 65%;
+    border-bottom: 1px solid #f96;
+    border-left: 1px solid #fc9;
+    border-right: 1px solid #fc9;
+}
+#trial-comment-form textarea {
+    border: 1px solid #ccc;
+    height: 120px;
+    margin: 10px 0 0 48px;
+    padding: 2px;
+    width: 594px;
+}
+#trial-comment-form .submit {
+    margin-left: 48px;
+}
+.comp_list_box {
+    border: 1px solid #ccc;
+    margin-top: 5px;
+    padding-bottom: 10px;
+    width: 628px;
+}
+.comp_list_box li {
+    border: 1px solid #cfc;
+    float: left;
+    height: 150px;
+    margin: 10px 0 0 10px;
+    padding: 10px;
+    width: 278px;
+}
+.comp_list_box li img {
+    height: 100px;
+    width: 280px;
+}
+.comp_list_box li .time {
+    color: #f90;
+    font-weight: bold;
+}
+.comp_list_box h3 {
+    font-size: 1.17em;
+    font-weight: bold;
+}
+.comp_list_box h3 a {
+    border-bottom: 1px dashed #ccc;
+    color: #066;
+}
+.thl-idx #content {
+    display: inline;
+    float: left;
+    margin-right: 10px;
+    position: relative;
+    width: 728px;
+}
+.thl-idx #sidebar {
+    display: inline;
+    float: left;
+    position: relative;
+    width: 212px;
+}
+.thl-idx #content li.item {
+    background: white none repeat scroll 0 0;
+    border: 2px solid #feecd8;
+    border-radius: 6px;
+    height: 160px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    padding: 4px;
+}
+.thl-idx #content li.item .img {
+    display: inline;
+    float: left;
+    margin-right: 10px;
+    position: relative;
+}
+.thl-idx #content li.item h3 {
+    color: #f60;
+    font-size: 1.5em;
+    text-decoration: none;
+}
+.thl-idx #content div.brief {
+    border-top: 1px dashed #ccc;
+    margin: 0.25em 0.25em 0 170px;
+    padding-top: 1px;
+}
+.cuisine-index .tabs {
+    margin: 10px 0;
+    padding-left: 10px;
+}
+.cuisine-index .tabs h2 {
+    float: left;
+}
+.cuisine-index .tabs a {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: #ccc;
+    border-image: none;
+    border-radius: 6px 6px 0 0;
+    border-style: solid;
+    border-width: 1px 1px 0;
+    color: #f60;
+    float: left;
+    font-size: 1.167em;
+    line-height: 30px;
+    margin-right: 0.5em;
+    padding: 0 0.5em;
+    position: relative;
+    text-decoration: none;
+}
+.cuisine-index .tabs a:hover, .cuisine-index .tabs a.selected {
+    background-color: #fff;
+    border-bottom-color: #fff;
+    border-bottom-width: 2px;
+    font-weight: bold;
+    margin-bottom: -1px;
+}
+.cuisine-index .tabs-top {
+    margin-bottom: 10px;
+}
+.cuisine-index .tabs-top h3 {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    color: #9a6b3d;
+    display: inline;
+    float: left;
+    font-size: 1.333em;
+    line-height: 25px;
+    margin: 0 10px 0 0;
+    padding-left: 10px;
+    position: relative;
+}
+.cuisine-index .tabs-top a {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: #ccc;
+    border-image: none;
+    border-radius: 4px 4px 0 0;
+    border-style: solid;
+    border-width: 1px 1px 0;
+    color: #f60;
+    float: left;
+    line-height: 2em;
+    margin-right: 0.5em;
+    padding: 0 0.25em;
+    position: relative;
+    text-decoration: none;
+}
+.cuisine-index .tabs-top a:hover, .cuisine-index .tabs-top a.selected {
+    background-color: #fff;
+    border-bottom-color: #fff;
+    border-bottom-width: 1px;
+    font-weight: bold;
+    margin-bottom: -1px;
+}
+.cuisine-index .tab {
+    padding-left: 10px;
+}
+.cuisine-index .tab li {
+    display: block;
+    float: left;
+    margin: 0 19px 4px 0;
+    position: relative;
+    width: 160px;
+}
+.cuisine-index .tab li.clear {
+    float: none;
+    margin: 0;
+    position: initial;
+    width: 100%;
+}
+.cuisine-index .tab li.last {
+    margin-right: 0;
+}
+.cuisine-index .tab a.img {
+    display: block;
+    height: 160px;
+}
+.cuisine-index .tab a {
+    color: #9a6b3d;
+    display: block;
+    font-size: 1.167em;
+    margin-top: 4px;
+    text-align: center;
+}
+.cuisine-index .tab a:hover {
+    color: #0287ca;
+}
+.cuisine-index #today-new, .cuisine-index #hot-new {
+    background: white url("http://static.bettyskitchen.com.cn/bk3/images/mr3/recipe-ac.png?d51f73d35d29") no-repeat scroll 0 0;
+    border: 1px solid #c0ddeb;
+    display: inline;
+    float: left;
+    margin: 10px 0 10px 10px;
+    padding: 30px 0 6px;
+    position: relative;
+    width: 339px;
+}
+.cuisine-index #hot-new {
+    background-image: url("http://static.bettyskitchen.com.cn/bk3/images/mr3/recipe-ad.png?d51f73d35d29");
+    border-color: #f4d497;
+    margin-left: 15px;
+}
+.cuisine-index #today-new .big, .cuisine-index #hot-new .big {
+    border-bottom: 1px dotted #c0ddeb;
+    margin: 0 5px 6px;
+    padding: 10px;
+}
+.cuisine-index #today-new .big p, .cuisine-index #hot-new .big p {
+    margin-left: 112px;
+}
+.cuisine-index #hot-new .big {
+    border-color: #f4d497;
+}
+.cuisine-index #today-new a.img, .cuisine-index #hot-new a.img {
+    border: 1px solid #ccc;
+    display: inline;
+    float: left;
+    height: 100px;
+    margin-right: 10px;
+    position: relative;
+    width: 100px;
+}
+.cuisine-index #today-new li, .cuisine-index #hot-new li {
+    float: left;
+    list-style-position: inside;
+    list-style-type: square;
+    margin-left: 15px;
+    position: relative;
+    width: 152px;
+}
+.cuisine-index #sidebar {
+    display: inline;
+    float: left;
+    position: relative;
+    width: 220px;
+}
+.cuisine-index .section {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+.cuisine-index .section p {
+    font-size: 14px;
+    padding: 0 0.75em 0.5em;
+}
+.cuisine-index ul.top-list {
+    border: medium none;
+    padding: 0 0.75em;
+}
+.cuisine-index .top-list li {
+    height: auto;
+    margin-bottom: 3px;
+    overflow: hidden;
+    padding: 0;
+}
+.cuisine-index #mainbar {
+    margin-right: 10px;
+    padding-left: 10px;
+    width: 718px;
+}
+.cuisine-index .specialist {
+    padding-bottom: 0.5em;
+}
+.cuisine-index .specialist li {
+    height: auto;
+    margin-bottom: 0;
+    overflow: hidden;
+}
+.heading-more {
+    float: right;
+    font-size: 12px;
+    line-height: 1em;
+    margin-right: 10px;
+    margin-top: 13px;
+}
+.baking-index #breadcrumb {
+    height: 10px;
+    line-height: 10px;
+}
+.baking-index #editor-pickup .pa {
+    padding: 10px 15px;
+    width: 620px;
+}
+.baking-index #slides_wrapper {
+    height: 450px;
+    overflow: hidden;
+}
+.baking-index #slides_wrapper .cs-active {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #f96;
+    padding-bottom: 3px;
+}
+.baking-index #slides_wrapper .info {
+    position: relative;
+    right: -300px;
+}
+.baking-index #slide-tabs-target {
+    display: inline-block;
+    float: left;
+    height: 450px;
+    position: relative;
+    width: 300px;
+}
+.baking-index #slide-tabs-target img {
+    border: 1px solid #ccc;
+}
+.baking-index #slide-tabs {
+    display: inline-block;
+    float: left;
+    height: 450px;
+    position: relative;
+    width: 320px;
+}
+.baking-index #slide-tabs .mytab {
+    display: inline-block;
+    height: 85px;
+    margin: 0 0 0 5px;
+    padding: 5px 0 0 15px;
+    text-decoration: none;
+    width: 320px;
+}
+.baking-index #slide-tabs .mytab img {
+    border: 1px solid #ccc;
+}
+.baking-index #slide-tabs .mytab h3 {
+    color: #630;
+    display: inline-block;
+    font-size: 16px;
+    line-height: 0.8em;
+    padding: 0 5px;
+    width: 200px;
+}
+.baking-index #slide-tabs .mytab span {
+    color: #666;
+    display: inline-block;
+    font-size: 13px;
+    padding: 0 5px;
+    width: 180px;
+}
+.baking-index #slide-tabs .selected {
+    background: rgba(0, 0, 0, 0) url("http://static.bettyskitchen.com.cn/bk3/images/baking/001.png?cec431fa467d") no-repeat scroll 3px 2px;
+}
+.baking-index #slide-tabs .selected img {
+    border: 1px solid #fff;
+}
+.baking-index #slide-tabs .selected h3 {
+    color: #f60;
+}
+.baking-index #changdi {
+}
+.baking-index #cook-a, .baking-index #cook-b, .baking-index #cook-c {
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid #ccc;
+}
+.baking-index #cook-a .cook-process, .baking-index #cook-b .cook-process, .baking-index #cook-c .cook-process {
+    background: #fff none repeat scroll 0 0;
+    padding-left: 20px;
+    width: 700px;
+}
+.baking-index #cook-a .pa {
+    border: medium none;
+}
+.baking-index #cook-a h4 {
+    background: rgba(0, 0, 0, 0) url("http://static.bettyskitchen.com.cn/bk3/images/baking/002.png?cec431fa467d") no-repeat scroll 0 0;
+    height: 27px;
+    left: -25px;
+    position: relative;
+    top: -5px;
+}
+.baking-index #cook-b h4 {
+    background: rgba(0, 0, 0, 0) url("http://static.bettyskitchen.com.cn/bk3/images/baking/003.png?cec431fa467d") no-repeat scroll 0 0;
+    height: 27px;
+    left: -25px;
+    position: relative;
+    top: -5px;
+}
+.baking-index #cook-c h4 {
+    background: rgba(0, 0, 0, 0) url("http://static.bettyskitchen.com.cn/bk3/images/baking/004.png?cec431fa467d") no-repeat scroll 0 0;
+    height: 27px;
+    left: -25px;
+    position: relative;
+    top: -5px;
+}
+.baking-index #cook-b .paa {
+    border: 1px solid #f60;
+}
+.baking-index #cook-b .paa h5 {
+    background: #f60 none repeat scroll 0 0;
+}
+.baking-index #cook-b .paa h5 a {
+    color: #fff;
+}
+.baking-index #cook-b .paa h5 a:hover {
+    color: #0287ca;
+}
+.baking-index #cook-b .cooking-star {
+    border: 1px solid #ccc;
+}
+.baking-index #cook-c {
+    padding-bottom: 1em;
+}
+.baking-index #cook-c ul li {
+    background: rgba(0, 0, 0, 0) url("http://static.bettyskitchen.com.cn/bk3/images/baking/006.png?271aa30e306b") repeat-x scroll 0 0;
+    border: 1px solid #ccc;
+    display: inline;
+    float: left;
+    height: 194px;
+    margin-top: 10px;
+    overflow: hidden;
+    padding: 5px 10px 10px;
+    position: relative;
+    width: 668px;
+}
+.baking-index #cook-c ul li .baking-wrapper {
+    margin-left: 208px;
+}
+.baking-index #cook-c ul li .baking-wrapper p {
+    float: none;
+    width: auto;
+}
+.baking-index #cook-c ul li a.img {
+    display: inline-block;
+    float: left;
+    height: 198px;
+    margin-right: 10px;
+    width: 470px;
+}
+.baking-index #cook-c ul li.baking a.img {
+    width: 198px;
+}
+.baking-index #cook-c ul li p {
+    border-top: 1px dotted #ccc;
+    color: #333;
+    float: left;
+    width: 185px;
+}
+.baking-index #cook-c ul li .time {
+    background: rgba(0, 0, 0, 0) url("http://static.bettyskitchen.com.cn/bk3/images/mr3/request-counter.png?d51f73d35d29") no-repeat scroll 2px center;
+    color: #666;
+    line-height: 1.8em;
+    padding-left: 20px;
+}
+.baking-index .right {
+    margin-left: 12px;
+}
+.baking-index .right .pb {
+    border: 1px solid #f60;
+    border-radius: 6px;
+}
+.baking-index .right .pb h5 {
+    background: rgba(0, 0, 0, 0) url("http://static.bettyskitchen.com.cn/bk3/images/mr3/xian-02.jpg?d51f73d35d29") repeat-x scroll 0 0;
+    color: #333;
+    line-height: 39px;
+    padding: 0 10px;
+}
+.baking-index .right .pb ul {
+    height: 373px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding: 5px 10px;
+}
+.baking-index .right .pb ul li {
+    border-bottom: 1px dotted #ccc;
+    padding: 5px 0;
+    width: 186px;
+}
+.baking-index .right .pb ul li p {
+    width: 176px;
+}
+.baking-index .right .pc {
+    border: 1px solid #f60;
+    border-radius: 6px;
+}
+.baking-index .right .pc h5 {
+    background: rgba(0, 0, 0, 0) url("http://static.bettyskitchen.com.cn/bk3/images/mr3/xian-02.jpg?d51f73d35d29") repeat-x scroll 0 0;
+    color: #333;
+    line-height: 39px;
+    padding: 0 10px;
+}
+#cboxClose {
+    background: rgba(0, 0, 0, 0) url("http://static.bettyskitchen.com.cn/bk3/images/controls.png?0bc8cc801fe0") no-repeat scroll 0 0;
+    border: 0 none;
+    height: 20px;
+    margin: 0;
+    overflow: visible;
+    padding: 0;
+    position: absolute;
+    text-indent: -9999px;
+    top: 0;
+    width: 20px;
+}
+#cboxClose {
+    background-position: -50px 0;
+    right: 0;
+}
+#cboxClose:hover {
+    background-position: -50px -25px;
+}
+.recipe-item #cboxPrevious, .recipe-item #cboxNext, .recipe-item #cboxClose {
+    background: rgba(0, 0, 0, 0) url("http://static.bettyskitchen.com.cn/bk3/images/controls.png?0bc8cc801fe0") no-repeat scroll 0 0;
+    border: 0 none;
+    height: 20px;
+    margin: 0;
+    overflow: visible;
+    padding: 0;
+    position: absolute;
+    text-indent: -9999px;
+    top: 0;
+    width: 20px;
+}
+.recipe-item #cboxPrevious:active, .recipe-item #cboxNext:active, .recipe-item #cboxClose:active {
+    outline: 0 none;
+}
+.recipe-item #cboxPrevious {
+    background-position: 0 0;
+    height: 25px;
+    right: 44px;
+}
+.recipe-item #cboxPrevious:hover {
+    background-position: 0 -25px;
+}
+.recipe-item #cboxNext {
+    background-position: -25px 0;
+    right: 22px;
+}
+.recipe-item #cboxNext:hover {
+    background-position: -25px -25px;
+}
+.recipe-item #cboxClose {
+    background-position: -50px 0;
+    right: 0;
+}
+.recipe-item #cboxClose:hover {
+    background-position: -50px -25px;
+}
+.recipe-item #cboxCurrent {
+    left: 0;
+    position: static;
+}
+.recipe-item #cboxTitle {
+    background: #fff none repeat scroll 0 0;
+    color: #666;
+    padding-left: 5px;
+    text-align: left;
+}

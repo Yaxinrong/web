@@ -9,8 +9,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <meta name="renderer" content="webkit">
   <meta http-equiv="Cache-Control" content="no-siteapp" />
-  <link rel="icon" type="image/png" href="assets/i/favicon.png">
-  <link rel="apple-touch-icon-precomposed" href="assets/i/app-icon72x72@2x.png">
+  <link rel="icon" type="image/png" href="__PUBLIC__/images/favicon.png">
+  <link rel="apple-touch-icon-precomposed" href="__PUBLIC__/iamges/app-icon72x72@2x.png">
   <meta name="apple-mobile-web-app-title" content="Amaze UI" />
   <link rel="stylesheet" href="__PUBLIC__/css/amazeui.min.css"/>
   <link rel="stylesheet" href="__PUBLIC__/css/admin.css">
@@ -31,7 +31,7 @@
   <div class="am-collapse am-topbar-collapse" id="topbar-collapse">
 
     <ul class="am-nav am-nav-pills am-topbar-nav am-topbar-right admin-header-list">
-      <li><a href="admin_log.html"><span class="am-icon-envelope-o"></span> 收件箱 <span class="am-badge am-badge-warning">new</span></a></li>
+
       <li class="am-dropdown" data-am-dropdown>
         <a class="am-dropdown-toggle" data-am-dropdown-toggle href="javascript:;">
           <span class="am-icon-users"></span> 欢迎，{$_SESSION['username']}  <span class="am-icon-caret-down"></span>
@@ -39,7 +39,7 @@
         <ul class="am-dropdown-content">
           <li><a href="admin_user.html"><span class="am-icon-user"></span> 资料</a></li>
           <li><a href="admin_changePassword.html"><span class="am-icon-cog"></span> 修改密码</a></li>
-          <li><a href="Index.html"><span class="am-icon-power-off"></span> 退出</a></li>
+          <li><a href="account.html"><span class="am-icon-power-off"></span> 退出</a></li>
         </ul>
       </li>
       <li><a href="javascript:;" id="admin-fullscreen"><span class="am-icon-arrows-alt"></span> <span class="admin-fullText">开启全屏</span></a></li>    </ul>
@@ -50,7 +50,7 @@
   <!-- sidebar start -->
   <div class="admin-sidebar">
     <ul class="am-list admin-sidebar-list">
-      <li><a href="admin-index.html"><span class="am-icon-home"></span> 首页</a></li>
+      <li><a href="admin_index.html"><span class="am-icon-home"></span> 首页</a></li>
       <li class="admin-parent">
         <a class="am-cf" data-am-collapse="{target: '#collapse-nav'}"><span class="am-icon-file"></span> 页面模块 <span class="am-icon-angle-right am-fr am-margin-right"></span></a>
         <ul class="am-list am-collapse admin-sidebar-sub am-in" id="collapse-nav">
@@ -62,21 +62,20 @@
         </ul>
       </li>
       <li><a href="admin_table.html"><span class="am-icon-table"></span> 我的菜单</a></li>
-      <li><a href="admin-form.html"><span class="am-icon-pencil-square-o"></span> 表单</a></li>
-      <li><a href="#"><span class="am-icon-sign-out"></span> 注销</a></li>
+      <li><a href="account.html"><span class="am-icon-sign-out"></span> 注销</a></li>
     </ul>
 
     <div class="am-panel am-panel-default admin-sidebar-panel">
       <div class="am-panel-bd">
         <p><span class="am-icon-bookmark"></span> 公告</p>
-        <p>时光静好，与君语；细水流年，与君同。—— Nourriture</p>
+        <p>建议使用火狐浏览器，以获得更好的浏览体验！—— Nourriture</p>
       </div>
     </div>
 
     <div class="am-panel am-panel-default admin-sidebar-panel">
       <div class="am-panel-bd">
         <p><span class="am-icon-tag"></span> Nourriture</p>
-        <p>Welcome to the Amaze Nourriture!</p>
+        <p>Welcome to the Nourriture!</p>
       </div>
     </div>
   </div>
@@ -88,12 +87,12 @@
     <div class="am-cf am-padding">
       <div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">相册</strong> / <small>Gallery</small></div>
     </div>
-    <volist name="list" id="vo" >
+    <volist name="list" id="vo" mod="3">
     <ul class="am-avg-sm-2 am-avg-md-4 am-avg-lg-6 am-margin gallery-list">
       <li>
-        <a href="#">
-          <img class="am-img-thumbnail am-img-bdrs" src="{$vo['finish_pic']}" alt=""/>
-          <div class="gallery-title">{$vo['dish_name']}</div>
+        <a href="admin_modify_dish.html">
+          <img class="am-img-thumbnail am-img-bdrs" src="{$vo['finish_pic']}"  alt="" height="200" width="200"/>
+          <div class="gallery-title" >{$vo['dish_name']}</div>
           <div class="gallery-desc">{$vo['description']}</div>
         </a>
       </li>
@@ -122,7 +121,7 @@
 
 <footer>
   <hr>
-  <p class="am-padding-left">© 2014 AllMobilize <a href="Index.html" target="_blank">Nourriture</a></p>
+  <p class="am-padding-left">© 2014 AllMobilize <a href="account.html" target="_blank">Nourriture</a></p>
 </footer>
 
 <!--[if lt IE 9]>
